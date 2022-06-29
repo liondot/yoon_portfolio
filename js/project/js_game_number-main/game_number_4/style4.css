@@ -1,0 +1,94 @@
+body {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.container {
+  border: 10px solid white;
+  border-radius: 20px;
+  text-align: center;
+  background-color: rgb(255, 178, 13);
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+  margin: 20px;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  height: 100%;
+}
+
+.title {
+  margin: 0;
+}
+
+.sub_title {
+  margin: 0;
+  color: wheat;
+  margin-bottom: 30px;
+}
+
+.border-line {
+  padding-bottom: 20px;
+  display: flex;
+  justify-content: center;
+}
+
+.button-style {
+  height: 40px;
+  width: 70px;
+  margin-top: 5px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.chance-area {
+  padding: 10px 20px;
+  margin: 20px;
+  background-color: brown;
+  border-radius: 20px;
+  display: inline-block;
+  color: #fff;
+}
+
+.img_area {
+  width: 500px;
+  /* height: 300px; */
+  object-fit: 100%;
+  object-position: center;
+}
+
+.result {
+  font-size: 20px;
+  color: brown;
+  border-bottom: 1px solid #333;
+  display: inline-block;
+}
+
+#user-input {
+  height: 30px;
+  width: 50%;
+  border: none;
+  outline: none;
+  font-size: 20px;
+  border-radius: 20px;
+  text-indent: 20px;
+}
+
+#result_view {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 150px;
+  height: 30px;
+}

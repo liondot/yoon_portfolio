@@ -1,0 +1,53 @@
+body{
+  margin: 0;
+  background-color: #ffe9e1;
+  background-repeat: no-repeat;
+  background-size: cover
+}
+
+.container {
+  background-color: #fff;
+  min-height: 100vh;
+  box-shadow: rgba(17, 12, 46, 0.15) 0px 48px 100px 0px;
+}
+
+.task_area {
+  border: 1px solid lightgray;
+}
+
+.task_tabs {
+  display: flex;
+  border-bottom: 1px solid lightgray;
+  position: relative;
+}
+
+.task_tabs div {
+  padding: 1em;
+  cursor: pointer;
+}
+
+.task_tabs div.active {
+  color: skyblue
+}
+
+#under_line {
+  height: 4px;
+  background-color: pink;
+  position: absolute;
+  width: 80px;
+  left: 0px;
+  top: 52px;
+  padding: 0;
+}
+
+.task {
+  display: flex;
+  justify-content: space-between;
+  padding: 1em;
+  justify-content: space-between;
+  border-bottom: 1px solid gainsboro;
+}
+
+.task_done {
+  text-decoration: line-through;
+}

@@ -1,0 +1,102 @@
+[33mcommit 56863fc1d248d9d5c925e2a42b2e90b957ac5bf6[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m)[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Thu May 19 14:58:51 2022 +0900
+
+    숫자 맞추기 게임 4번째 & 체크사항 확인
+
+[33mcommit 7093f62d02f19e1d103d765697529e0a94657b2e[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Fri Apr 22 15:01:49 2022 +0900
+
+    버그이유를 모르겠따 도대체
+
+[33mcommit 3927d18f529f76f26aaebff6fff9a504a182b2f5[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Fri Apr 22 13:33:02 2022 +0900
+
+    number_Game 3 index setting
+
+[33mcommit 9112d49aa2b2a2b2fde0d998ec2e5f4aef9aec0d[m
+Author: yoon <funfunjulia@gmail.com>
+Date:   Thu Apr 21 13:51:11 2022 +0900
+
+    gif파일 src
+
+[33mcommit 54e1fddb341aec497423b262ff516209635eba52[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Wed Apr 20 17:04:35 2022 +0900
+
+    reset button fix
+
+[33mcommit 31f2aa7a680432cdc2bdf02d28cacc8c1a138af8[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Wed Apr 20 16:49:31 2022 +0900
+
+    number game second commit
+
+[33mcommit 271bc2ca1cce683d3e006e25f24d98cbcfeb3f08[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Sun Apr 17 17:29:47 2022 +0900
+
+    game twe
+
+[33mcommit 5df39d57747ca3a3712147394681a70f82c8cbe0[m
+Author: yoon <funfunjulia@gmail.com>
+Date:   Thu Apr 7 01:26:32 2022 +0900
+
+    숫자맞추기 게임
+
+[33mcommit 4750f11b31301f4f9e208489ee3fe31060a28040[m
+Author: yoon <funfunjulia@gmail.com>
+Date:   Wed Apr 6 23:25:02 2022 +0900
+
+    남은기회 setting
+
+[33mcommit b6ca9780bcaa4edb2fb80132591b3bc10d2056b0[m
+Author: yoon <funfunjulia@gmail.com>
+Date:   Wed Apr 6 23:16:24 2022 +0900
+
+    기회는 총 5번, 5번을 넘기면 더이상 버튼 클릭이 안됨
+
+[33mcommit d8a8708d5740e5aed177d7e5c3eaad7a0121ba0e[m
+Merge: 257b514 559b745
+Author: yoon <funfunjulia@gmail.com>
+Date:   Wed Apr 6 22:35:28 2022 +0900
+
+    의미없는 커밋
+
+[33mcommit 559b745314f44e07eef0017975497bc7769c957c[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Wed Apr 6 20:06:12 2022 +0900
+
+    reset button setting
+
+[33mcommit d0fc5d72aacfd2e25ddf524560885f917892b522[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Wed Apr 6 19:56:16 2022 +0900
+
+    up, down, 정답입니다.
+
+[33mcommit be0c131ac4b608cea094943802762025819f87f8[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Wed Apr 6 19:32:49 2022 +0900
+
+    file commit
+
+[33mcommit 257b5145c813d31dbc0860f5b1cbb450ff2b1a93[m
+Author: yoon <funfunjulia@gmail.com>
+Date:   Wed Apr 6 18:00:31 2022 +0900
+
+    숫자 맞추기 게임 진행중
+
+[33mcommit e56abeecb43c701a5f91754a6ae5de5519524985[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Tue Apr 5 20:07:32 2022 +0900
+
+    숫자맞추기 중간 단계
+
+[33mcommit 5740cabc51047b3408bd08d6c56ff329a5c68c91[m
+Author: liondot <51257576+liondot@users.noreply.github.com>
+Date:   Fri Apr 1 19:31:08 2022 +0900
+
+    first commit
