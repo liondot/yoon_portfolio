@@ -550,15 +550,11 @@ a.swiper-slide{
 }
 
 /********** section #javascript **********/
-.js_container {
-  border: 2px solid green;
-}
 
 .js_wrapper {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  border: 2px solid red;
 }
 
 .js_wrapper a {
@@ -663,7 +659,6 @@ a.swiper-slide{
 
 .featherlight .featherlight-inner {
   width: 100% !important;
-  /* height: 100% !important; */
 }
 
 .featherlight .featherlight-content {
