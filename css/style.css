@@ -25,7 +25,6 @@ section {
   top: 0;
   left: 0;
   position: relative;
-  border: 2px solid;
 }
 
 .wrapper {
@@ -466,7 +465,7 @@ section#responsiv_web {
   margin-left: 31px;
   font-weight: normal;
 }
- 
+
 .web_txt p em img {
   width: 60px;
   height: 60px;
@@ -496,9 +495,6 @@ section#responsiv_web {
 }
 
 /********** section #design **********/
-#design {
-  height: 100vh;
-}
 
 .grid-container {
   width: 100%;
@@ -508,7 +504,7 @@ section#responsiv_web {
   justify-content: center;
 }
 
-.grid-container a{
+.grid-container a {
   display: inline-block;
   max-width: 100%;
   min-width: 100px;
@@ -629,7 +625,7 @@ section#responsiv_web {
 
 .featherlight-iframe .featherlight-content {
   width: 100% !important;
-  height: 100%  !important;
+  height: 100% !important;
 }
 
 .featherlight .featherlight-inner {
@@ -674,7 +670,7 @@ section#contact_me {
 
 .my_social em {
   margin: 15px;
-  width:200px;
+  width: 200px;
   height: 250px;
   border-radius: 30px;
   background: #fff;
@@ -688,7 +684,7 @@ section#contact_me {
   height: 40px;
   display: block;
   margin: 0 auto;
-  margin-top: 45px; 
+  margin-top: 45px;
 }
 
 .my_social em span {
@@ -734,7 +730,7 @@ section#contact_me {
 }
 
 .contact_me a {
-  width: 100%;  
+  width: 100%;
   height: 100%;
   display: inline-block;
   line-height: 40px;
@@ -745,7 +741,6 @@ section#contact_me {
 @media screen and (max-width: 1100px) {
   #section_info .container .contents {
     height: 50vh;
-    border: 2px solid red;
   }
 
   #responsiv_web .container .contents,
@@ -762,7 +757,7 @@ section#contact_me {
     min-width: 400px
   }
 
-  
+
   .btn_img {
     top: 360% !important;
   }
@@ -813,6 +808,7 @@ section#contact_me {
   .grid-container a {
     width: 220px;
     height: 220px;
+    margin: 20px;
   }
 
   /* javascript  */
@@ -831,25 +827,55 @@ section#contact_me {
     top: 30px;
   }
 
+  .arrow_top {
+    width: 40%;
+  }
+
+  section#contact_me {
+    right: 5px !important;
+  }
+
 
 }
 
 @media screen and (max-width: 970px) {
- 
-  .js_wrapper a {
-    width: calc(100% / 4);
+
+  .top_txt {
+    width: 90%;
+    text-align: center;
+    line-height: 1.5;
   }
+
+  .top_txt p {
+    font-size: 18px;
+  }
+
 
   .main_img {
     height: auto;
     width: 100%;
     max-width: 430px;
   }
+  
+  .js_wrapper a {
+    width: calc(100% / 4);
+  }
 
   .my_social em span {
     font-size: 14px;
   }
 
+  .contact_me {
+    width: 90px;
+    font-size: 14px;
+
+
+  }
+
+  .toggle_btn {
+    width: 25px;
+    height: 20px;
+  }
 
 }
 
@@ -869,16 +895,12 @@ section#contact_me {
 }
 
 @media screen and (max-width: 740px) {
-  body {
-    border: 2px solid green;
-  }
-
+ 
   .grid-container a {
-    width: 200px;
-    height: 200px;
+    max-width: 220px;
+    max-height: 220px;
+    margin: 20px;
   }
-
-  
 
   .my_social {
     flex-wrap: wrap;
@@ -908,5 +930,43 @@ section#contact_me {
 @media screen and (max-width: 600px) {
   .js_wrapper a {
     width: calc(100% / 3);
+  }
+
+  .grid-container a {
+   
+    max-width: 30%;
+    max-height: 180px;
+    margin: 20px;
+  }
+
+  .subject_bg {
+    font-size: 3em;
+  }
+
+  .javascript_img em{
+    font-size: 15px;
+  }
+
+  .javascript_img em:after {
+    display: none;
+  }
+
+  .javascript_img span {
+    font-size: 20px;
+    margin-top: 10px;
+  }
+
+  section#contact_me {
+    height: auto;
+  }
+
+  #contact_me .container .contents {
+    height: auto;
+    margin: 100px 0;
+  }
+
+  .my_social em {
+    width: 150px;
+    margin: 5px;
   }
 }
