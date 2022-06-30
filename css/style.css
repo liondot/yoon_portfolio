@@ -45,6 +45,7 @@ section {
 h2 {
   position: absolute;
   top: -1000px;
+  font-size: 0;
 }
 
 /* .btn_menu  */
@@ -227,7 +228,7 @@ h2 {
   height: 40px;
   position: relative;
   cursor: pointer;
-  margin-bottom: 40px;
+  margin-bottom: 10px;
 }
 
 .arrow_top em {
@@ -739,7 +740,21 @@ section#contact_me {
   line-height: 40px;
 }
 
+
+/* @media  */
 @media screen and (max-width: 1100px) {
+  #section_info .container .contents {
+    height: 50vh;
+    border: 2px solid red;
+  }
+
+  #responsiv_web .container .contents,
+  #design .container .contents,
+  #javascript .container .contents {
+    height: auto;
+    margin: 30px 0;
+  }
+
   .main_img {
     height: auto;
     width: 100%;
@@ -747,14 +762,9 @@ section#contact_me {
     min-width: 400px
   }
 
-}
-
-@media screen and (max-width: 970px) {
-
-  .main_img {
-    height: auto;
-    width: 100%;
-    max-width: 430px;
+  
+  .btn_img {
+    top: 360% !important;
   }
 
   .subject_effect {
@@ -798,6 +808,48 @@ section#contact_me {
     margin-right: 50px;
   }
 
+  /* design  */
+
+  .grid-container a {
+    width: 220px;
+    height: 220px;
+  }
+
+  /* javascript  */
+  #javascript .container .contents {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+
+  .arrow_top {
+    margin-bottom: 10px;
+  }
+
+  .javascript_img em:after {
+    top: 30px;
+  }
+
+
+}
+
+@media screen and (max-width: 970px) {
+ 
+  .js_wrapper a {
+    width: calc(100% / 4);
+  }
+
+  .main_img {
+    height: auto;
+    width: 100%;
+    max-width: 430px;
+  }
+
+  .my_social em span {
+    font-size: 14px;
+  }
+
 
 }
 
@@ -809,5 +861,52 @@ section#contact_me {
     max-width: 430px;
   }
 
+  .javascript_img em:after {
+    top: 25px;
+  }
 
+
+}
+
+@media screen and (max-width: 740px) {
+  body {
+    border: 2px solid green;
+  }
+
+  .grid-container a {
+    width: 200px;
+    height: 200px;
+  }
+
+  
+
+  .my_social {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 10px 0;
+  }
+
+  .my_social em {
+    width: 210px;
+    height: 160px;
+  }
+
+  .my_social em img {
+    margin-top: 7px;
+  }
+
+  .my_social em:last-child img {
+    margin-top: 15px;
+  }
+
+  .avata_img img {
+    width: 130px !important;
+    height: 130px !important;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .js_wrapper a {
+    width: calc(100% / 3);
+  }
 }
