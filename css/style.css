@@ -680,6 +680,13 @@ section#contact_me {
   color: #444;
 }
 
+.my_social i  {
+  font-size:3em;
+  display: block;
+  text-align: center;
+  margin-top: 50px;
+}
+
 .my_social em img {
   width: 40px;
   height: 40px;
@@ -923,6 +930,17 @@ section#contact_me {
 
   }
 
+  .my_social i  {
+    margin-top: 15px;
+  }
+
+  .my_social em span {
+    margin-top: 20px;
+  }
+
+  .my_social em:nth-child(4) span {
+    font-size: 12px;
+  }
 
 
 }
@@ -1055,12 +1073,20 @@ section#contact_me {
     width: 150px;
     margin: 5px;
   }
+
+  .arrow_top {
+    width: 35%;
+  }
+
+  .contact_me {
+    margin: 0;
+  }
 }
 
 @media screen and (max-width: 450px) {
   .top_bg_image .main_img1{
     left: -95px !important;
-    top: -20% !important;
+    top: -40% !important;
     width: 100% !important;
     max-width: 40% !important;
   }
@@ -1068,7 +1094,7 @@ section#contact_me {
   .top_bg_image .main_img2{
     width: 100%;
     max-width: 400px;
-    top: -40% !important;
+    top: -55% !important;
     left: 100% !important;
   }
 
@@ -1081,7 +1107,7 @@ section#contact_me {
 
   .top_bg_image .main_img4 {
     top: 80% !important;
-    left: 100% !important;
+    left: 110% !important;
   }
  
 }
