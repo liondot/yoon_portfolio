@@ -16,10 +16,6 @@ body {
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
 section {
   height: auto;
   top: 0;
