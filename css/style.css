@@ -414,6 +414,7 @@ h2 {
 /********** section #responsive_web **********/
 section#responsiv_web {
   position: relative;
+  background-color: #fff;
 }
 
 #responsiv_web .container .contents {
@@ -755,19 +756,23 @@ section#contact_me {
 
 /* @media  */
 @media screen and (max-width: 1100px) {
-  body {
-  overflow-y: scroll;
-  }
+
+  
   #section_info .container .contents {
     height: 50vh;
   }
 
-  #responsiv_web .container .contents,
+  #responsiv_web .container .contents {
+    margin: 0 !important;
+  }
+
   #design .container .contents,
   #javascript .container .contents {
     height: auto;
-    margin: 30px 0;
+    margin: 0;
   }
+
+
 
   .main_img {
     height: auto;
