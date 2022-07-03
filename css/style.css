@@ -6,6 +6,10 @@
   box-sizing: border-box;
 }
 
+html {
+  overflow: scroll !important;
+}
+
 body {
   font-family: arial, sans-serif;
   margin: 0;
@@ -13,7 +17,7 @@ body {
   color: white;
   box-sizing: border-box;
   width: 100vw;
-  border: 2px solid red;
+  border: 2px solid green;
   overflow-y: scroll;
   overflow-x: hidden;
 }
