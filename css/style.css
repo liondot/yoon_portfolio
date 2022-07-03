@@ -14,7 +14,9 @@ body {
   color: white;
   box-sizing: border-box;
   width: 100vw;
-  border: 2px solid orange;
+  border: 2px solid purple;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
 
 section {
@@ -750,6 +752,9 @@ section#contact_me {
 
 /* @media  */
 @media screen and (max-width: 1100px) {
+  body {
+  overflow-y: scroll;
+  }
   #section_info .container .contents {
     height: 50vh;
   }
