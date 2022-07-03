@@ -520,6 +520,12 @@ section#responsiv_web {
 
 /********** section #javascript **********/
 
+#javascript .container .js_container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
 .js_wrapper {
   display: flex;
   flex-wrap: wrap;
