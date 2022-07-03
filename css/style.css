@@ -10,11 +10,10 @@ body {
   font-family: arial, sans-serif;
   margin: 0;
   padding: 0;
-  max-width: 100%;
   color: white;
   box-sizing: border-box;
   width: 100vw;
-  border: 2px solid purple;
+  border: 2px solid red;
   overflow-y: scroll;
   overflow-x: hidden;
 }
