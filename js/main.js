@@ -43,17 +43,14 @@ function goToTop() {
 
 
 // var s = skrollr.init();
-let $root = $('html, body');
-let $position = [0, 1000, 2000, 3000, 4000, 5000, 6000,];
-let $currentPosition = 0;
+// let $root = $('html, body');
+// let $position = [0, 1000, 2000, 3000, 4000, 5000, 6000,];
+// let $currentPosition = 0;
 
 
 
 $(window).scroll(function () {
-    // $currentPosition = getCurrentPosition();
     getCurrentPosition();
-    console.log($currentPosition);
-
 });
 
 
@@ -61,22 +58,17 @@ function getCurrentPosition() {
     // let positionNum;
     let scrollAmount = $(document).scrollTop();
 
-    if (scrollAmount >= $position[4]) {
-        // positionNum = 3;
-        $currentPosition = 4;
-    } else if (scrollAmount >= $position[3]) {
-        // positionNum = 2;
-        $currentPosition = 3;
-    } else if (scrollAmount >= $position[2]) {
-        // positionNum = 1;
-        $currentPosition = 2;
-    } else if (scrollAmount >= $position[1]) {
-        // positionNum = 1;
-        $currentPosition = 1;
-    } else {
-        // positionNum = 0;
-        $currentPosition = 0;
-    }
+    // if (scrollAmount >= $position[4]) {
+    //     $currentPosition = 4;
+    // } else if (scrollAmount >= $position[3]) {
+    //     $currentPosition = 3;
+    // } else if (scrollAmount >= $position[2]) {
+    //     $currentPosition = 2;
+    // } else if (scrollAmount >= $position[1]) {
+    //     $currentPosition = 1;
+    // } else {
+    //     $currentPosition = 0;
+    // }
 
     // return positionNum;
 }
