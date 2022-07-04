@@ -10,7 +10,6 @@ const spanTxt = document.querySelector('.spanTxt');
 const BODY = document.querySelector('body, html')
 const BODYOffset = BODY.getBoundingClientRect()
 
-// spanTxt.addEventListener('click', clickResult);
 document.addEventListener('scroll', ()=> {
 console.log('윈도우 위치:', window.scrollY)
 
@@ -73,5 +72,44 @@ function getCurrentPosition() {
     // return positionNum;
 }
 
+// Navbar toggle btn 
 
+// 스크롤링 핸들 
+const arrowTop = document.querySelector('.arrow_top');
+const contactMe = document.querySelector('.contact_me');
+const navbarMenu = document.querySelector('.navbar');
+
+
+navbarMenu.addEventListener('click', (event) => {
+    const target = event.target;
+    const link = target.dataset.link;
+
+    if(link == null) {
+        return;
+    }
+    menuList.classList.remove('active')
+    toggleBtn.classList.remove('active')
+    const scrollInTo = document.querySelector(link);
+    scrollInTo.scrollIntoView({behavior:"smooth"});
+})
+
+// arrow top 버튼 핸들링 
+arrowTop.addEventListener('click', ()=> {
+    scrollIntoView('#section01')
+})
+
+contactMe.addEventListener('click', ()=> {
+    scrollIntoView('#contact_me')
+})
+
+function scrollIntoView(selector){
+    const scrollTo = document.querySelector(selector);
+    scrollTo.scrollIntoView({behavior:'smooth'});
+}
+
+
+
+const navbarToggleBtn = document.querySelector('.toggle_btn');
+navbarMenu.addEventListener('click', ()=> {
+})
 

@@ -7,17 +7,21 @@
 }
 
 html {
-  overflow: scroll !important;
+  overflow: auto !important;
+  width: 100%;
+}
+
+html::-webkit-scrollbar {
+  display: none;
 }
 
 body {
-  font-family: arial, sans-serif;
+  font-family: 'Noto Sans KR', sans-serif;
   margin: 0;
   padding: 0;
   color: white;
   box-sizing: border-box;
   width: 100vw;
-  border: 2px solid green;
   overflow-y: scroll;
   overflow-x: hidden;
 }
@@ -54,6 +58,10 @@ h2 {
   display: none;
 }
 
+.menu li {
+  margin: 10px 0;
+}
+
 
 /********** menu_list  **********/
 #menu_list {
@@ -61,7 +69,7 @@ h2 {
   z-index: 999;
   top: 0;
   left: -400px;
-  background: #222;
+  background: skyblue;
   height: 100vh;
   padding: 50px 40px 0;
   transition: all .3s ease-in;
@@ -95,7 +103,7 @@ h2 {
   display: flex;
   position: fixed;
   width: 40px;
-  height: 25px;
+  height: 20px;
   cursor: pointer;
   top: 20px;
   left: 20px;
@@ -104,7 +112,7 @@ h2 {
 
 .toggle_btn span {
   position: absolute;
-  height: 3px;
+  height: 2px;
   display: block;
   width: 100%;
   background: #222;
@@ -121,7 +129,7 @@ h2 {
 
 .toggle_btn.active span:first-child {
   display: none;
-  background: #fff;
+  background:#333;
 }
 
 .toggle_btn.active span:nth-child(2),
@@ -129,7 +137,7 @@ h2 {
   top: 50%;
   transform: rotate(140deg);
   transition: all .3s;
-  background: #fff;
+  background: #333;
 }
 
 .toggle_btn.active span:nth-child(3) {
@@ -412,12 +420,12 @@ h2 {
 }
 
 /********** section #responsive_web **********/
-section#responsiv_web {
+section#responsive_web {
   position: relative;
   background-color: #fff;
 }
 
-#responsiv_web .container .contents {
+#responsive_web .container .contents {
   height: auto;
   margin: 100px 0;
 }
@@ -744,14 +752,9 @@ section#contact_me {
   border-radius: 30px;
   box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
   box-sizing: border-box;
+  cursor: pointer;
 }
 
-.contact_me a {
-  width: 100%;
-  height: 100%;
-  display: inline-block;
-  line-height: 40px;
-}
 
 
 /* @media  */
@@ -762,7 +765,7 @@ section#contact_me {
     height: 50vh;
   }
 
-  #responsiv_web .container .contents {
+  #responsive_web .container .contents {
     margin: 0 !important;
   }
 
@@ -905,11 +908,6 @@ section#contact_me {
 
 @media screen and (max-width: 888px) {
 
-  /* .main_img {
-    height: auto;
-    width: 100%;
-    max-width: 430px;
-  } */
 
   .javascript_img em:after {
     top: 25px;
@@ -963,6 +961,12 @@ section#contact_me {
 
 @media screen and (max-width: 740px) {
 
+  
+  .toggle_btn {
+    left: 10px !important;
+  }
+
+
   .top_bg_image .main_img1{
     left: 0 !important;
     top: -30% !important;
@@ -994,6 +998,14 @@ section#contact_me {
     max-height: 220px;
     margin: 20px;
   }
+
+  /* #responsive_web .container .contents {
+    transform: translateY(11%) !important;
+  }
+
+  .web_images img.web_device {
+    transform: translateY(-230px) !important;
+  } */
 
   .my_social {
     flex-wrap: wrap;

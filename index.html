@@ -10,12 +10,6 @@
     <!-- jquery  -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
 
-    <!-- slide js & css  -->
-    <!-- <link rel="stylesheet" href="css/swiper.css">
-    <script src="js/swiper.min.js"></script>
-    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
-    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script> -->
-
     <!-- featherlight js & css  -->
     <link rel="stylesheet" href="js/featherlight/featherlight.css">
     <script src="js/featherlight/featherlight.js"></script>
@@ -27,6 +21,9 @@
 
     <!-- fontawesome  -->
     <script src="https://kit.fontawesome.com/c741f3b9be.js" crossorigin="anonymous"></script>
+
+    <!-- font  -->
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
 </head>
 
 <body>
@@ -38,16 +35,16 @@
     </div>
     <div class="wrapper">
         <div id="menu_list">
-            <div class="toggle_btn" data-0="left: -200px" data-300="left: 20px;">
+            <div class="toggle_btn">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
             <div class="menu navbar">
-                <li><a href="#responsiv_web">Responsive Web</a></li>
-                <li><a href="#design">Design</a></li>
-                <li><a href="#javascript">Javascript</a></li>
-                <li><a href="#contact_me">Contact Me</a></li>
+                <li class="menu_item" data-link="#responsive_web">Responsive Web</li>
+                <li class="menu_item" data-link="#design">Design</li>
+                <li class="menu_item" data-link="#javascript">Javascript</li>
+                <li class="menu_item" data-link="#contact_me">Contact Me</li>
             </div>
         </div>
         <section id="section01" class="header">
@@ -152,7 +149,7 @@
                 </div>
             </div>
         </section>
-        <section id="responsiv_web">
+        <section id="responsive_web">
             <div class="container">
                 <div class="contents cont01" data-1500="transform:translateY(50%);"
                     data-1800="transform:translateY(0%);">
@@ -220,8 +217,6 @@
                             <p>
                                 <em data-2700="left: -20%; opacity:0;" data-3000="left: 0%; opacity:1;"><img
                                         src="imgs/web_img/element.gif" alt=""> <span>클론 코딩</span></em>
-                                <!-- <em data-2730="left: -20%; opacity:0;" data-3030="left: 0%; opacity:1;"><img src="imgs/web_img/paint-palette.gif" alt=""> <span>디자인</span></em> -->
-                                <!-- <em data-2760="left: -20%; opacity:0;" data-3060="left: 0%; opacity:1;"><img src="imgs/web_img/laptop.gif" alt=""> <span>퍼블리싱</span></em> -->
                             </p>
                         </div>
                         <div class="web_images">
@@ -398,44 +393,44 @@
                         <a href="imgs/design_img/img_01.jpg" class="swiper-slide 01_1">
                             <img src="imgs/design_img/img_01.jpg" alt="">
                         </a>
-                        <a href="imgs/design_img/img_02.jpg" class="swiper-slide 02_2"
-                            data-featherlight="iframe" target="blank">
+                        <a href="imgs/design_img/img_02.jpg" class="swiper-slide 02_2" data-featherlight="iframe"
+                            target="blank">
                             <img src="imgs/design_img/img_02.jpg" alt="">
                         </a>
-                        <a href="imgs/design_img/리뷰몬스터-시안_6.jpg" class="swiper-slide 01_2"
-                            data-featherlight="iframe" target="blank">
+                        <a href="imgs/design_img/리뷰몬스터-시안_6.jpg" class="swiper-slide 01_2" data-featherlight="iframe"
+                            target="blank">
                             <img src="imgs/design_img/리뷰몬스터-시안_6.jpg" alt="">
                         </a>
-                        <a href="imgs/design_img/리뷰몬스터-시안_7.jpg" class="swiper-slide 02_2"
-                            data-featherlight="iframe" target="blank">
+                        <a href="imgs/design_img/리뷰몬스터-시안_7.jpg" class="swiper-slide 02_2" data-featherlight="iframe"
+                            target="blank">
                             <img src="imgs/design_img/리뷰몬스터-시안_7.jpg" alt="">
                         </a>
-                        <a href="imgs/design_img/reviewmonster.png" class="swiper-slide 03_2"
-                            data-featherlight="iframe" target="blank">
+                        <a href="imgs/design_img/reviewmonster.png" class="swiper-slide 03_2" data-featherlight="iframe"
+                            target="blank">
                             <img src="imgs/design_img/reviewmonster.png" alt="">
                         </a>
                         <a href="imgs/design_img/업체안내사항-카드뉴스_최종.jpg" class="swiper-slide 01_3"
                             data-featherlight="iframe" target="blank">
                             <img src="imgs/design_img/업체안내사항-카드뉴스_최종.jpg" alt="">
                         </a>
-                        <a href="imgs/design_img/캐릭터_연꽃.png" class="swiper-slide 02_3"
-                            data-featherlight="iframe" target="blank">
+                        <a href="imgs/design_img/캐릭터_연꽃.png" class="swiper-slide 02_3" data-featherlight="iframe"
+                            target="blank">
                             <img src="imgs/design_img/캐릭터_연꽃.png" alt="">
                         </a>
                         <a href="imgs/design_img/코로나-예방수칙-card-news.gif" class="swiper-slide 03_3"
                             data-featherlight="iframe" target="blank">
                             <img src="imgs/design_img/코로나-예방수칙-card-news.gif" alt="">
                         </a>
-                        <a href="imgs/design_img/타이포_떠나요둘이서_ot.png" class="swiper-slide 03_3"
-                            data-featherlight="iframe" target="blank">
+                        <a href="imgs/design_img/타이포_떠나요둘이서_ot.png" class="swiper-slide 03_3" data-featherlight="iframe"
+                            target="blank">
                             <img src="imgs/design_img/타이포_떠나요둘이서_ot.png" alt="">
                         </a>
-                        <a href="imgs/design_img/타이포_먹방맛집-순회크루.png" class="swiper-slide 03_3"
-                            data-featherlight="iframe" target="blank">
+                        <a href="imgs/design_img/타이포_먹방맛집-순회크루.png" class="swiper-slide 03_3" data-featherlight="iframe"
+                            target="blank">
                             <img src="imgs/design_img/타이포_먹방맛집-순회크루.png" alt="">
                         </a>
-                        <a href="imgs/design_img/타이포_할로윈특가.png" class="swiper-slide 03_3"
-                            data-featherlight="iframe" target="blank">
+                        <a href="imgs/design_img/타이포_할로윈특가.png" class="swiper-slide 03_3" data-featherlight="iframe"
+                            target="blank">
                             <img src="imgs/design_img/타이포_할로윈특가.png" alt="">
                         </a>
                     </div>
@@ -598,13 +593,14 @@
                                     <span>@liondot</span></a>
                             </em>
                             <em>
-                                <p>Pinterest</p> <a href="https://www.pinterest.co.kr/sunflo_512"><i class="fa-brands fa-pinterest"></i>
+                                <p>Pinterest</p> <a href="https://www.pinterest.co.kr/sunflo_512"><i
+                                        class="fa-brands fa-pinterest"></i>
                                     <span>@sunflo_512</span></a>
                             </em>
                             <em>
                                 <p>Email</p><i class="fa-solid fa-envelope"></i><span> yoon3315.5@gmail.com</span>
                             </em>
-                            
+
                         </div>
                     </div>
                 </div>
@@ -617,7 +613,7 @@
                 <span></span>
             </li>
             <li class="contact_me" data-0="opacity: 0;" data-300="opacity: 1;">
-                <a href="#contact_me">Contact Me</a>
+               Contact Me
             </li>
         </div>
     </div>
@@ -627,8 +623,7 @@
 
     <script src="js/skrollr.js"></script>
     <script type="text/javascript">
-var s = skrollr.init();
-      
+        var s = skrollr.init();
     </script>
 </body>
 
