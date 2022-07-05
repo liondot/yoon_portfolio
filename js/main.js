@@ -102,14 +102,11 @@ contactMe.addEventListener('click', ()=> {
     scrollIntoView('#contact_me')
 })
 
+
+
+// 모바일 토글 버튼
+
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
 }
-
-
-
-const navbarToggleBtn = document.querySelector('.toggle_btn');
-navbarMenu.addEventListener('click', ()=> {
-})
-
