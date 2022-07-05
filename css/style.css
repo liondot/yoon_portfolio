@@ -9,7 +9,6 @@
 html {
   overflow: auto !important;
   width: 100%;
-  scroll-behavior: smooth;
 }
 
 html::-webkit-scrollbar {
@@ -101,6 +100,10 @@ h2 {
 }
 
 /* toggle  */
+
+.mobile_bottom_line {
+  display: none;
+}
 
 .toggle_btn {
   display: flex;
@@ -819,7 +822,7 @@ section#contact_me {
 
   .web_cont {
     flex-direction: column;
-    margin-top: 50px;
+    padding-top: 50px;
   }
 
   .web_txt {
@@ -1030,14 +1033,14 @@ section#contact_me {
   }
 
   .toggle_menu_mobile ul li img {
-    padding: 8%;
+    padding: 5%;
     text-align: center;
     margin: auto;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 50%;
-    max-width: 50px;
+    max-width: 60px;
     /* max-height: 60px; */
   }
 
@@ -1270,18 +1273,24 @@ section#contact_me {
     left: 110% !important;
   }
 
-  
+  .toggle_menu_mobile ul {
+    margin: 0 2%;
+  }
+
+  .toggle_menu_mobile ul.contact_order {
+    padding-left: 8%;
+  }
 
   .toggle_menu_mobile ul li {
-  
-    max-width: 45px;
-    max-height: 45px;
-  
+    max-width: 50px;
+    max-height: 50px;
+    margin-bottom: 10px;
   }
 
   .toggle_menu_mobile ul li img {
-   
-    max-width: 40px;
+   width: 100%;
+   height: 100%;
+    /* max-width: 60px; */
   }
 
 
