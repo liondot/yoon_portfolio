@@ -55,6 +55,14 @@ h2 {
   font-size: 0;
 }
 
+button {
+  border: none;
+  outline: none;
+  cursor: pointer;
+  background: #000;
+  color: #fff;
+}
+
 .main_title {
   font-size: 64px;
   font-size: 3vw;
@@ -83,67 +91,58 @@ h2 {
   display: none;
 }
 
+/* .menu li {
+  margin: 10px 0;
+} */
 
+.mobile_bottom_line {
+  display: none;
+}
 
+.mobile_bottom_line
 
 /********** menu_list  **********/
 #menu_list {
   position: fixed;
   z-index: 999;
-  top: -100px;
+  top: 0;
+  /* padding: 50px 40px 0; */
   transition: all .3s ease-in;
+  color: #333;
+  display: flex;
   width: 100%;
   justify-content: center;
-  display: flex;
   background: #fff;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  visibility: hidden;
-  transition: all .2s ease-in-out;
 }
 
-#menu_list.visible {
-  visibility: visible;
-  top: 0;
-
-}
+/* #menu_list.active {
+  left: 0;
+} */
 
 #menu_list .menu {
   cursor: pointer;
   display: flex;
   width: 1200px;
-  border: 1px solid;
   justify-content: space-between;
-  height: 100%;
+  
+ 
 }
 
 #menu_list .menu li {
+  padding: 10px 0;
   font-size: 20px;
-  color: #333;
-  height: 100%;
+  display: flex;
+}
+
+#menu_list .menu li a {
+  color: #fff;
+  display: flex;
 }
 
 #menu_list .menu li:hover a {
   color: firebrick;
 }
-
-#menu_list .menu li a {
-  width: 60px;
-  display: inline-block;
-  height: 56px;
-  line-height: 56px;
-  text-align: center;
-  font-size: 40px;
-  background: skyblue;
-  color: #fff;
-}
-
-.menu_items {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  padding: 10px 0;
-}
-
 
 
 /********** section01  **********/
@@ -503,6 +502,14 @@ section#responsive_web {
   display: flex;
   align-items: flex-end;
   height: 550px;
+  justify-content: center;
+}
+
+.web_images button {
+  border: 2px solid red;
+  width: 10vw;
+  height: 10%;
+  margin: .5vw;
 }
 
 .web_images img.web_device {
@@ -683,14 +690,24 @@ section#responsive_web {
 
 
 
+
 /********** section #contact_me **********/
+#contact_me .my_profile{
+  display: none;
+}
+
+section#javascript {
+  border-bottom: 0;
+}
 
 section#contact_me {
   height: 50vh;
-  background: #e7e7e7;
+  /* background: #e7e7e7; */
+  background: #fff;
   box-sizing: border-box;
   max-width: 100%;
   overflow: hidden;
+  display: none;
 }
 
 .my_profile {
