@@ -9,11 +9,14 @@
 html {
   overflow: auto !important;
   width: 100%;
+  overflow: hidden;
+  width: 100vw;
+  box-sizing: border-box;
 }
-
+/* 
 html::-webkit-scrollbar {
   display: none;
-}
+} */
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
@@ -22,7 +25,7 @@ body {
   color: white;
   box-sizing: border-box;
   width: 100vw;
-  overflow-y: scroll;
+  width: 100%;
   overflow-x: hidden;
 }
 
@@ -51,6 +54,18 @@ h2 {
   position: absolute;
   top: -1000px;
   font-size: 0;
+}
+
+.main_title {
+  font-size: 64px;
+  font-size: 3vw;
+  color: gray;
+  font-weight: bold;
+  margin: 100px auto;
+  padding-top: 50px;
+  display: block;
+  text-align: center;
+  border-top: 1px solid #e5e5e5;
 }
 
 /* .btn_menu  */

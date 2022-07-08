@@ -10,10 +10,10 @@ const spanTxt = document.querySelector('.spanTxt');
 const BODY = document.querySelector('body, html')
 const BODYOffset = BODY.getBoundingClientRect()
 
-document.addEventListener('scroll', ()=> {
-console.log('윈도우 위치:', window.scrollY)
+// document.addEventListener('scroll', ()=> {
+// console.log('윈도우 위치:', window.scrollY)
 
-})
+// })
 
 
 
