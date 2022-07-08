@@ -1,7 +1,7 @@
 'use-strict'
 
 const menuList = document.querySelector('#menu_list')
-const toggleBtn = document.querySelector('.toggle_btn');
+// const toggleBtn = document.querySelector('.toggle_btn');
 const mainSection = document.querySelector('#section01')
 const mainSectionHeight = mainSection.getBoundingClientRect().height;
 const spanTxt = document.querySelector('.spanTxt');
@@ -12,7 +12,7 @@ const BODYOffset = BODY.getBoundingClientRect()
 
 
 
-toggleBtn.addEventListener('click', toggle);
+// toggleBtn.addEventListener('click', toggle);
 
 // 토글 버튼 
 function toggle() {
@@ -21,7 +21,10 @@ function toggle() {
 }
 
 document.addEventListener('scroll', () => {
-    if(window.scrollY > mainSectionHeight / 3) {
+    if(window.scrollY > mainSectionHeight / 2) {
+        menuList.classList.add('visible');
+    } else {
+        menuList.classList.remove('visible');
     }
 })
 
