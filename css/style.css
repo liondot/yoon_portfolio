@@ -34,6 +34,7 @@ section {
   top: 0;
   left: 0;
   position: relative;
+  border-bottom: 1px solid #e2e2e2;
 }
 
 .wrapper {
@@ -64,7 +65,6 @@ h2 {
   padding: 60px;
   display: block;
   text-align: center;
-  border-top: 1px solid #e5e5e5;
 }
 
 /* .btn_menu  */
@@ -549,10 +549,10 @@ section#responsive_web {
 
 .grid-container a {
   display: inline-block;
-  max-width: 100%;
-  min-width: 100px;
-  width: 250px;
-  height: 250px;
+  /* max-width: 100%;
+  min-width: 100px; */
+  width: 20%;
+  /* height: 250px; */
   overflow: hidden;
   margin: 10px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
@@ -818,6 +818,10 @@ section#contact_me {
   #javascript .container .contents {
     height: auto;
     margin: 0;
+  }
+
+  #design .container .contents {
+    padding: 50px 0;
   }
 
 
