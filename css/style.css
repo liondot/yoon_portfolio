@@ -81,7 +81,10 @@ h2 {
   display: none;
 }
 
-
+button {
+  outline: none;
+  border: none;
+}
 
 
 /********** menu_list  **********/
@@ -503,7 +506,49 @@ section#responsive_web {
   position: relative;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   height: 550px;
+  flex-direction: column;
+}
+
+.web_images .web_btn {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-10%);
+}
+
+.web_images button {
+  border: 1px solid #e5e5e5;
+  width: 9vw;
+  height: 4vh;
+  margin: 5px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.web_images button a {
+  width: 100%;
+  height: 100%;
+  line-height: 4vh;
+  display: inline-block;
+}
+
+.web_images button i {
+  font-size: 1vw;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: #456179;
+  opacity: .8;
+}
+
+.web_images button:nth-child(2) i {
+  font-size: 1.2vw;
+}
+.web_images .web_btn span {
+  font-size: .6vw;
+  color: #456179;
 }
 
 .web_images img.web_device {
@@ -874,6 +919,13 @@ section#contact_me {
     width: auto;
   }
 
+  .web_images .web_btn {
+    width: 100%;
+    position: static;
+    transform: translateX(0);
+    text-align: center;
+  }
+
   .web_images a {
     display: flex;
     justify-content: center;
@@ -888,8 +940,26 @@ section#contact_me {
   }
 
   .web_images img.web_mobile {
-    height: 65%;
+    height: 55%;
     margin-right: 50px;
+    bottom: 10%;
+  }
+
+  .web_images button {
+    width: 19vw;
+    margin-top: 20px;
+  }
+
+  .web_images .web_btn span {
+    font-size: 1.6vw;
+  }
+
+  .web_images button:nth-child(2) i {
+    font-size: 2.2vw;
+  }
+
+  .web_images button i {
+    font-size: 2vw;
   }
 
   /* design  */
@@ -962,6 +1032,35 @@ section#contact_me {
     width: 100%;
     max-width: 430px;
   }
+
+  .web_images img.web_mobile {
+    bottom: 18%;
+  }
+
+  .web_images button {
+    margin-top: 40px;
+    width: 28vw;
+    height: 3vh;
+  }
+
+  .web_images button a {
+    line-height: 3vh;
+    vertical-align: middle;
+  }
+
+  .web_images .web_btn span {
+    line-height: 3vh;
+    font-size: 2.6vw;
+  }
+
+  .web_images button i {
+    font-size: 3vw;
+  }
+
+  .web_images button:nth-child(2) i {
+    font-size: 3.2vw;
+  }
+
 
   .js_wrapper a {
     width: calc(100% / 4);
@@ -1362,6 +1461,10 @@ section#contact_me {
 
   .my_social {
     /* flex-wrap: nowrap; */
+  }
+
+  .web_images button {
+    height: 4vh;
   }
 
   .my_social em p {
