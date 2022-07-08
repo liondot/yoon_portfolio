@@ -889,12 +889,8 @@ section#contact_me {
   }
 
   /* javascript  */
-  #javascript .container .contents.js_device {
-    display: none;
-  }
 
-  #javascript .container .contents.js_mobile {
-    display: block;
+  .js_wrapper  {
     padding: 50px 0;
   }
 
@@ -1159,14 +1155,6 @@ section#contact_me {
     max-height: 220px;
     margin: 20px;
   }
-
-  /* #responsive_web .container .contents {
-    transform: translateY(11%) !important;
-  }
-
-  .web_images img.web_device {
-    transform: translateY(-230px) !important;
-  } */
 
   .my_social {
     flex-wrap: wrap;
