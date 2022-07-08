@@ -10,11 +10,6 @@ const spanTxt = document.querySelector('.spanTxt');
 const BODY = document.querySelector('body, html')
 const BODYOffset = BODY.getBoundingClientRect()
 
-document.addEventListener('scroll', ()=> {
-console.log('윈도우 위치:', window.scrollY)
-
-})
-
 
 
 toggleBtn.addEventListener('click', toggle);
@@ -57,19 +52,6 @@ function getCurrentPosition() {
     // let positionNum;
     let scrollAmount = $(document).scrollTop();
 
-    // if (scrollAmount >= $position[4]) {
-    //     $currentPosition = 4;
-    // } else if (scrollAmount >= $position[3]) {
-    //     $currentPosition = 3;
-    // } else if (scrollAmount >= $position[2]) {
-    //     $currentPosition = 2;
-    // } else if (scrollAmount >= $position[1]) {
-    //     $currentPosition = 1;
-    // } else {
-    //     $currentPosition = 0;
-    // }
-
-    // return positionNum;
 }
 
 // Navbar toggle btn 

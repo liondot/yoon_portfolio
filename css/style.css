@@ -9,11 +9,19 @@
 html {
   overflow: auto !important;
   width: 100%;
+  overflow: hidden;
+  width: 100vw;
+  box-sizing: border-box;
 }
 
 html::-webkit-scrollbar {
   display: none;
 }
+
+body::-webkit-scrollbar {
+  display: scroll;
+}
+
 
 body {
   font-family: 'Noto Sans KR', sans-serif;
@@ -22,8 +30,9 @@ body {
   color: white;
   box-sizing: border-box;
   width: 100vw;
-  overflow-y: scroll;
+  width: 100%;
   overflow-x: hidden;
+  overflow-y: scroll;
 }
 
 section {
@@ -31,6 +40,7 @@ section {
   top: 0;
   left: 0;
   position: relative;
+  border-bottom: 1px solid #e2e2e2;
 }
 
 .wrapper {
@@ -53,6 +63,29 @@ h2 {
   font-size: 0;
 }
 
+.main_title {
+  font-size: 64px;
+  font-size: 3vw;
+  color: #333;
+  padding-top: 100px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  margin: 0 auto;
+  letter-spacing: -2px;
+}
+
+.main_title:after {
+  content: '';
+  width: 5%;
+  height: 2px;
+  position: absolute;
+  bottom: -40px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: gray;
+}
+
 /* .btn_menu  */
 .btn_menu {
   display: none;
@@ -61,8 +94,6 @@ h2 {
 .menu li {
   margin: 10px 0;
 }
-
-
 
 
 /********** menu_list  **********/
@@ -135,7 +166,7 @@ h2 {
 
 .toggle_btn.active span:first-child {
   display: none;
-  background:#333;
+  background: #333;
 }
 
 .toggle_btn.active span:nth-child(2),
@@ -244,7 +275,7 @@ h2 {
 }
 
 .arrow_top {
-text-align: center;
+  text-align: center;
   cursor: pointer;
   background: #fff;
   border-radius: 50%;
@@ -270,7 +301,7 @@ text-align: center;
   background: #444;
   height: 1px;
   width: 50%;
-  left:100%;
+  left: 100%;
   transform: rotate(50deg);
   padding: 0;
   border-radius: 100px;
@@ -445,6 +476,7 @@ section#responsive_web {
 #responsive_web .container .contents {
   height: auto;
   margin: 100px 0;
+  padding: 50px 0;
 }
 
 .web_cont {
@@ -525,23 +557,24 @@ section#responsive_web {
 
 /********** section #design **********/
 
+
 .grid-container {
   width: 100%;
+  height: 100%;
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  align-items: center;
+  padding: 90px 0;
 }
 
 .grid-container a {
   display: inline-block;
-  max-width: 100%;
-  min-width: 100px;
-  width: 250px;
-  height: 250px;
+  width: 20%;
+  height: 220px;
   overflow: hidden;
   margin: 10px;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 20px 25px -5px, rgba(0, 0, 0, 0.04) 0px 10px 10px -5px;
   border-radius: 30px;
 }
 
@@ -554,7 +587,7 @@ section#responsive_web {
   display: none;
 }
 
-#javascript .container .js_container{
+#javascript .container .js_container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -563,13 +596,16 @@ section#responsive_web {
 .js_wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  padding: 0 30px;
+  padding-right: 10%;
+  padding-left: 10%;
 }
 
 .js_wrapper a {
-  width: calc(100% / 5);
+  width: 30%;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 
@@ -717,8 +753,8 @@ section#contact_me {
   color: #444;
 }
 
-.my_social i  {
-  font-size:3em;
+.my_social i {
+  font-size: 3em;
   display: block;
   text-align: center;
   margin-top: 50px;
@@ -779,6 +815,12 @@ section#contact_me {
 
 /* @media  */
 @media screen and (max-width: 1100px) {
+
+  html::-webkit-scrollbar {
+    display: none;
+  }
+
+
   .device_port {
     display: none;
   }
@@ -786,7 +828,7 @@ section#contact_me {
   .mobile_port {
     display: block;
   }
-  
+
   #section_info .container .contents {
     height: 50vh;
   }
@@ -799,6 +841,10 @@ section#contact_me {
   #javascript .container .contents {
     height: auto;
     margin: 0;
+  }
+
+  #design .container .contents {
+    padding: 50px 0;
   }
 
 
@@ -858,21 +904,21 @@ section#contact_me {
   }
 
   /* design  */
+  .grid-container {
+    padding: 30px 0 !important;
+  }
 
   .grid-container a {
     width: 220px;
     height: 220px;
-    margin: 20px;
+    /* margin: 20px; */
   }
 
   /* javascript  */
-  #javascript .container .contents.js_device {
-    display: none;
-  }
 
-  #javascript .container .contents.js_mobile {
-    display: block;
+  .js_wrapper {
     padding: 50px 0;
+    justify-content: center;
   }
 
   #javascript .container .contents {
@@ -903,6 +949,9 @@ section#contact_me {
 }
 
 @media screen and (max-width: 970px) {
+  .main_title {
+    font-size: 6vw;
+  }
 
   .top_txt {
     width: 90%;
@@ -920,7 +969,7 @@ section#contact_me {
     width: 100%;
     max-width: 430px;
   }
-  
+
   .js_wrapper a {
     width: calc(100% / 4);
   }
@@ -969,7 +1018,7 @@ section#contact_me {
     background: #fff;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     display: block;
-    left:0;
+    left: 0;
     bottom: -2px;
     border-radius: 0 50px 0 0;
     position: fixed;
@@ -984,7 +1033,7 @@ section#contact_me {
     background: #fff;
     box-shadow: rgba(17, 17, 26, 0.1) 0px 8px 24px, rgba(17, 17, 26, 0.1) 0px 16px 56px, rgba(17, 17, 26, 0.1) 0px 24px 80px;
     display: block;
-    right:0%;
+    right: 0%;
     bottom: 0;
     border-radius: 180px 0 0 0;
     position: fixed;
@@ -1017,7 +1066,7 @@ section#contact_me {
     justify-content: flex-end;
   }
 
-  .toggle_menu_mobile ul.contact_order{
+  .toggle_menu_mobile ul.contact_order {
     justify-content: flex-start;
   }
 
@@ -1033,7 +1082,7 @@ section#contact_me {
   }
 
   .toggle_menu_mobile ul li img {
-    padding: 5%;
+    padding: 16%;
     text-align: center;
     margin: auto;
     display: flex;
@@ -1052,14 +1101,14 @@ section#contact_me {
     height: 100%;
   }
 
-  .top_bg_image .main_img1{
+  .top_bg_image .main_img1 {
     left: 0 !important;
     top: -20% !important;
     width: 100% !important;
     max-width: 40% !important;
   }
 
-  .top_bg_image .main_img2{
+  .top_bg_image .main_img2 {
     width: 100%;
     max-width: 400px;
     top: -30% !important;
@@ -1079,7 +1128,7 @@ section#contact_me {
 
   }
 
-  .my_social i  {
+  .my_social i {
     margin-top: 15px;
   }
 
@@ -1096,20 +1145,20 @@ section#contact_me {
 
 @media screen and (max-width: 740px) {
 
-  
+
   .toggle_btn {
     left: 10px !important;
   }
 
 
-  .top_bg_image .main_img1{
+  .top_bg_image .main_img1 {
     left: 0 !important;
     top: -30% !important;
     width: 100% !important;
     max-width: 40% !important;
   }
 
-  .top_bg_image .main_img2{
+  .top_bg_image .main_img2 {
     width: 100%;
     max-width: 400px;
     top: -40% !important;
@@ -1127,20 +1176,12 @@ section#contact_me {
     top: 70% !important;
     left: 120% !important;
   }
- 
+
   .grid-container a {
     max-width: 220px;
     max-height: 220px;
     margin: 20px;
   }
-
-  /* #responsive_web .container .contents {
-    transform: translateY(11%) !important;
-  }
-
-  .web_images img.web_device {
-    transform: translateY(-230px) !important;
-  } */
 
   .my_social {
     flex-wrap: wrap;
@@ -1168,15 +1209,17 @@ section#contact_me {
 }
 
 @media screen and (max-width: 600px) {
-
-  .top_bg_image .main_img1{
+  .toggle_menu_mobile ul li img {
+    padding: 10%;
+  }
+  .top_bg_image .main_img1 {
     left: -65px !important;
     top: -30% !important;
     width: 100% !important;
     max-width: 40% !important;
   }
 
-  .top_bg_image .main_img2{
+  .top_bg_image .main_img2 {
     width: 100%;
     max-width: 400px;
     top: -40% !important;
@@ -1194,13 +1237,13 @@ section#contact_me {
     top: 70% !important;
     left: 130% !important;
   }
- 
+
   .js_wrapper a {
     width: calc(100% / 3);
   }
 
   .grid-container a {
-   
+
     max-width: 30%;
     max-height: 180px;
     margin: 20px;
@@ -1210,7 +1253,7 @@ section#contact_me {
     font-size: 3em;
   }
 
-  .javascript_img em{
+  .javascript_img em {
     font-size: 15px;
   }
 
@@ -1247,14 +1290,14 @@ section#contact_me {
 }
 
 @media screen and (max-width: 450px) {
-  .top_bg_image .main_img1{
+  .top_bg_image .main_img1 {
     left: -95px !important;
     top: -40% !important;
     width: 100% !important;
     max-width: 40% !important;
   }
 
-  .top_bg_image .main_img2{
+  .top_bg_image .main_img2 {
     width: 100%;
     max-width: 400px;
     top: -55% !important;
@@ -1288,11 +1331,11 @@ section#contact_me {
   }
 
   .toggle_menu_mobile ul li img {
-   width: 100%;
-   height: 100%;
+    width: 100%;
+    height: 100%;
     /* max-width: 60px; */
   }
 
 
-  
+
 }
