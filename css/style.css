@@ -13,8 +13,8 @@ html {
   width: 100vw;
   box-sizing: border-box;
 }
-/* 
-html::-webkit-scrollbar {
+
+/* html::-webkit-scrollbar {
   display: none;
 } */
 
@@ -58,11 +58,10 @@ h2 {
 
 .main_title {
   font-size: 64px;
-  font-size: 3vw;
+  font-size: 2vw;
   color: gray;
   font-weight: bold;
-  margin: 100px auto;
-  padding-top: 50px;
+  padding: 60px;
   display: block;
   text-align: center;
   border-top: 1px solid #e5e5e5;
@@ -76,8 +75,6 @@ h2 {
 .menu li {
   margin: 10px 0;
 }
-
-
 
 
 /********** menu_list  **********/
@@ -460,6 +457,7 @@ section#responsive_web {
 #responsive_web .container .contents {
   height: auto;
   margin: 100px 0;
+  padding: 50px 0;
 }
 
 .web_cont {
@@ -540,6 +538,7 @@ section#responsive_web {
 
 /********** section #design **********/
 
+
 .grid-container {
   width: 100%;
   box-sizing: border-box;
@@ -582,7 +581,7 @@ section#responsive_web {
 }
 
 .js_wrapper a {
-  width: calc(100% / 5);
+  width: 20%;
   display: flex;
   justify-content: flex-start;
 }
@@ -794,6 +793,11 @@ section#contact_me {
 
 /* @media  */
 @media screen and (max-width: 1100px) {
+
+  body,html {
+    overflow: hidden;
+  }
+
   .device_port {
     display: none;
   }
@@ -918,6 +922,9 @@ section#contact_me {
 }
 
 @media screen and (max-width: 970px) {
+  .main_title {
+    font-size: 6vw;
+  }
 
   .top_txt {
     width: 90%;
