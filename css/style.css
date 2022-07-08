@@ -8,9 +8,8 @@
 
 html {
   overflow: auto !important;
-  width: 100%;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -22,7 +21,6 @@ body {
   padding: 0;
   color: white;
   box-sizing: border-box;
-  width: 100vw;
   width: 100%;
   overflow-x: hidden;
 }
@@ -144,6 +142,9 @@ h2 {
   padding: 10px 0;
 }
 
+.toggle_menu_mobile {
+  display: none;
+}
 
 
 /********** section01  **********/
@@ -691,6 +692,7 @@ section#contact_me {
   box-sizing: border-box;
   max-width: 100%;
   overflow: hidden;
+  display: none;
 }
 
 .my_profile {
@@ -765,6 +767,22 @@ section#contact_me {
   object-fit: cover;
   border-radius: 50%;
 }
+
+/********** footer **********/
+.footer {
+  background: #333;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.footer  .contents {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+
 
 /* contact/ arrow_top / contact_me  */
 .contact_me {
@@ -1031,6 +1049,7 @@ section#contact_me {
 
   }
 
+
   .toggle_menu_mobile {
     position: fixed;
     z-index: 110;
@@ -1123,6 +1142,14 @@ section#contact_me {
 
   .my_social em:nth-child(4) span {
     font-size: 12px;
+  }
+
+  .footer {
+    height: 25vh;
+  }
+
+  .footer  .contents{
+    width: 100%;
   }
 
 
