@@ -83,96 +83,57 @@ h2 {
   display: none;
 }
 
-.menu li {
+/* .menu li {
   margin: 10px 0;
+} */
+
+.mobile_bottom_line {
+  display: none;
 }
-
-
 
 /********** menu_list  **********/
 #menu_list {
   position: fixed;
   z-index: 999;
   top: 0;
-  left: -400px;
-  background: skyblue;
-  height: 100vh;
-  padding: 50px 40px 0;
+  /* padding: 50px 40px 0; */
   transition: all .3s ease-in;
+  color: #333;
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-#menu_list.active {
+/* #menu_list.active {
   left: 0;
-}
+} */
 
 #menu_list .menu {
   cursor: pointer;
-  padding-top: 50px;
+  display: flex;
+  width: 1200px;
+  justify-content: space-between;
+  
+ 
 }
 
 #menu_list .menu li {
-  padding: 20px 0;
-  font-size: 30px;
+  padding: 10px 0;
+  font-size: 20px;
+  display: flex;
 }
 
 #menu_list .menu li a {
   color: #fff;
+  display: flex;
 }
 
 #menu_list .menu li:hover a {
   color: firebrick;
 }
 
-/* toggle  */
-
-.mobile_bottom_line {
-  display: none;
-}
-
-.toggle_btn {
-  display: flex;
-  position: fixed;
-  width: 40px;
-  height: 20px;
-  cursor: pointer;
-  top: 20px;
-  left: 20px;
-  z-index: 500;
-}
-
-.toggle_btn span {
-  position: absolute;
-  height: 2px;
-  display: block;
-  width: 100%;
-  background: #222;
-  top: 50%;
-}
-
-.toggle_btn span:nth-child(2) {
-  top: 0%;
-}
-
-.toggle_btn span:nth-child(3) {
-  top: 100%;
-}
-
-.toggle_btn.active span:first-child {
-  display: none;
-  background: #333;
-}
-
-.toggle_btn.active span:nth-child(2),
-.toggle_btn.active span:nth-child(3) {
-  top: 50%;
-  transform: rotate(140deg);
-  transition: all .3s;
-  background: #333;
-}
-
-.toggle_btn.active span:nth-child(3) {
-  transform: rotate(-140deg);
-}
 
 /********** section01  **********/
 .mobile_port {

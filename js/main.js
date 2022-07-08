@@ -69,8 +69,8 @@ navbarMenu.addEventListener('click', (event) => {
     if(link == null) {
         return;
     }
-    menuList.classList.remove('active')
-    toggleBtn.classList.remove('active')
+    // menuList.classList.remove('active')
+    // toggleBtn.classList.remove('active')
     const scrollInTo = document.querySelector(link);
     scrollInTo.scrollIntoView({behavior:"smooth"});
 })
