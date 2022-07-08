@@ -8,9 +8,8 @@
 
 html {
   overflow: auto !important;
-  width: 100%;
   overflow: hidden;
-  width: 100vw;
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -22,7 +21,6 @@ body {
   padding: 0;
   color: white;
   box-sizing: border-box;
-  width: 100vw;
   width: 100%;
   overflow-x: hidden;
 }
@@ -83,13 +81,13 @@ h2 {
   display: none;
 }
 
-<<<<<<< HEAD
 /* .menu li {
   margin: 10px 0;
 } */
-=======
-
->>>>>>> origin
+button {
+  outline: none;
+  border: none;
+}
 
 .mobile_bottom_line {
   display: none;
@@ -99,7 +97,6 @@ h2 {
 #menu_list {
   position: fixed;
   z-index: 999;
-<<<<<<< HEAD
   top: 0;
   /* padding: 50px 40px 0; */
   transition: all .3s ease-in;
@@ -114,30 +111,11 @@ h2 {
 /* #menu_list.active {
   left: 0;
 } */
-=======
-  top: -100px;
-  transition: all .3s ease-in;
-  width: 100%;
-  justify-content: center;
-  display: flex;
-  background: #fff;
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-  visibility: hidden;
-  transition: all .2s ease-in-out;
-}
-
-#menu_list.visible {
-  visibility: visible;
-  top: 0;
-
-}
->>>>>>> origin
 
 #menu_list .menu {
   cursor: pointer;
   display: flex;
   width: 1200px;
-<<<<<<< HEAD
   justify-content: space-between;
   
  
@@ -152,45 +130,12 @@ h2 {
 #menu_list .menu li a {
   color: #fff;
   display: flex;
-=======
-  border: 1px solid;
-  justify-content: space-between;
-  height: 100%;
-}
-
-#menu_list .menu li {
-  font-size: 20px;
-  color: #333;
-  height: 100%;
->>>>>>> origin
 }
 
 #menu_list .menu li:hover a {
   color: firebrick;
 }
 
-<<<<<<< HEAD
-=======
-#menu_list .menu li a {
-  width: 60px;
-  display: inline-block;
-  height: 56px;
-  line-height: 56px;
-  text-align: center;
-  font-size: 40px;
-  background: skyblue;
-  color: #fff;
-}
-
-.menu_items {
-  display: flex;
-  justify-content: space-between;
-  width: 60%;
-  padding: 10px 0;
-}
-
-
->>>>>>> origin
 
 /********** section01  **********/
 .mobile_port {
@@ -548,7 +493,49 @@ section#responsive_web {
   position: relative;
   display: flex;
   align-items: flex-end;
+  justify-content: flex-end;
   height: 550px;
+  flex-direction: column;
+}
+
+.web_images .web_btn {
+  position: absolute;
+  bottom: -100px;
+  left: 50%;
+  width: 100%;
+  transform: translateX(-10%);
+}
+
+.web_images button {
+  border: 1px solid #e5e5e5;
+  width: 9vw;
+  height: 4vh;
+  margin: 5px;
+  box-sizing: border-box;
+  background: #fff;
+}
+
+.web_images button a {
+  width: 100%;
+  height: 100%;
+  line-height: 4vh;
+  display: inline-block;
+}
+
+.web_images button i {
+  font-size: 1vw;
+  margin-right: 10px;
+  vertical-align: middle;
+  color: #456179;
+  opacity: .8;
+}
+
+.web_images button:nth-child(2) i {
+  font-size: 1.2vw;
+}
+.web_images .web_btn span {
+  font-size: .6vw;
+  color: #456179;
 }
 
 .web_images img.web_device {
@@ -737,6 +724,7 @@ section#contact_me {
   box-sizing: border-box;
   max-width: 100%;
   overflow: hidden;
+  display: none;
 }
 
 .my_profile {
@@ -811,6 +799,22 @@ section#contact_me {
   object-fit: cover;
   border-radius: 50%;
 }
+
+/********** footer **********/
+.footer {
+  background: #333;
+  width: 100%;
+  height: 100px;
+  overflow: hidden;
+}
+
+.footer  .contents {
+  width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 100px;
+}
+
 
 /* contact/ arrow_top / contact_me  */
 .contact_me {
@@ -902,6 +906,13 @@ section#contact_me {
     width: auto;
   }
 
+  .web_images .web_btn {
+    width: 100%;
+    position: static;
+    transform: translateX(0);
+    text-align: center;
+  }
+
   .web_images a {
     display: flex;
     justify-content: center;
@@ -916,8 +927,26 @@ section#contact_me {
   }
 
   .web_images img.web_mobile {
-    height: 65%;
+    height: 55%;
     margin-right: 50px;
+    bottom: 10%;
+  }
+
+  .web_images button {
+    width: 19vw;
+    margin-top: 20px;
+  }
+
+  .web_images .web_btn span {
+    font-size: 1.6vw;
+  }
+
+  .web_images button:nth-child(2) i {
+    font-size: 2.2vw;
+  }
+
+  .web_images button i {
+    font-size: 2vw;
   }
 
   /* design  */
@@ -990,6 +1019,35 @@ section#contact_me {
     width: 100%;
     max-width: 430px;
   }
+
+  .web_images img.web_mobile {
+    bottom: 18%;
+  }
+
+  .web_images button {
+    margin-top: 40px;
+    width: 28vw;
+    height: 3vh;
+  }
+
+  .web_images button a {
+    line-height: 3vh;
+    vertical-align: middle;
+  }
+
+  .web_images .web_btn span {
+    line-height: 3vh;
+    font-size: 2.6vw;
+  }
+
+  .web_images button i {
+    font-size: 3vw;
+  }
+
+  .web_images button:nth-child(2) i {
+    font-size: 3.2vw;
+  }
+
 
   .js_wrapper a {
     width: calc(100% / 4);
@@ -1076,6 +1134,7 @@ section#contact_me {
     z-index: 100;
 
   }
+
 
   .toggle_menu_mobile {
     position: fixed;
@@ -1169,6 +1228,14 @@ section#contact_me {
 
   .my_social em:nth-child(4) span {
     font-size: 12px;
+  }
+
+  .footer {
+    height: 25vh;
+  }
+
+  .footer  .contents{
+    width: 100%;
   }
 
 
@@ -1381,6 +1448,10 @@ section#contact_me {
 
   .my_social {
     /* flex-wrap: nowrap; */
+  }
+
+  .web_images button {
+    height: 4vh;
   }
 
   .my_social em p {
