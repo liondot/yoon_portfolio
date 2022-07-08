@@ -14,13 +14,6 @@ html {
   box-sizing: border-box;
 }
 
-html::-webkit-scrollbar {
-  display: none;
-}
-
-body::-webkit-scrollbar {
-  display: scroll;
-}
 
 
 body {
@@ -32,7 +25,6 @@ body {
   width: 100vw;
   width: 100%;
   overflow-x: hidden;
-  overflow-y: scroll;
 }
 
 section {
@@ -94,6 +86,7 @@ h2 {
 .menu li {
   margin: 10px 0;
 }
+
 
 
 /********** menu_list  **********/
