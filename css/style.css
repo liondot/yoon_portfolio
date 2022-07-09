@@ -446,7 +446,7 @@ section#responsive_web {
 
 #responsive_web .container .contents {
   height: auto;
-  margin: 100px 0;
+  margin: 180px 0;
   padding: 50px 0;
 }
 
@@ -1006,7 +1006,10 @@ section#contact_me {
     right: 5px !important;
   }
 
-
+  .web_images button a {
+    line-height: none;
+    display: inline-flex;
+  }
 }
 
 @media screen and (max-width: 970px) {
@@ -1046,7 +1049,6 @@ section#contact_me {
   }
 
   .web_images button a {
-    line-height: 3vh;
     vertical-align: middle;
   }
 
@@ -1202,6 +1204,14 @@ section#contact_me {
     /* max-height: 60px; */
   }
 
+ 
+
+  .web_images button a {
+    line-height: 0;
+    display: inline-flex;
+  }
+
+
   .javascript_img em:after {
     top: 25px;
   }
@@ -1290,6 +1300,8 @@ section#contact_me {
     left: 120% !important;
   }
 
+  
+
   .grid-container a {
     max-width: 220px;
     max-height: 220px;
@@ -1356,6 +1368,19 @@ section#contact_me {
   .top_bg_image .main_img4 {
     top: 70% !important;
     left: 130% !important;
+  }
+
+  
+  .web_images button:nth-child(2) i{
+    font-size: 5.2vw;
+  }
+
+  .web_images button i{
+    font-size: 4.8vw;
+  }
+
+  .web_images .web_btn span {
+    font-size: 3vw;
   }
 
   .js_wrapper a {
