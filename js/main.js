@@ -85,9 +85,6 @@ arrowTop.addEventListener('click', ()=> {
     scrollIntoView('#section01')
 })
 
-contactMe.addEventListener('click', ()=> {
-    scrollIntoView('#contact_me')
-})
 
 
 

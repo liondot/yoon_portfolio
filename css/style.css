@@ -26,7 +26,8 @@ body {
   width: 100%;
   overflow-x: hidden;
   overflow-y: unset;
-  border: 2px solid red;
+  border: 2px solid green;
+  font-size: 14px;
 }
 
 section {
@@ -124,14 +125,14 @@ button {
 #menu_list .menu li {
   font-size: 20px;
   color: #333;
-  height: 100%;
+  height: 35px;
 }
 
 #menu_list .menu li:hover a {
   color: firebrick;
 }
 
-#menu_list .menu li a {
+#menu_list .menu .menu_item_logo a {
   width: 60px;
   display: inline-block;
   height: 56px;
@@ -141,12 +142,30 @@ button {
   background: skyblue;
   color: #fff;
 }
+/* 
+#menu_list .menu_items li a{
+  font-size: 1rem !important;
+  width: 100%;
+  background: none;
+} 
+
+#menu_list .menu_items li:hover a {
+  transform: scale(1.1);
+} */
 
 .menu_items {
   display: flex;
   justify-content: space-between;
   width: 60%;
   padding: 10px 0;
+}
+
+.menu_item a {
+  font-size: 1rem;
+}
+
+.menu_item a:hover {
+  transform: scale(1.1) !important;
 }
 
 .toggle_menu_mobile {
