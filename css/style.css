@@ -24,11 +24,16 @@ body {
   padding: 0;
   color: white;
   box-sizing: border-box;
-  width: 100%;
-  overflow-x: hidden;
-  overflow-y: unset;
   font-size: 14px;
 }
+
+.wrapper {
+  position: relative;
+  overflow-y: hidden;
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
 
 section {
   height: auto;
@@ -38,9 +43,6 @@ section {
   border-bottom: 1px solid #e2e2e2;
 }
 
-.wrapper {
-  position: relative;
-}
 
 .container {
   margin: 0 auto;
