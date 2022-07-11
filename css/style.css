@@ -162,6 +162,13 @@ button {
   padding: 10px 0;
 }
 
+.menu_items ul{
+  margin: 0;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
 .menu_item a {
   font-size: 1rem;
 }
