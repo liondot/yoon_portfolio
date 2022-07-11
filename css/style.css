@@ -205,7 +205,7 @@ button {
   z-index: 100;
   left: 15%;
   top: -15%;
-  transform: scale(.5), rotate(13deg), translateY(-20%);
+  transform: scale(.5) rotate(13deg) translateY(-20%);
 }
 
 .header .contents {
@@ -1024,7 +1024,7 @@ section#contact_me {
   }
 
   .web_images .web_btn_link {
-    line-height: none;
+    line-height: 0;
     display: inline-flex;
     width: 19vw;
   }
