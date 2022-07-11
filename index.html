@@ -9,21 +9,15 @@
 
     <!-- jquery  -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
     <!-- featherlight js & css  -->
     <link rel="stylesheet" href="js/featherlight/featherlight.css">
     <script src="js/featherlight/featherlight.js"></script>
-
     <!-- css  -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="transition.css">
     <link rel="stylesheet" href="css/style.css">
-
-    
-
     <!-- fontawesome  -->
     <script src="https://kit.fontawesome.com/c741f3b9be.js" crossorigin="anonymous"></script>
-
     <!-- font  -->
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
@@ -33,17 +27,19 @@
 
 <body>
     <div class="wrapper">
-        <div id="menu_list">
-            <div class="menu navbar">
-                <li class="menu_item_logo"><a href="#">Y</a></li>
-                <div class="menu_items">
-                    <li class="menu_item"><a href="#responsive_web">Responsive Web</a></li>
-                    <li class="menu_item"><a href="#design">Design</a></li>
-                    <li class="menu_item"><a href="#javascript">Javascript</a></li>
-                    <li class="menu_item"><a href="#section01">Contact Me</a></li>
+        <header>
+            <nav id="menu_list">
+                <div class="menu navbar">
+                    <a class="menu_item_logo" href="#">Y</a>
+                    <div class="menu_items">
+                        <li class="menu_item"><a href="#responsive_web">Responsive Web</a></li>
+                        <li class="menu_item"><a href="#design">Design</a></li>
+                        <li class="menu_item"><a href="#javascript">Javascript</a></li>
+                        <li class="menu_item"><a href="#section01">Contact Me</a></li>
+                    </div>
                 </div>
-            </div>
-        </div>
+            </nav>
+        </header>
         <section id="section01" class="header">
             <div class="container text1 text">
                 <div class="contents">
@@ -90,22 +86,23 @@
                         <p>디자인과 퍼블리싱을 겸비한 디퍼블리셔입니다.</p>
                         <div class="my_profile">
                             <div class="my_social">
-                                <em>
-                                    <p>Mobile</p> <i class="fa-solid fa-mobile-retro"></i><span>010.3484.0618</span>
-                                </em>
-                                <em>
-                                    <p>Github</p> <a href="https://github.com/liondot"><i class="fa-brands fa-github"></i>
+                                <p>
+                                    <em>Mobile</em> <i class="fa-solid fa-mobile-retro"></i><span>010.3484.0618</span>
+                                </p>
+                                <p>
+                                    <em>Github</em> <a href="https://github.com/liondot">
+                                        <i class="fa-brands fa-github"></i>
                                         <span>@liondot</span></a>
-                                </em>
-                                <em>
-                                    <p>Pinterest</p> <a href="https://www.pinterest.co.kr/sunflo_512"><i
+                                </p>
+                                <p>
+                                    <em>Pinterest</em> <a href="https://www.pinterest.co.kr/sunflo_512"><i
                                             class="fa-brands fa-pinterest"></i>
                                         <span>@sunflo_512</span></a>
-                                </em>
-                                <em>
-                                    <p>Email</p><i class="fa-solid fa-envelope"></i><span> yoon3315.5@gmail.com</span>
-                                </em>
-    
+                                </p>
+                                <p>
+                                    <em>Email</em><i class="fa-solid fa-envelope"></i><span> yoon3315.5@gmail.com</span>
+                                </p>
+
                             </div>
                         </div>
                     </div>
@@ -121,10 +118,10 @@
                         <div class="web_txt">
                             <span>웹에이전시</span>
                             <strong>Fullscreen video</strong>
-                            <em> 사용자에게 첫인상으로 남는 메인 섹션에 풀스크린을 활성화 하여 
+                            <em> 사용자에게 첫인상으로 남는 메인 섹션에 풀스크린을 활성화 하여
                                 역동적이고 강렬한 느낌을 주었습니다. 프로젝트 영역 각 카테고리에
-                                javascript를 이용하여 탭을 클릭하면 해당하는 영역으로 
-                                이동 하며 트랜지션을 이용한 바운스 모션 효과를 적용해 카드ui에 움직임을 
+                                javascript를 이용하여 탭을 클릭하면 해당하는 영역으로
+                                이동 하며 트랜지션을 이용한 바운스 모션 효과를 적용해 카드ui에 움직임을
                                 부드럽고 생동적인 느낌으로 주었습니다. </em>
                             <p>
                                 <em><img src="imgs/web_img/document.gif" alt=""><span>기획</span></em>
@@ -138,8 +135,10 @@
                                 <img class="web_mobile" src="imgs/web_img/webagency_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href="https://liondot.github.io/webAgency_website/"><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href="https://github.com/liondot/webAgency_website"><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/webAgency_website/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/webAgency_website"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -164,8 +163,10 @@
                                 <img class="web_mobile" src="imgs/web_img/tble_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href="https://tble-biz.kr/"><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href="https://github.com/liondot/tble_landing_2.0"><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://tble-biz.kr/"><i class="fa-solid fa-desktop"></i><span>Live
+                                            Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/tble_landing_2.0"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -179,29 +180,26 @@
                                 <em>체험단 홈페이지 제작: 검색창 클릭 시 하단 선정확률 높은 캠페인 폼 노출, 메인 영역에서 스크롤 다운할 경우 Quick Menu와
                                     상단으로 올라가는 버튼이 보이도록 제작하였습니다. 각 메인, 서브페이지 와이어프레임, 로고, 웹디자인제작 및 퍼블리싱 작업하였습니다.</em>
                                 <p>
-                                    <em><img
-                                            src="imgs/web_img/layers.gif" alt=""> <span>와이어프레임</span></em>
-                                    <em><img
-                                            src="imgs/web_img/paint-palette.gif" alt=""><span> 디자인</span></em>
-                                    <em><img
-                                            src="imgs/web_img/laptop.gif" alt=""> <span>퍼블리싱</span></em>
+                                    <em><img src="imgs/web_img/layers.gif" alt=""> <span>와이어프레임</span></em>
+                                    <em><img src="imgs/web_img/paint-palette.gif" alt=""><span> 디자인</span></em>
+                                    <em><img src="imgs/web_img/laptop.gif" alt=""> <span>퍼블리싱</span></em>
                                 </p>
                             </div>
                             <div class="web_images">
                                 <a href="http://reviewmonster01.dothome.co.kr/" target="_blank">
-                                    <img class="web_device" src="imgs/web_img/reviewmonster_de.png" alt=""
-                                        >
-                                    <img class="web_mobile" src="imgs/web_img/reviewmonster_mo.png" alt=""
-                                        >
+                                    <img class="web_device" src="imgs/web_img/reviewmonster_de.png" alt="">
+                                    <img class="web_mobile" src="imgs/web_img/reviewmonster_mo.png" alt="">
                                 </a>
                                 <div class="web_btn">
-                                    <button><a href="http://reviewmonster01.dothome.co.kr/"><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                    <button><a href="https://github.com/liondot/reviewmonster"><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                    <a class="web_btn_link" href="http://reviewmonster01.dothome.co.kr/"><i
+                                                class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                    <a class="web_btn_link" href="https://github.com/liondot/reviewmonster"><i
+                                                class="fa-brands fa-github-square"></i><span>github</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
                 <div class="contents cont03">
                     <div class="web_cont">
@@ -220,8 +218,10 @@
                                 <img class="web_mobile" src="imgs/web_img/musium_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href="https://liondot.github.io/museum-responsive/"><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href="https://github.com/liondot/museum-responsive"><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/museum-responsive/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/museum-responsive"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -243,8 +243,10 @@
                                 <img class="web_device" src="imgs/web_img/vivid.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href="https://liondot.github.io/shoppingmall/"><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href="https://github.com/liondot/shoppingmall"><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/shoppingmall/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/shoppingmall"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -266,8 +268,10 @@
                                 <img class="web_mobile" src="imgs/web_img/megabox_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href="https://liondot.github.io/moviebox/"><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href="https://github.com/liondot/moviebox"><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/moviebox/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/moviebox"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -294,8 +298,10 @@
                                 <img class="web_mobile" src="imgs/web_img/moode_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href="https://liondot.github.io/Jewelry-mall/"><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href="https://github.com/liondot/Jewelry-mall"><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/Jewelry-mall/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/Jewelry-mall"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -431,6 +437,7 @@
             </div>
         </section>
         <section id="contact_me">
+            <h2>contact me</h2>
             <div class="container">
                 <div class="contents">
                     <div class="my_profile">
@@ -457,7 +464,8 @@
             </div>
         </section>
         <footer class="footer">
-            <div class="contents"><span>Copyright © 2022. All Rights Reserved</spa></div>
+            <div class="contents"><span>Copyright © 2022. All Rights Reserved</span>
+            </div>
         </footer>
         <div class="contact" data-500="right: -200px" data-700="right: 15px;">
             <li class="arrow_top" data-0="transform: rotate(-90deg)" data-300="transform: rotate(0deg)">
@@ -483,8 +491,8 @@
     </div>
 
 
-<!-- js  -->
-<script src="js/main.js"></script>
+    <!-- js  -->
+    <script src="js/main.js"></script>
 
     <script src="js/skrollr.js"></script>
     <script type="text/javascript">

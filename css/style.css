@@ -134,7 +134,7 @@ button {
   color: firebrick;
 }
 
-#menu_list .menu .menu_item_logo a {
+#menu_list .menu .menu_item_logo {
   width: 60px;
   display: inline-block;
   height: 56px;
@@ -544,23 +544,19 @@ section#responsive_web {
   transform: translateX(-10%);
 }
 
-.web_images button {
+.web_images .web_btn_link {
+  display: inline-block;
   border: 1px solid #e5e5e5;
   width: 9vw;
   height: 4vh;
+  line-height: 4vh;
   margin: 5px;
+  text-align: center;
   box-sizing: border-box;
   background: #fff;
 }
 
-.web_images button a {
-  width: 100%;
-  height: 100%;
-  line-height: 4vh;
-  display: inline-block;
-}
-
-.web_images button i {
+.web_images .web_btn_link i {
   font-size: 1vw;
   margin-right: 10px;
   vertical-align: middle;
@@ -568,7 +564,7 @@ section#responsive_web {
   opacity: .8;
 }
 
-.web_images button:nth-child(2) i {
+.web_images .web_btn_link:nth-child(2) i {
   font-size: 1.2vw;
 }
 .web_images .web_btn span {
@@ -780,7 +776,7 @@ section#contact_me {
   padding: 100px 0;
 }
 
-.my_social em {
+.my_social p {
   /* width: 200px; */
   width: 22%;
   /* height: 250px; */
@@ -802,15 +798,8 @@ section#contact_me {
   color: #888;
 }
 
-.my_social em img {
-  width: 40px;
-  height: 40px;
-  display: block;
-  margin: 0 auto;
-  margin-top: 45px;
-}
 
-.my_social em span {
+.my_social p span {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -819,23 +808,13 @@ section#contact_me {
 
 }
 
-.my_social em:hover img {
-  mix-blend-mode: normal;
-}
 
-.my_social em p {
+.my_social p em {
   color: #444;
   display: block;
   text-align: center;
   color: rgb(41, 92, 133);
   font-size: .6vw;
-}
-
-.avata_img img {
-  width: 170px !important;
-  height: 170px !important;
-  object-fit: cover;
-  border-radius: 50%;
 }
 
 /********** footer **********/
@@ -951,6 +930,14 @@ section#contact_me {
     text-align: center;
   }
 
+  .web_images .web_btn_link i {
+    font-size: 2vw;
+  }
+
+  .web_images .web_btn_link:nth-child(2) i {
+    font-size: 2.3vw;
+  }
+
   .web_images a {
     display: flex;
     justify-content: center;
@@ -1029,10 +1016,12 @@ section#contact_me {
     right: 5px !important;
   }
 
-  .web_images button a {
+  .web_images .web_btn_link {
     line-height: none;
     display: inline-flex;
+    width: 19vw;
   }
+
 }
 
 @media screen and (max-width: 970px) {
@@ -1065,13 +1054,13 @@ section#contact_me {
     bottom: 18%;
   }
 
-  .web_images button {
+  .web_images .web_btn_link {
     margin-top: 40px;
     width: 34vw;
     height: 4vh;
   }
 
-  .web_images button a {
+  .web_images .web_btn_link {
     vertical-align: middle;
   }
 
@@ -1080,11 +1069,11 @@ section#contact_me {
     font-size: 2.6vw;
   }
 
-  .web_images button i {
+  .web_images .web_btn_link i {
     font-size: 3vw;
   }
 
-  .web_images button:nth-child(2) i {
+  .web_images .web_btn_link:nth-child(2) i {
     font-size: 3.2vw;
   }
 
@@ -1109,7 +1098,7 @@ section#contact_me {
   font-size: 2.5vw;
 }
 
-  .my_social em {
+  .my_social p {
     width: 20%;
     margin: 5px;
   }
@@ -1337,7 +1326,7 @@ section#contact_me {
     padding: 10px 0;
   }
 
-  .my_social em {
+  .my_social u {
     width: 40%;
     margin: 5px;
   }
@@ -1347,18 +1336,7 @@ section#contact_me {
   padding: 6px 0;
 }
 
-  .my_social em img {
-    margin-top: 7px;
-  }
 
-  .my_social em:last-child img {
-    margin-top: 15px;
-  }
-
-  .avata_img img {
-    width: 130px !important;
-    height: 130px !important;
-  }
 }
 
 @media screen and (max-width: 600px) {
@@ -1447,7 +1425,7 @@ section#contact_me {
     width: 100%;
   }
 
-  .my_social em {
+  .my_social p {
     width: 40%;
     margin: 5px;
   }
@@ -1509,15 +1487,19 @@ section#contact_me {
     /* max-width: 60px; */
   }
 
-  .my_social {
-    /* flex-wrap: nowrap; */
+  .web_images .web_btn_link i {
+    font-size: 4vw;
   }
 
-  .web_images button {
-    height: 4vh;
+  .web_images .web_btn_link:nth-child(2) i {
+    font-size: 4.3vw;
   }
 
-  .my_social em p {
+  .web_images .web_btn_link {
+    height: 3vh;
+  }
+
+  .my_social p em {
     font-size: 3.6vw;
   }
 
