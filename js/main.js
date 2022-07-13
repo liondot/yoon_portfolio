@@ -63,9 +63,11 @@ function getCurrentPosition() {
 const arrowTop = document.querySelector('.arrow_top');
 const contactMe = document.querySelector('.contact_me');
 const navbarMenu = document.querySelector('.navbar');
+const menuItems = document.querySelector('.menu_items')
 
+console.log(menuItems)
 
-navbarMenu.addEventListener('click', (event) => {
+menuItems.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
 
@@ -83,9 +85,6 @@ arrowTop.addEventListener('click', ()=> {
     scrollIntoView('#section01')
 })
 
-contactMe.addEventListener('click', ()=> {
-    scrollIntoView('#contact_me')
-})
 
 
 
