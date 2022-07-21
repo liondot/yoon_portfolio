@@ -10,19 +10,16 @@
 
 html {
   overflow: auto !important;
-  /* overflow: hidden; */
   width: 100%;
   box-sizing: border-box;
   overflow-x: hidden;
   scroll-behavior: smooth;
 }
 
-
 body {
   font-family: 'Noto Sans KR', sans-serif;
   margin: 0;
   padding: 0;
-  color: white;
   box-sizing: border-box;
   font-size: 14px;
 }
@@ -119,7 +116,6 @@ button {
   cursor: pointer;
   display: flex;
   width: 1200px;
-  border: 1px solid;
   justify-content: space-between;
   height: 100%;
 }
@@ -144,16 +140,6 @@ button {
   background: skyblue;
   color: #fff;
 }
-/* 
-#menu_list .menu_items li a{
-  font-size: 1rem !important;
-  width: 100%;
-  background: none;
-} 
-
-#menu_list .menu_items li:hover a {
-  transform: scale(1.1);
-} */
 
 .menu_items {
   display: flex;
@@ -314,6 +300,26 @@ button {
   transform: rotate(-45deg);
   left: 22px;
 }
+
+/********** section #point_title **********/
+
+.sticky_elem {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+}
+
+
+#show-scene-0 #scroll-section-0 .sticky_elem,
+#show-scene-1 #scroll-section-1 .sticky_elem,
+#show-scene-2 #scroll-section-2 .sticky_elem,
+#show-scene-3 #scroll-section-3 .sticky_elem {
+    display: block; 
+}
+
+
 
 
 /********** section #section_info **********/
