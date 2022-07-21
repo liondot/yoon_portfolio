@@ -21,7 +21,7 @@ function toggle() {
 }
 
 document.addEventListener('scroll', () => {
-    if(window.scrollY > mainSectionHeight / 2) {
+    if (window.scrollY > mainSectionHeight / 2) {
         menuList.classList.add('visible');
     } else {
         menuList.classList.remove('visible');
@@ -63,35 +63,89 @@ function getCurrentPosition() {
 const arrowTop = document.querySelector('.arrow_top');
 const contactMe = document.querySelector('.contact_me');
 const navbarMenu = document.querySelector('.navbar');
+const menuItems = document.querySelector('.menu_items')
 
+console.log(menuItems)
 
-navbarMenu.addEventListener('click', (event) => {
+menuItems.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
 
-    if(link == null) {
+    if (link == null) {
         return;
     }
     // menuList.classList.remove('active')
     // toggleBtn.classList.remove('active')
     const scrollInTo = document.querySelector(link);
-    scrollInTo.scrollIntoView({behavior:"smooth"});
+    scrollInTo.scrollIntoView({
+        behavior: "smooth"
+    });
 })
 
 // arrow top 버튼 핸들링 
-arrowTop.addEventListener('click', ()=> {
+arrowTop.addEventListener('click', () => {
     scrollIntoView('#section01')
 })
 
-contactMe.addEventListener('click', ()=> {
-    scrollIntoView('#contact_me')
-})
 
 
 
 // 모바일 토글 버튼
 
-function scrollIntoView(selector){
+function scrollIntoView(selector) {
     const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({behavior:'smooth'});
+    scrollTo.scrollIntoView({
+        behavior: 'smooth'
+    });
 }
+
+
+// 텍스트 나오기 
+
+let yOffset = 0; //pageYOffset대신 쓸 변수
+let prevScrollHeight = 0; //현재 스크롤 위치(yOffset)보다 이전에 위치한 스크롤 섹션들의 높이 값
+let currentScene = 0; //현재 활성화된 (눈 앞에 보고 있는 )씬(scroll-section)
+
+const scenInfo = [{
+        //0
+        type: 'sticky',
+        heightNum: 5, //브라우저 높이의 5배로 scrollHeight 세팅
+        scrollHeight: 0,
+        objs: {
+            container: document.querySelector('.section_box')
+        }
+    },
+    {
+        //1
+        type: 'sticky',
+        heightNum: 5, //브라우저 높이의 5배로 scrollHeight 세팅
+        scrollHeight: 0,
+        objs: {
+            container: document.querySelector('.section_box')
+        }
+    },
+    {
+        //2
+        type: 'sticky',
+        heightNum: 5, //브라우저 높이의 5배로 scrollHeight 세팅
+        scrollHeight: 0,
+        objs: {
+            container: document.querySelector('.section_box')
+        }
+    },
+]
+
+function setLayout() {
+    
+}
+
+function scrollLoop() {
+    
+}
+
+window.addEventListener('resize', setLayout);
+window.addEventListener('scroll', ()=>{
+    yOffset = window.pageYOffset;
+    scrollLoop();
+});
+setLayout();

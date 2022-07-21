@@ -9,22 +9,15 @@
 
     <!-- jquery  -->
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-
     <!-- featherlight js & css  -->
     <link rel="stylesheet" href="js/featherlight/featherlight.css">
     <script src="js/featherlight/featherlight.js"></script>
-
     <!-- css  -->
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="transition.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <!-- js  -->
-    <script src="js/main.js" defer></script>
-
     <!-- fontawesome  -->
     <script src="https://kit.fontawesome.com/c741f3b9be.js" crossorigin="anonymous"></script>
-
     <!-- font  -->
     <link
         href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
@@ -34,15 +27,22 @@
 
 <body>
     <div class="wrapper">
-        <div id="menu_list">
-            <div class="menu navbar">
-                <li class="menu_item" data-link="#responsive_web">Responsive Web</li>
-                <li class="menu_item" data-link="#design">Design</li>
-                <li class="menu_item" data-link="#javascript">Javascript</li>
-                <li class="menu_item" data-link="#contact_me">Contact Me</li>
-            </div>
-        </div>
-        <section id="section01" class="header">
+        <header>
+            <nav id="menu_list">
+                <div class="menu navbar">
+                    <a class="menu_item_logo" href="#">Y</a>
+                    <div class="menu_items">
+                        <ul>
+                            <li class="menu_item"><a href="#responsive_web">Responsive Web</a></li>
+                            <li class="menu_item"><a href="#design">Design</a></li>
+                            <li class="menu_item"><a href="#javascript">Javascript</a></li>
+                            <li class="menu_item"><a href="#section01">Contact Me</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </nav>
+        </header>
+        <section id="section01 scroll_section_0" class="header section_box">
             <div class="container text1 text">
                 <div class="contents">
                     <div class="top_bg_image">
@@ -85,16 +85,93 @@
                     <div class="top_txt">
                         <h4>Yoon Seonhwa</h4>
                         <em>PHOTOSHOP &#45; ILLUSTRATOR &#45; HTML &#45; CSS &#45; JQUERY &#45; JAVASCRIPT </em>
-                        <p>디자인과 퍼블리싱을 겸비한 디퍼블리셔입니다.</p>
-                        <button class="top_btn"><a href="#contact_me">Contact Me</a></button>
+                        <p>디자인과 퍼블리싱을 겸비한 디블리셔입니다.</p>
+                        <div class="my_profile">
+                            <div class="my_social">
+                                <p>
+                                    <em>Mobile</em> <i class="fa-solid fa-mobile-retro"></i><span>010.3484.0618</span>
+                                </p>
+                                <p>
+                                    <em>Github</em> <a href="https://github.com/liondot">
+                                        <i class="fa-brands fa-github"></i>
+                                        <span>@liondot</span></a>
+                                </p>
+                                <p>
+                                    <em>Pinterest</em> <a href="https://www.pinterest.co.kr/sunflo_512"><i
+                                            class="fa-brands fa-pinterest"></i>
+                                        <span>@sunflo_512</span></a>
+                                </p>
+                                <p>
+                                    <em>Email</em><i class="fa-solid fa-envelope"></i><span> yoon3315.5@gmail.com</span>
+                                </p>
+
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section id="responsive_web">
+        <section id="responsive_web" class="section_box">
             <h2>반응형 웹</h2>
             <div class="main_title">Responsive Web</div>
             <div class="container">
+                <div class="contents cont0">
+                    <div class="web_cont">
+                        <div class="web_txt">
+                            <span>마이트립어드바이저</span>
+                            <strong>api를 이용한 여행지 검색 기능</strong>
+                            <em>여행 계획을 설계할 수 있도록 도와주는 국내 여행 정보 사이트인 
+                                마이트립어드바이저를 클론 코딩하였습니다. 사용자가 원하는 기간을 날짜
+                            달력으로 선택할 수 있도록 Datepicker 컴포넌트를 사용하였고 여행지 api를 이용해
+                            검색 버튼을 눌렀을 때 데모api에 있는 각각의 엘리먼트를 생성하여 
+                            화면 ui로 나타나도록 작업했습니다.   </em>
+                            <p>
+                                <em><img src="imgs/web_img/flag.gif" alt=""><span>클론 코딩</span></em>
+                            </p>
+                        </div>
+                        <div class="web_images">
+                            <a href="https://liondot.github.io/my_trip/" target="_blank">
+                                <img class="web_device" src="imgs/web_img/my_trip.png" alt="">
+                            </a>
+                            <div class="web_btn">
+                                <a class="web_btn_link" href="https://liondot.github.io/my_trip/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/my_trip"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contents cont0">
+                    <div class="web_cont">
+                        <div class="web_txt">
+                            <span>웹에이전시</span>
+                            <strong>Fullscreen video</strong>
+                            <em> 사용자에게 첫인상으로 기억되는 메인 섹션에 풀스크린을 활성화 하여
+                                동적이고 강렬한 느낌을 주었습니다. 프로젝트 영역 각 카테고리에
+                                javascript를 이용하여 탭을 클릭하면 해당하는 영역으로
+                                이동하는 동시에 바운스 모션 효과를 적용해 카드ui에 움직임을
+                                부드럽고 생동적인 느낌으로 주었습니다. </em>
+                            <p>
+                                <em><img src="imgs/web_img/document.gif" alt=""><span>기획</span></em>
+                                <em><img src="imgs/web_img/layers.gif" alt=""><span>디자인</span></em>
+                                <em><img src="imgs/web_img/laptop.gif" alt=""><span>퍼블리싱</span></em>
+                            </p>
+                        </div>
+                        <div class="web_images">
+                            <a href="https://liondot.github.io/webAgency_website/" target="_blank">
+                                <img class="web_device" src="imgs/web_img/webagency.png" alt="">
+                                <img class="web_mobile" src="imgs/web_img/webagency_mo.png" alt="">
+                            </a>
+                            <div class="web_btn">
+                                <a class="web_btn_link" href="https://liondot.github.io/webAgency_website/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/webAgency_website"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
                 <div class="contents cont01">
                     <div class="web_cont">
                         <div class="web_txt">
@@ -115,8 +192,10 @@
                                 <img class="web_mobile" src="imgs/web_img/tble_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href=""><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href=""><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://tble-biz.kr/"><i class="fa-solid fa-desktop"></i><span>Live
+                                            Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/tble_landing_2.0"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -130,29 +209,26 @@
                                 <em>체험단 홈페이지 제작: 검색창 클릭 시 하단 선정확률 높은 캠페인 폼 노출, 메인 영역에서 스크롤 다운할 경우 Quick Menu와
                                     상단으로 올라가는 버튼이 보이도록 제작하였습니다. 각 메인, 서브페이지 와이어프레임, 로고, 웹디자인제작 및 퍼블리싱 작업하였습니다.</em>
                                 <p>
-                                    <em><img
-                                            src="imgs/web_img/layers.gif" alt=""> <span>와이어프레임</span></em>
-                                    <em><img
-                                            src="imgs/web_img/paint-palette.gif" alt=""><span> 디자인</span></em>
-                                    <em><img
-                                            src="imgs/web_img/laptop.gif" alt=""> <span>퍼블리싱</span></em>
+                                    <em><img src="imgs/web_img/layers.gif" alt=""> <span>와이어프레임</span></em>
+                                    <em><img src="imgs/web_img/paint-palette.gif" alt=""><span> 디자인</span></em>
+                                    <em><img src="imgs/web_img/laptop.gif" alt=""> <span>퍼블리싱</span></em>
                                 </p>
                             </div>
                             <div class="web_images">
                                 <a href="http://reviewmonster01.dothome.co.kr/" target="_blank">
-                                    <img class="web_device" src="imgs/web_img/reviewmonster_de.png" alt=""
-                                        >
-                                    <img class="web_mobile" src="imgs/web_img/reviewmonster_mo.png" alt=""
-                                        >
+                                    <img class="web_device" src="imgs/web_img/reviewmonster_de.png" alt="">
+                                    <img class="web_mobile" src="imgs/web_img/reviewmonster_mo.png" alt="">
                                 </a>
                                 <div class="web_btn">
-                                    <button><a href=""><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                    <button><a href=""><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                    <a class="web_btn_link" href="http://reviewmonster01.dothome.co.kr/"><i
+                                                class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                    <a class="web_btn_link" href="https://github.com/liondot/reviewmonster"><i
+                                                class="fa-brands fa-github-square"></i><span>github</span></a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                   
+
                 </div>
                 <div class="contents cont03">
                     <div class="web_cont">
@@ -160,7 +236,7 @@
                             <span>Hompage</span>
                             <strong>뮤지엄 홈페이지 제작</strong>
                             <em>클론코딩으로 제작한 뮤지엄 홈페이지 입니다. 상호작용을 위해 ScrollDown을 이용한 화면전환으로 움직임을 주었고 홈페이지 로딩이 시작되는 메인 화면에
-                                텍스트 애니메이션을 주어 역동적인 타이틀 디자인을 작업했습니다. </em>
+                                텍스트 애니메이션을 주어 동적인 타이틀 디자인을 작업했습니다. </em>
                             <p>
                                 <em><img src="imgs/web_img/element.gif" alt=""> <span>클론 코딩</span></em>
                             </p>
@@ -171,8 +247,10 @@
                                 <img class="web_mobile" src="imgs/web_img/musium_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href=""><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href=""><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/museum-responsive/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/museum-responsive"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -182,8 +260,8 @@
                         <div class="web_txt">
                             <span>Shoppingmall</span>
                             <strong>vivid 쇼핑몰 제작</strong>
-                            <em>navbar 호버를 이용하여 submenu를 나열하였고, 메인 페이지를 슬라이드 형태로 Pagination 버튼을 이용하여 좌우 전환되도록
-                                작업하였습니다.네번째 section인 new section 에는 swiper에 배열을 이용하여 카테고리를 분류하였고 해당하는 내용을 슬라이드를 통해 보여지도록
+                            <em>navbar 호버를 이용하여 submenu를 나열하였고, 메인 페이지를 슬라이드 형태로 페이지 넘버 버튼을 이용하여 좌우 전환되도록
+                                작업하였습니다.네번째 section인 new section 에는 swiper에 배열을 이용하여 카테고리를 분류하였고 해당하는 내용에 컨텐츠가 보여지도록
                                 커스텀하였습니다. </em>
                             <p>
                                 <em><img src="imgs/web_img/flag.gif" alt=""> <span>코딩 테스트 페이지</span></em>
@@ -194,8 +272,10 @@
                                 <img class="web_device" src="imgs/web_img/vivid.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href=""><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href=""><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/shoppingmall/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/shoppingmall"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
@@ -217,25 +297,27 @@
                                 <img class="web_mobile" src="imgs/web_img/megabox_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href=""><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href=""><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/moviebox/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/moviebox"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="contents cont06">
+                <!-- <div class="contents cont06">
                     <div class="web_cont">
                         <div class="web_txt">
                             <span>Shoppingmall</span>
                             <strong>무드모드 쇼핑몰</strong>
                             <em>이미지에 효과를 넣어 판매하는 제품에 포인트를 줄 수 있도록 하였고 navbar에 마우스 오버할 경우 카테고리에 해당하는 이미지를 노출하여 나열된 이미지 중
                                 마우스오버되지 않은 메뉴에는 불투명도를 주어 차별점을 두었습니다.
-                                BEST ITEM 을 마우스오버할 경우 텍스트 배경에 물결모양의 요소가 나타나도록 하였고, ENWS & EVENT 에 있는 카드 형태의 ui의 경우 마우스를
+                                BEST ITEM에 마우스오버할 경우 텍스트 배경에 물결모양의 요소가 나타나도록 하였고, ENWS & EVENT 에 있는 카드 형태의 ui의 경우 마우스를
                                 올렸을때 꼭지점에서 테두리 모양으로 교차 되도록 적용하였습니다.
                             </em>
                             <p>
                                 <em><img src="imgs/web_img/document.gif" alt=""> <span>기획</span></em>
-                                <em><img src="imgs/web_img/paint-palette.gif" alt=""> <span>디자인<span></em>
+                                <em><img src="imgs/web_img/paint-palette.gif" alt=""> <span>디자인</span></em>
                                 <em><img src="imgs/web_img/laptop.gif" alt=""> <span>퍼블리싱</span></em>
                             </p>
                         </div>
@@ -245,40 +327,17 @@
                                 <img class="web_mobile" src="imgs/web_img/moode_mo.png" alt="">
                             </a>
                             <div class="web_btn">
-                                <button><a href=""><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href=""><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
+                                <a class="web_btn_link" href="https://liondot.github.io/Jewelry-mall/"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
+                                <a class="web_btn_link" href="https://github.com/liondot/Jewelry-mall"><i
+                                            class="fa-brands fa-github-square"></i><span>github</span></a>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="contents cont07">
-                    <div class="web_cont">
-                        <div class="web_txt">
-                            <span>Hompage</span>
-                            <strong>쿠우쿠우 웹사이트</strong>
-                            <em>navbar 마우스 오버할 경우 컬러 변화와 가상클래스를 이용하여 밑줄이 중앙에서 끝지점으로 나타나도록 하였고, 메인 아이콘 섹션에 hover를 적용하여
-                                색상이 다른 아이콘이 슬라이드 되도록 보여집니다.</em>
-                            <p>
-                                <em><img src="imgs/web_img/document.gif" alt=""><span>기획</span></em>
-                                <em><img src="imgs/web_img/paint-palette.gif" alt=""><span>디자인</span></em>
-                                <em><img src="imgs/web_img/laptop.gif" alt=""><span>퍼블리싱</span></em>
-                            </p>
-                        </div>
-                        <div class="web_images">
-                            <a href="https://liondot.github.io/kuukuu/" target="_blank">
-                                <img class="web_device" src="imgs/web_img/kuu_de.png" alt="">
-                                <img class="web_mobile" src="imgs/web_img/kuu_mo.png" alt="">
-                            </a>
-                            <div class="web_btn">
-                                <button><a href=""><i class="fa-solid fa-desktop"></i><span>Live Demo</span></a></button>
-                                <button><a href=""><i class="fa-brands fa-github-square"></i><span>github</span></a></button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </div> -->
             </div>
         </section>
-        <section id="design">
+        <section id="design" class="section_box">
             <h2>디자인</h2>
             <span class="main_title">Design</span>
             <div class="container">
@@ -333,7 +392,7 @@
                 </div>
             </div>
         </section>
-        <section id="javascript">
+        <section id="javascript" class="section_box">
             <h2>javascript</h2>
             <span class="main_title">Javascript</span>
             <div class="container">
@@ -365,7 +424,7 @@
                         </a>
                         <a href="https://liondot.github.io/carrot_game/" class="project" target="blank">
                             <div class="javascript_img">
-                                <img src="imgs/js_img/js_dudeogy.png" alt="blog">
+                                <img src="imgs/js_img/js_carrot.png" alt="blog">
                                 <em>javascript</em>
                                 <span>Start</span>
                             </div>
@@ -386,14 +445,14 @@
                                 <span>Start</span>
                             </div>
                         </a>
-                        <a href="js/project/my-trip-advisor/index.html" class="project" data-featherlight="iframe"
+                        <!-- <a href="js/project/my-trip-advisor/index.html" class="project" data-featherlight="iframe"
                             target="blank">
                             <div class="javascript_img">
                                 <img src="imgs/js_img/js_mytrip.png" alt="blog">
                                 <em>javascript</em>
                                 <span>Start</span>
                             </div>
-                        </a>
+                        </a> -->
                         <!-- <a href="imgs/Project/click_img/de1.jpg" class="project" data-featherlight="iframe"
                             target="blank">
                             <div class="javascript_img">
@@ -406,42 +465,14 @@
                 </div>
             </div>
         </section>
-        <section id="contact_me">
-            <div class="container">
-                <div class="contents">
-                    <div class="my_profile">
-                        <div class="my_social">
-                            <em>
-                                <p>Mobile</p> <i class="fa-solid fa-mobile-retro"></i><span>010.3484.0618</span>
-                            </em>
-                            <em>
-                                <p>Github</p> <a href="https://github.com/liondot"><i class="fa-brands fa-github"></i>
-                                    <span>@liondot</span></a>
-                            </em>
-                            <em>
-                                <p>Pinterest</p> <a href="https://www.pinterest.co.kr/sunflo_512"><i
-                                        class="fa-brands fa-pinterest"></i>
-                                    <span>@sunflo_512</span></a>
-                            </em>
-                            <em>
-                                <p>Email</p><i class="fa-solid fa-envelope"></i><span> yoon3315.5@gmail.com</span>
-                            </em>
-
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
         <footer class="footer">
-            <div class="contents"><span>Copyright © 2022. All Rights Reserved</spa></div>
+            <div class="contents"><span>Copyright © 2022. All Rights Reserved</span>
+            </div>
         </footer>
         <div class="contact" data-500="right: -200px" data-700="right: 15px;">
-            <li class="arrow_top" data-0="transform: rotate(-90deg)" data-300="transform: rotate(0deg)">
+            <a class="arrow_top" data-0="transform: rotate(-90deg)" data-300="transform: rotate(0deg)">
                 <img src="imgs/up-arrow.png" alt="">
-            </li>
-            <li class="contact_me" data-0="opacity: 0;" data-300="opacity: 1;">
-                Contact
-            </li>
+            </a>
         </div>
         <div class="mobile_bottom_line">
             <div class="toggle_menu_mobile">
@@ -454,8 +485,6 @@
                                 src="imgs/web_img/js.gif" alt="Javascript"></a></li>
                 </ul>
                 <ul class="contact_order">
-                    <li class="mobile_toggle_menu" data-type="#contact_me"><a href="#contact_me"><img
-                                src="imgs/contact.gif" alt="contact"></a></li>
                     <li class="mobile_toggle_menu" data-type="#section01"><a href="#section01"><img
                                 src="imgs/up-arrow.png" alt="arrow_up"></a></li>
                 </ul>
@@ -464,7 +493,8 @@
     </div>
 
 
-
+    <!-- js  -->
+    <script src="js/main.js"></script>
 
     <script src="js/skrollr.js"></script>
     <script type="text/javascript">
