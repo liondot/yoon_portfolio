@@ -38,7 +38,14 @@ function goToTop() {
     window.scrollTo(0, 0);
 }
 
+// loading 
+window.addEventListener('load', () => {
+    document.body.classList.remove('before_loading');
+})
 
+document.querySelector('.progress').addEventListener('transitionend', (e) => {
+    document.body.removeChild(e.currentTarget);
+})
 
 
 
