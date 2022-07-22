@@ -50,13 +50,13 @@ document.querySelector('.progress').addEventListener('transitionend', (e) => {
 
 
 // loading 
-// window.addEventListener('load', () => {
-//     document.body.classList.remove('before_loading');
-// })
+window.addEventListener('load', () => {
+    document.body.classList.remove('before_loading');
+})
 
-// document.querySelector('.progress').addEventListener('transitionend', (e) => {
-//     document.body.removeChild(e.currentTarget);
-// })
+document.querySelector('.progress').addEventListener('transitionend', (e) => {
+    document.body.removeChild(e.currentTarget);
+})
 
 // 스크롤링 핸들 
 const arrowTop = document.querySelector('.arrow_top');
