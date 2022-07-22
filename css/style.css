@@ -95,13 +95,22 @@ button {
 
 /* progress bar */
 .progress {
+  display: flex;
   background-color: #000;
   color: #fff;
   height: 100%;
   width: 100%;
   position: fixed;
   z-index:9999999;
+  opacity: 0;
+  visibility: visible;
+  justify-content: center;
+  align-items: center;
 }
+.before_loading .progress {
+  opacity: 1;
+}
+
 .progress-bar {
   border-top:1px solid #fff;
   position: absolute;
@@ -171,15 +180,31 @@ button {
           animation: blur-text 1.5s 1.2s infinite linear alternate;
 }
 
-.progress_bar {
-  position: absolute;
-  width: 0;
-  background: #e5e5e5;
-  height: 2px;
-  top: 55%;
-  left: 0;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
-  animation: line 3s 1s ease;
+.loading-circle {
+  margin-top: 150px;
+  width: 70px;
+  height: 70px;
+  animation: loading_spin 3s infinite;
+}
+
+@keyframes loading_spin{    
+  100%{transform: rotate(360deg);}
+}
+@keyframes loading_circle {
+ 0% {stroke-dashoffset: 157}
+ 75% {stroke-dashoffset: -147}
+ 100% {stroke-dashoffset: -157}
+}
+
+
+.loading-circle circle {
+  stroke:#fff;
+  stroke-width: 4px;
+  fill: transparent;
+  stroke-dasharray: 157;
+  stroke-dashoffset: 0;
+  transition: 1s;
+  animation: loading_circle 1s infinite;
 }
 
 @keyframes blur-text {
@@ -191,17 +216,8 @@ button {
   }
 }
 
-@keyframes line { 
-  0% {    
-   width: 0;
-}
-100% {    
-  width: 100%;
-
-}
-}
   
-}
+
 
 
 

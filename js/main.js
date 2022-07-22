@@ -38,11 +38,14 @@ function goToTop() {
     window.scrollTo(0, 0);
 }
 
+// loading 
+window.addEventListener('load', () => {
+    document.body.classList.remove('before_loading');
+})
 
-// var s = skrollr.init();
-// let $root = $('html, body');
-// let $position = [0, 1000, 2000, 3000, 4000, 5000, 6000,];
-// let $currentPosition = 0;
+document.querySelector('.progress').addEventListener('transitionend', (e) => {
+    document.body.removeChild(e.currentTarget);
+})
 
 
 
