@@ -1,20 +1,18 @@
 'use-strict'
 
-
 const menuList = document.querySelector('#menu_list')
-const toggleBtn = document.querySelector('.toggle_btn');
+// const toggleBtn = document.querySelector('.toggle_btn');
 const mainSection = document.querySelector('#section01')
-const mainSectionHeight = mainSection.getBoundingClientRect().y;
+const mainSectionHeight = mainSection.getBoundingClientRect().height;
 const spanTxt = document.querySelector('.spanTxt');
 
 
 const BODY = document.querySelector('body, html')
 const BODYOffset = BODY.getBoundingClientRect()
 
-console.log(mainSectionHeight)
 
 
-toggleBtn.addEventListener('click', toggle);
+// toggleBtn.addEventListener('click', toggle);
 
 // 토글 버튼 
 function toggle() {
@@ -23,7 +21,7 @@ function toggle() {
 }
 
 document.addEventListener('scroll', () => {
-    if (window.scrollY > mainSectionHeight / 2) {
+    if(window.scrollY > mainSectionHeight / 2) {
         menuList.classList.add('visible');
     } else {
         menuList.classList.remove('visible');
@@ -40,12 +38,26 @@ function goToTop() {
     window.scrollTo(0, 0);
 }
 
+
+// var s = skrollr.init();
+// let $root = $('html, body');
+// let $position = [0, 1000, 2000, 3000, 4000, 5000, 6000,];
+// let $currentPosition = 0;
+
+
+
+$(window).scroll(function () {
+    getCurrentPosition();
+});
+
+
 function getCurrentPosition() {
     // let positionNum;
     let scrollAmount = $(document).scrollTop();
 
 }
 
+// Navbar toggle btn 
 
 // 스크롤링 핸들 
 const arrowTop = document.querySelector('.arrow_top');
@@ -59,19 +71,17 @@ menuItems.addEventListener('click', (event) => {
     const target = event.target;
     const link = target.dataset.link;
 
-    if (link == null) {
+    if(link == null) {
         return;
     }
     // menuList.classList.remove('active')
     // toggleBtn.classList.remove('active')
     const scrollInTo = document.querySelector(link);
-    scrollInTo.scrollIntoView({
-        behavior: "smooth"
-    });
+    scrollInTo.scrollIntoView({behavior:"smooth"});
 })
 
 // arrow top 버튼 핸들링 
-arrowTop.addEventListener('click', () => {
+arrowTop.addEventListener('click', ()=> {
     scrollIntoView('#section01')
 })
 
@@ -80,10 +90,7 @@ arrowTop.addEventListener('click', () => {
 
 // 모바일 토글 버튼
 
-function scrollIntoView(selector) {
+function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
-    scrollTo.scrollIntoView({
-        behavior: 'smooth'
-    });
+    scrollTo.scrollIntoView({behavior:'smooth'});
 }
-
