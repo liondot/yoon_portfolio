@@ -869,6 +869,10 @@ section#contact_me {
   cursor: pointer;
 }
 
+.footer  .contents span {
+  color: #fff;
+  
+}
 
 
 /* @media  */
@@ -1307,6 +1311,7 @@ section#contact_me {
   .footer  .contents{
     width: 100%;
   }
+
 
 
 }
