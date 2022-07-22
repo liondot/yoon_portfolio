@@ -39,25 +39,17 @@ function goToTop() {
 }
 
 
-// var s = skrollr.init();
-// let $root = $('html, body');
-// let $position = [0, 1000, 2000, 3000, 4000, 5000, 6000,];
-// let $currentPosition = 0;
 
 
 
-$(window).scroll(function () {
-    getCurrentPosition();
-});
+// loading 
+window.addEventListener('load', () => {
+    document.body.classList.remove('before_loading');
+})
 
-
-function getCurrentPosition() {
-    // let positionNum;
-    let scrollAmount = $(document).scrollTop();
-
-}
-
-// Navbar toggle btn 
+document.querySelector('.progress').addEventListener('transitionend', (e) => {
+    document.body.removeChild(e.currentTarget);
+})
 
 // 스크롤링 핸들 
 const arrowTop = document.querySelector('.arrow_top');
@@ -94,3 +86,4 @@ function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
 }
+
