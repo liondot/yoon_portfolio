@@ -49,14 +49,18 @@ document.querySelector('.progress').addEventListener('transitionend', (e) => {
 
 
 
-// loading 
-window.addEventListener('load', () => {
-    document.body.classList.remove('before_loading');
-})
+$(window).scroll(function () {
+    getCurrentPosition();
+});
 
-document.querySelector('.progress').addEventListener('transitionend', (e) => {
-    document.body.removeChild(e.currentTarget);
-})
+
+function getCurrentPosition() {
+    // let positionNum;
+    let scrollAmount = $(document).scrollTop();
+
+}
+
+// Navbar toggle btn 
 
 // 스크롤링 핸들 
 const arrowTop = document.querySelector('.arrow_top');
@@ -93,4 +97,3 @@ function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
     scrollTo.scrollIntoView({behavior:'smooth'});
 }
-
