@@ -49,9 +49,9 @@ document.querySelector('.progress').addEventListener('transitionend', (e) => {
 
 
 
-$(window).scroll(function () {
-    getCurrentPosition();
-});
+// $(window).scroll(function () {
+//     getCurrentPosition();
+// });
 
 
 function getCurrentPosition() {
