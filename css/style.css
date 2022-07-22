@@ -91,6 +91,122 @@ button {
 }
 
 
+/* loading  */
+
+/* progress bar */
+.progress {
+  background-color: #000;
+  color: #fff;
+  height: 100%;
+  width: 100%;
+  position: fixed;
+  z-index:9999999;
+}
+.progress-bar {
+  border-top:1px solid #fff;
+  position: absolute;
+  top: 50%; 
+  width: 0%;
+  opacity: 1;
+}
+.progress-bar.progress-complete {
+  border-top-color: #ddd;
+}
+.progress-text {
+  font-size: 14px;
+  position: absolute;
+  top: 50%;
+  text-align: center;
+  width: 100%;
+  margin-top:10px;
+  opacity: 0;
+}
+
+/* loading */
+
+.loading_text {
+  position: absolute;
+  top: 0;
+  bottom: 50px;
+  left: 0;
+  right: 0;
+  margin: auto;
+  text-align: center;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
+.loading_text span {
+  display: inline-block;
+  margin: 0 5px;
+  color: #fff;
+  font-family: 'Quattrocento Sans', sans-serif;
+}
+.loading_text span:nth-child(1) {  
+          filter: blur(0px);  
+          animation: blur-text 1.5s 0s infinite linear alternate;
+}
+.loading_text span:nth-child(2) {
+          filter: blur(0px);
+          animation: blur-text 1.5s 0.2s infinite linear alternate;
+} 
+.loading_text span:nth-child(3) {  
+          filter: blur(0px);
+          animation: blur-text 1.5s 0.4s infinite linear alternate;
+}
+.loading_text span:nth-child(4) {
+          filter: blur(0px);
+          animation: blur-text 1.5s 0.6s infinite linear alternate;
+}
+.loading_text span:nth-child(5) {
+          filter: blur(0px);
+          animation: blur-text 1.5s 0.8s infinite linear alternate;
+}
+.loading_text span:nth-child(6) {  
+          filter: blur(0px);
+          animation: blur-text 1.5s 1s infinite linear alternate;
+}
+.loading_text span:nth-child(7) {
+          filter: blur(0px);
+          animation: blur-text 1.5s 1.2s infinite linear alternate;
+}
+
+.progress_bar {
+  position: absolute;
+  width: 0;
+  background: #e5e5e5;
+  height: 2px;
+  top: 55%;
+  left: 0;
+  animation: name duration timing-function delay iteration-count direction fill-mode;
+  animation: line 3s 1s ease;
+}
+
+@keyframes blur-text {
+  0% {    
+            filter: blur(0px);
+  }
+  100% {    
+            filter: blur(4px);
+  }
+}
+
+@keyframes line { 
+  0% {    
+   width: 0;
+}
+100% {    
+  width: 100%;
+
+}
+}
+  
+}
+
+
+
+
+
 /********** menu_list  **********/
 #menu_list {
   position: fixed;
