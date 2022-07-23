@@ -13,10 +13,10 @@ const BODYOffset = BODY.getBoundingClientRect()
 
 
 // 토글 버튼 
-// function toggle() {
-//     toggleBtn.classList.toggle('active')
-//     menuList.classList.toggle('active')
-// }
+function toggle() {
+    toggleBtn.classList.toggle('active')
+    menuList.classList.toggle('active')
+}
 
 document.addEventListener('scroll', () => {
     if(window.scrollY > mainSectionHeight / 2) {
