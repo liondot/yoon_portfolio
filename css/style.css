@@ -22,7 +22,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-  border: 3px solid pink;
+  border: 3px solid green;
 }
 
 .wrapper {
@@ -121,9 +121,11 @@ button {
   width: 0%;
   opacity: 1;
 }
+
 .progress-bar.progress-complete {
   border-top-color: #ddd;
 }
+
 .progress-text {
   font-size: 14px;
   position: absolute;
@@ -144,6 +146,7 @@ button {
 @keyframes loading_spin{    
   100%{transform: rotate(360deg);}
 }
+
 @keyframes loading_circle {
  0% {stroke-dashoffset: 157}
  75% {stroke-dashoffset: -147}
@@ -207,17 +210,6 @@ button {
 .loading_text span:nth-child(7) {
           filter: blur(0px);
           animation: blur-text 1.5s 1.2s infinite linear alternate;
-}
-
-.progress_bar {
-  position: absolute;
-  width: 0;
-  background: #e5e5e5;
-  height: 2px;
-  top: 55%;
-  left: 0;
-  animation: name duration timing-function delay iteration-count direction fill-mode;
-  animation: line 3s 1s ease;
 }
 
 @keyframes blur-text {

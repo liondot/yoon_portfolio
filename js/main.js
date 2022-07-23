@@ -46,16 +46,6 @@ document.querySelector('.progress').addEventListener('transitionend', (e) => {
 })
 
 
-$(window).scroll(function () {
-    getCurrentPosition();
-});
-
-
-function getCurrentPosition() {
-    let scrollAmount = $(document).scrollTop();
-}
-
-// Navbar toggle btn 
 
 // 스크롤링 핸들 
 const arrowTop = document.querySelector('.arrow_top');
@@ -63,7 +53,6 @@ const contactMe = document.querySelector('.contact_me');
 const navbarMenu = document.querySelector('.navbar');
 const menuItems = document.querySelector('.menu_items')
 
-console.log(menuItems)
 
 menuItems.addEventListener('click', (event) => {
     const target = event.target;
@@ -83,10 +72,6 @@ arrowTop.addEventListener('click', ()=> {
     scrollIntoView('#section01')
 })
 
-
-
-
-// 모바일 토글 버튼
 
 function scrollIntoView(selector){
     const scrollTo = document.querySelector(selector);
