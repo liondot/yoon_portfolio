@@ -46,16 +46,13 @@ document.querySelector('.progress').addEventListener('transitionend', (e) => {
 })
 
 
-
-// $(window).scroll(function () {
-//     getCurrentPosition();
-// });
+$(window).scroll(function () {
+    getCurrentPosition();
+});
 
 
 function getCurrentPosition() {
-    // let positionNum;
     let scrollAmount = $(document).scrollTop();
-
 }
 
 // Navbar toggle btn 
