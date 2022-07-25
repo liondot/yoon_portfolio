@@ -10,7 +10,14 @@ const spanTxt = document.querySelector('.spanTxt');
 const BODY = document.querySelector('body, html')
 const BODYOffset = BODY.getBoundingClientRect()
 
+// loading 
+window.addEventListener('load', () => {
+    document.body.classList.remove('before_loading');
+})
 
+document.querySelector('.progress').addEventListener('transitionend', (e) => {
+    document.body.removeChild(e.currentTarget);
+})
 
 // toggleBtn.addEventListener('click', toggle);
 
@@ -27,6 +34,7 @@ document.addEventListener('scroll', () => {
         menuList.classList.remove('visible');
     }
 })
+
 
 
 // top btn 
