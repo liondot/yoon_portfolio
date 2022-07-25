@@ -22,7 +22,7 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-  border: 3px solid green;
+  border: 3px solid blue;
 }
 
 .wrapper {
@@ -35,7 +35,7 @@ body {
 
 section {
   height: auto;
-  top: 0;
+  top: 0; 
   left: 0;
   position: relative;
   border-bottom: 1px solid #e2e2e2;
