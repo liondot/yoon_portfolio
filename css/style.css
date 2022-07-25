@@ -22,7 +22,6 @@ body {
   padding: 0;
   box-sizing: border-box;
   font-size: 14px;
-  border: 3px solid green;
 }
 
 .wrapper {
@@ -115,13 +114,6 @@ button {
   z-index:200;
 }
 
-.progress-bar {
-  border-top:1px solid #fff;
-  position: absolute;
-  top: 50%; 
-  width: 0%;
-  opacity: 1;
-}
 
 .progress-bar.progress-complete {
   border-top-color: #ddd;
