@@ -39,19 +39,10 @@ document.addEventListener('scroll', () => {
 
 // top btn 
 const topBtn = document.querySelector('.arrow_top');
-
 topBtn.addEventListener('click', goToTop);
-
 function goToTop() {
     window.scrollTo(0, 0);
 }
-
-
-// var s = skrollr.init();
-// let $root = $('html, body');
-// let $position = [0, 1000, 2000, 3000, 4000, 5000, 6000,];
-// let $currentPosition = 0;
-
 
 
 $(window).scroll(function () {
