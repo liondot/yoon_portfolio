@@ -1,4 +1,31 @@
-$viewLine : 2px solid red;
-$viewLine2 : 2px solid green;
-$viewLine3 : 2px solid blue;
-$viewLine4 : 2px solid orange;
+
+$bdLineGreen : 2px solid green;
+$bdLineBlue : 2px solid blue;
+$bdLineYellow : 2px solid yellow;
+$bdLineRed : 2px solid red;
+
+
+//중앙정렬에 필요한 변수
+$translateX-50 : translateX(-50%);
+$translateY-50 : translateY(-50%);
+$translateXY-50 : translate(-50%, -50%);
+
+$translateX-100 : translateX(-100%);
+$translateY-100 : translateY(-100%);
+$translateXY-100 : translate(-100%, -100%);
+
+//webkit
+$webkitTranslate: -webkit-transform;
+$mozTranslate: -moz-transform;
+$oTranslate: -o-transform;
+$msTranslate: -ms-transform;
+
+// breakpoints 
+$grid-breakpoints: (
+  xs: 0,
+  sm: 576px,
+  md: 768px,
+  lg: 992px,
+  xl: 1200px,
+  xxl: 1400px
+);

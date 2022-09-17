@@ -5,21 +5,46 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <meta name="author" content="Seonhwa Yoon">
+        <meta name="description" content="포트폴리오">
+        <meta name="keywords" content="포트폴리오, 토이프로젝트, 클론코딩, 반응형웹, 웹사이트제작, 프론트엔드 포트폴리오">
         <title>YOON</title>
 
         <!-- jquery  -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-        <!-- featherlight js & css  -->
-        <link rel="stylesheet" href="js/featherlight/featherlight.css">
-        <script src="js/featherlight/featherlight.js"></script>
+      
         <!-- css  -->
-        <link rel="stylesheet" href="sass/style.css">
-        <!-- fontawesome  -->
-        <script src="https://kit.fontawesome.com/c741f3b9be.js" crossorigin="anonymous"></script>
-        <!-- font  -->
-        <link
-            href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@1fff00;300;400;500;700&family=Roboto:wght@300;400;500;700&display=swap"
+        <link rel="stylesheet" href="css/reset.css">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- 파비콘 -->
+        <link rel="shortcut icon" href="assets/icons/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="assets/icons/favicon_72.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="96x96" href="assets/icons/favicon_96.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/icons/favicon_144.png" />
+        <link rel="apple-touch-icon-precomposed" sizes="192x192" href="assets/icons/favicon_192.png" />
+
+        <!-- 페이스북 메타 태그 -->
+        <meta property="og:title" content="윤선화 포트폴리오" />
+        <!-- <meta property="og:url" content="https://github.com/liondot/yoon_portfolio" /> -->
+        <!-- <meta property="og:image" content="https://liondot.github.io/yoon_portfolio/mega.jpg" /> -->
+        <meta property="og:description" content="윤선화 프론트엔드 포트폴리오입니다." />
+
+        <!-- 트위터 메타 태그 -->
+        <meta name="twitter:card" content="summary">
+        <meta name="twitter:title" content="윤선화 포트폴리오">
+        <!-- <meta name="twitter:url" content="https://github.com/liondot/yoon_portfolio/"> -->
+        <!-- <meta name="twitter:image" content="https://liondot.github.io/yoon_portfolio/mega.jpg"> -->
+        <meta name="twitter:description" content="윤선화 프론트엔드 포트폴리오입니다.">
+
+        <!-- 웹폰트 -->
+        <link rel="preconnect" href="https://fonts.gstatic.com">
+        <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;300;400;500;700;900&display=swap"
             rel="stylesheet">
+
+        <!-- 폰트어썸  -->
+        <script src="https://kit.fontawesome.com/c741f3b9be.js" crossorigin="anonymous"></script>
     </head>
 
 
@@ -42,7 +67,13 @@
         </div> -->
         <div class="wrapper">
             <header>
-                <nav id="menu_list">
+                <div class="vers">
+                    <p class="vers_notice">지금 보고있는 웹사이트를 다른 코드 버전으로 만나보세요!</p>
+                    <div class="code_ver"><a href="">Js</a></div>
+                    <div class="code_ver"><a href="">React</a></div>
+                    <div class="code_ver"><a href="">View</a></div>
+                </div>
+                <!-- <nav id="menu_list">
                     <div class="menu navbar">
                         <a class="menu_item_logo" href="#">Y</a>
                         <div class="menu_items">
@@ -53,19 +84,65 @@
                                 <li class="menu_item"><a href="#section01">Contact Me</a></li>
                             </ul>
                         </div>
-                        
                     </div>
-                </nav>
-            </header>
-        <section id="main">
-            <h2>메인영역</h2>
-            <div class="container">
-                <div class="main_top_img">
-                    <img src="" alt="">
+                </nav> -->
+                <div class="nav_toggle active">
+                    <span></span>
+                    <span></span>
+                    <span></span>
                 </div>
-            </div>
-        </section>
-        <section id="responsive_web">
+            </header>
+            <section id="main_section">
+                <h2 class="ir_so">메인영역</h2>
+                <div class="container">
+                    <div class="main_images">
+                        <div class="main_top_img">
+                            <img class="main_img1" src="./asset/images/web_img.png" alt="">
+                            <img class="main_img2" src="./asset/images/web2_img.png" alt="">
+                            <img class="main_img3" src="./asset/images/web2_img.png" alt="">
+                        </div>
+                        <div class="main_bottom_img">
+                            <img class="main_img4" src="./asset/images/web2_img.png" alt="">
+                            <img class="main_img5" src="./asset/images/web_img.png" alt="">
+                            <img class="main_img6" src="./asset/images/web_img.png" alt="">
+                        </div>
+                    </div>
+                    <div class="profile">
+                        <div class="profile_img">
+                            <img src="./asset/images/profile.png" alt="프로필 이미지">
+                        </div>
+                        <div class="profile_txt">
+                            <span>윤선화 <em>프론트엔드</em></span>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                            <p class="profile_subTxt">
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ea omnis suscipit ipsa dignissimos fugit voluptatibus accusamus modi esse. Voluptate?
+                            </p>
+                        </div>
+                </div>
+            </section>
+            <section id="how_to_section">
+                <h2 class="ir_so">메인영역</h2>
+                <div class="container">
+                    <div class="howTo_txts">
+                            <em class="txt1">남녀노소, 시각과 청각이 불편한 장애인, 누구나</em> <br> <em class="txt2"> 어떤 디바이스,</em> <em class="txt3">어떤 브라우저로 들어와도</em> <br> <em class="txt4">동일한 구조와, 정보를 보여주는 웹사이트를 만듭니다.</em>
+                    </div>
+                    <div class="howTo_imgs">
+                        <div class="imgs1">
+                            <img src="./asset/images/web_1.png" alt="">
+                        </div>
+                        <div class="imgs2">
+                            <img src="./asset/images/web_2.png" alt="">
+                        </div>
+                        <div class="imgs3">
+                            <img src="./asset/images/desktop.png" alt="">
+                        </div>
+                        <div class="imgs3">
+                            <img src="./asset/images/mobile.png" alt="">
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- <section id="responsive_web">
             <h2>반응형 웹</h2>
             <div class="main_title">Responsive Web</div>
             <div class="container">
@@ -264,18 +341,17 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
         </div>
 
 
-        <!-- js  -->
-        <script src="js/main.js"></script>
-
-        <script src="js/skrollr.js"></script>
-        <script type="text/javascript">
-            var s = skrollr.init();
-        </script>
+      <!-- 자바스크립트 라이브러리 -->
+    <script src="js/jquery.min_1.12.4.js"></script>
+    <script src="js/modernizr-custom.js"></script>
+    <script src="js/ie-checker.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/main.js"></script>
     </body>
 
     </html>
