@@ -1,0 +1,313 @@
+@import './partial/var';
+
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    color: #333;
+}
+
+body,
+html {
+    overflow-x: hidden;
+    width: 100%;
+    height: 100%;
+    font-size: 14px;
+    position: relative;
+    
+}
+
+section {
+    display: block;
+    border-top: 2px solid orange;
+}
+
+.container {
+    max-width: 1400px;
+    height: 100%;
+    margin: 0 auto;
+}
+
+//header
+header {
+    position: fixed;
+    z-index: 10;
+    width: 100%;
+
+    .vers {
+        display: none;
+
+        .code_ver {
+            width: 50px;
+            height: 50px;
+            border: 1px solid green;
+            border-radius: 50%;
+            display: inline-block;
+            margin: 5px;
+            font-size: 1rem;
+            text-align: center;
+            line-height: 50px;
+        }
+    }
+
+    .nav_toggle {
+        position: absolute;
+        top: 20px;
+        right: 20px;
+        width: 2rem;
+        height: 1.5rem;
+        cursor: pointer;
+
+        &.active {
+            span {
+                transition: all .3s ease-in;
+
+                &:first-child {
+                    top: 50%;
+                    transform: rotate(45deg);
+                }
+
+                &:nth-of-type(2) {
+                    display: none;
+                }
+
+                &:last-child {
+                    top: 50%;
+                    transform: rotate(320deg);
+                }
+            }
+        }
+
+        span {
+            width: 100%;
+            height: .1rem;
+            background: #000;
+            position: absolute;
+            top: 0;
+            left: 0;
+
+            &:nth-child(2) {
+                top: 50%;
+                transform: $translateY-50;
+            }
+
+            &:last-child {
+                top: 100%;
+                transform: $translateY-100;
+            }
+        }
+    }
+}
+
+// #main_section
+#main_section {
+    position: relative;
+    height: 1080px;
+    .main_images {
+        img {
+            width: 100%;
+            max-width: 260px;
+            transform: rotate(20deg);
+            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
+        }
+
+        .main_top_img {
+            position: absolute;
+            top: -5vh;
+            left: -9vw;
+
+            .main_img2 {
+                position: absolute;
+                left: 350px;
+                top: -12vh;
+            }
+
+            .main_img3 {
+                position: absolute;
+                left: 650px;
+                top: -11vh;
+            }
+        }
+
+        .main_bottom_img {
+            position: absolute;
+            bottom: -2vh;
+            right: -12vw;
+
+            .main_img5 {
+                position: absolute;
+                right: 375px;
+                bottom: -13vh;
+            }
+
+            .main_img6 {
+                position: absolute;
+                right: 700px;
+                bottom: -17vh;
+            }
+        }
+    }
+
+    .profile {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        top: 50%;
+        left: 50%;
+        transform: $translateXY-50;
+        -webkit-transform: translate(-50%, -50%);
+        -moz-transform: translate(-50%, -50%);
+        -o-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+
+        .profile_img {
+            overflow: hidden;
+            border-radius: 50%;
+            max-height: 280px;
+            max-width: 280px;
+            min-width: 200px;
+            min-height: 200px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 4vw;
+            border: 2px solid #ddd;
+            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+
+            img {
+                object-fit: fill;
+                object-position: bottom;
+            }
+        }
+
+        .profile_txt {
+            span {
+                font-size: 1.5rem;
+
+                em {
+                    font-size: 1rem;
+                }
+            }
+
+            p {
+                font-size: .8rem;
+                color: #777;
+            }
+
+            .profile_subTxt {
+                color: #333;
+                font-size: .8rem;
+                margin-top: 1rem;
+            }
+
+            .contact {
+                display: flex;
+
+                span {
+                    margin: 2px;
+                    margin-right: 8px;
+                }
+            }
+
+            .button_contact {
+                display: inline-block;
+                margin-top: 20px;
+
+                button {
+                    cursor: pointer;
+                    font-size: 1rem;
+                    font-weight: 200;
+                    padding: 5px 20px;
+                    border-radius: 30px;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                }
+            }
+        }
+
+
+
+    }
+
+
+}
+
+// #how_to_section 
+#how_to_section {
+    height: 3000px;
+
+    .container {
+        position: relative;
+        border:1px solid green;
+        height: 3000px;
+        overflow: auto;
+        
+        .inner {
+            
+            width: 100%;
+            height: 100%;
+            border: 2px solid red;
+            text-align: center;
+        }
+
+        .howTo_txts {
+            position: sticky;
+            position: -webkit-sticky;
+            top: calc(50vh - 10px);
+            left: 0;
+            em {
+                font-size: 2rem;
+                margin-bottom: 2rem;
+                // padding-bottom: 2rem;
+                visibility: hidden;
+                transform: translateY(-1000px);
+                opacity:1;
+                &.active {
+                animation : transformY .5s 1 ease-in forwards;
+
+                }
+            }
+
+            @keyframes transformY {
+                0%{
+                    padding-top: -200px;
+                }
+                50%{
+                    padding-top: 100px;
+                }
+                100%{
+                    padding-top: 0px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+            }
+
+
+        }
+
+        .howTo_imgs {
+            margin-top: 30px;
+
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+
+            display: none;
+
+            img {
+                width: 15vw;
+                margin: 5px;
+            }
+        }
+    }
+
+
+
+}
