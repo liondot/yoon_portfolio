@@ -200,37 +200,93 @@ header {
             .profile_subTxt {
                 color: #333;
                 font-size: .8rem;
-                margin-top: 2rem;
+                margin-top: 1rem;
+            }
+
+            .contact {
+                display: flex;
+
+                span {
+                    margin: 2px;
+                    margin-right: 8px;
+                }
+            }
+
+            .button_contact {
+                display: inline-block;
+                margin-top: 20px;
+
+                button {
+                    cursor: pointer;
+                    font-size: 1rem;
+                    font-weight: 200;
+                    padding: 5px 20px;
+                    border-radius: 30px;
+                    background-color: #fff;
+                    border: 1px solid #ddd;
+                }
             }
         }
 
 
 
     }
+
+
 }
 
 // #how_to_section 
 #how_to_section {
-    .container {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        border: 2px solid red;
-        text-align: center;
+    height: 3000px;
 
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        -ms-flex-direction: column;
-        flex-direction: column;
+    .container {
+        position: relative;
+        border:1px solid green;
+        height: 3000px;
+        overflow: auto;
+        
+        .inner {
+            
+            width: 100%;
+            height: 100%;
+            border: 2px solid red;
+            text-align: center;
+        }
 
         .howTo_txts {
-            font-size: 2rem;
-
+            position: sticky;
+            position: -webkit-sticky;
+            top: calc(50vh - 10px);
+            left: 0;
             em {
-                margin-bottom: 1.2rem;
+                font-size: 2rem;
+                margin-bottom: 2rem;
+                // padding-bottom: 2rem;
+                visibility: hidden;
+                transform: translateY(-1000px);
+                opacity:1;
+                &.active {
+                animation : transformY .5s 1 ease-in forwards;
+
+                }
             }
+
+            @keyframes transformY {
+                0%{
+                    padding-top: -200px;
+                }
+                50%{
+                    padding-top: 100px;
+                }
+                100%{
+                    padding-top: 0px;
+                    opacity: 1;
+                    visibility: visible;
+                }
+                
+            }
+
+
         }
 
         .howTo_imgs {
@@ -240,8 +296,11 @@ header {
             display: -ms-flexbox;
             display: flex;
 
+            display: none;
+
             img {
                 width: 15vw;
+                margin: 5px;
             }
         }
     }

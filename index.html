@@ -13,7 +13,7 @@
 
         <!-- jquery  -->
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-      
+
         <!-- css  -->
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
@@ -49,6 +49,7 @@
 
 
     <body class="before_loading">
+       
         <!-- <div class="progress" id="progress">
             <div id="loading">
                 <div class="loading_text">
@@ -92,7 +93,7 @@
                     <span></span>
                 </div>
             </header>
-            <section id="main_section">
+            <section id="main_section" class="main_section">
                 <h2 class="ir_so">메인영역</h2>
                 <div class="container">
                     <div class="main_images">
@@ -113,31 +114,65 @@
                         </div>
                         <div class="profile_txt">
                             <span>윤선화 <em>프론트엔드</em></span>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipisicing.</p>
+                            <div class="contact">
+                                <span>
+                                    <a href="">
+                                        <em class="ir_pm github">Gihub</em>
+                                        <i class="fa-brands fa-square-github"></i>
+                                    </a>
+                                </span>
+                                <span>
+                                   <a href="">
+                                        <em class="ir_pm pinterest">Pinterest</em>
+                                        <i class="fa-brands fa-square-pinterest"></i>
+                                   </a>
+                                </span>
+                                <span>
+                                    <a href="">
+                                        <em class="ir_pm email">E-mail</em>
+                                        <i class="fa-solid fa-envelope"></i>
+                                    </a>
+                                </span>
+                                <span>
+                                    <a href="">
+                                        <em class="ir_pm mobile">Mobile</em>
+                                        <i class="fa-solid fa-mobile-screen-button"></i>
+                                    </a>
+                                </span>
+                            </div>
+                           
                             <p class="profile_subTxt">
-                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ea omnis suscipit ipsa dignissimos fugit voluptatibus accusamus modi esse. Voluptate?
+                                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Non ea omnis suscipit ipsa
+                                dignissimos fugit voluptatibus accusamus modi esse. Voluptate?
                             </p>
+                            
+                            <div class="button_contact">
+                                <button>Contact me</button>
+                            </div>
                         </div>
-                </div>
+                    </div>
             </section>
-            <section id="how_to_section">
+            <section id="how_to_section" class="how_to_section">
                 <h2 class="ir_so">메인영역</h2>
                 <div class="container">
-                    <div class="howTo_txts">
-                            <em class="txt1">남녀노소, 시각과 청각이 불편한 장애인, 누구나</em> <br> <em class="txt2"> 어떤 디바이스,</em> <em class="txt3">어떤 브라우저로 들어와도</em> <br> <em class="txt4">동일한 구조와, 정보를 보여주는 웹사이트를 만듭니다.</em>
-                    </div>
-                    <div class="howTo_imgs">
-                        <div class="imgs1">
-                            <img src="./asset/images/web_1.png" alt="">
+                    <div class="inner">
+                        <div class="howTo_txts">
+                            <em class="txt1">남녀노소, 시각과 청각이 불편한 장애인, 누구나</em> <br> <em class="txt2"> 어떤 디바이스,</em> <em
+                                class="txt3">어떤 브라우저로 들어와도</em> <br> <em class="txt4">동일한 구조와, 정보를 보여주는 웹사이트를 만듭니다.</em>
                         </div>
-                        <div class="imgs2">
-                            <img src="./asset/images/web_2.png" alt="">
-                        </div>
-                        <div class="imgs3">
-                            <img src="./asset/images/desktop.png" alt="">
-                        </div>
-                        <div class="imgs3">
-                            <img src="./asset/images/mobile.png" alt="">
+                        <div class="howTo_imgs">
+                            <div class="imgs1">
+                                <img src="./asset/images/web_1.png" alt="">
+                            </div>
+                            <div class="imgs2">
+                                <img src="./asset/images/web_2.png" alt="">
+                            </div>
+                            <div class="imgs3">
+                                <img src="./asset/images/desktop.png" alt="">
+                            </div>
+                            <div class="imgs3">
+                                <img src="./asset/images/mobile.png" alt="">
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -346,12 +381,12 @@
         </div>
 
 
-      <!-- 자바스크립트 라이브러리 -->
-    <script src="js/jquery.min_1.12.4.js"></script>
-    <script src="js/modernizr-custom.js"></script>
-    <script src="js/ie-checker.js"></script>
-    <script src="js/swiper.min.js"></script>
-    <script src="js/main.js"></script>
+        <!-- 자바스크립트 라이브러리 -->
+        <script src="js/jquery.min_1.12.4.js"></script>
+        <script src="js/modernizr-custom.js"></script>
+        <script src="js/ie-checker.js"></script>
+        <script src="js/swiper.min.js"></script>
+        <script src="js/main.js"></script>
     </body>
 
     </html>
