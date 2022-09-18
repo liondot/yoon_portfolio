@@ -15,13 +15,14 @@ body,
 html {
     overflow-x: hidden;
     width: 100%;
+    height: 100%;
     font-size: 14px;
     position: relative;
+    
 }
 
 section {
-    height: 100vh;
-    overflow: hidden;
+    display: block;
     border-top: 2px solid orange;
 }
 
@@ -105,47 +106,49 @@ header {
 // #main_section
 #main_section {
     position: relative;
-
+    height: 1080px;
     .main_images {
         img {
-            width: 28vw;
+            width: 100%;
             max-width: 260px;
-            transform: rotate(25deg);
+            transform: rotate(20deg);
             box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+            border: 1px solid #ddd;
+            border-radius: 10px;
         }
 
         .main_top_img {
             position: absolute;
-            top: -24vh;
+            top: -5vh;
             left: -9vw;
 
             .main_img2 {
                 position: absolute;
-                left: 349px;
+                left: 350px;
                 top: -12vh;
             }
 
             .main_img3 {
                 position: absolute;
-                left: 649px;
+                left: 650px;
                 top: -11vh;
             }
         }
 
         .main_bottom_img {
             position: absolute;
-            bottom: -22vh;
+            bottom: -2vh;
             right: -12vw;
 
             .main_img5 {
                 position: absolute;
-                right: 350px;
+                right: 375px;
                 bottom: -13vh;
             }
 
             .main_img6 {
                 position: absolute;
-                right: 669px;
+                right: 700px;
                 bottom: -17vh;
             }
         }

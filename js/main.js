@@ -1,6 +1,3 @@
-'use-strict'
-
-
 
 $(function () {
     let navToggle = $('.nav_toggle');
@@ -15,7 +12,6 @@ $(function () {
     let scrollPercent;
     let percent;
 
-    
     function scrollFunc() {
         setProperty()
         contentIn() 
@@ -29,7 +25,7 @@ $(function () {
         sectionScrollTop = winScrollTop - sectionOffsetTop;
         scrollPercent = sectionScrollTop / scrollRealHeight;
         percent = scrollPercent * 100;
-       
+
         console.log(`sectionOffsetTop: ${sectionOffsetTop}`)
         console.log(`scrollHeight: ${scrollHeight}`)
         console.log(`scrollRealHeight: ${scrollRealHeight}`)
@@ -75,14 +71,6 @@ $(function () {
 			
 		}
 
-	};
-
-    function opacityEasyIn() {
-
-		var img = $('.fix_motion .slide_wrap .slide');
-		img.css({
-			'transform':'translateX('+ -moveX +'px)'
-		});
 	};
 
 
