@@ -109,53 +109,54 @@ header {
 #main_section {
     .container {
         border: 2px solid green;
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+        position: relative;
     }
+    
     .main_images {
-        img {
-            width: 100%;
-            max-width: 260px;
-            transform: rotate(20deg);
-            box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
-            border: 1px solid #ddd;
-            border-radius: 10px;
+        height: 100%;
+        border: 3px solid blue;
+        width: 100%;
+       img {
+        max-height: 70vh;
+        max-width: 30vw;
+        width: auto;
+        transform: rotate(25deg);
+        margin: 0 20px;
+        box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;
+       }
+
+       .main_top_img {
+        position: absolute;
+        top: -20vh;
+        left: -205px;
+        .main_img2 {
+            transform: translate(170px, -290px) rotate(25deg);
         }
+        .main_img3 {
+            transform: translate(200px, -300px) rotate(25deg);
 
-        .main_top_img {
-            position: absolute;
-            top: calc(100% - 140%);
-            left: -9vw;
-
-            .main_img2 {
-                position: absolute;
-                left: 350px;
-                top: -12vh;
-            }
-
-            .main_img3 {
-                position: absolute;
-                left: 650px;
-                top: -11vh;
-            }
         }
+       }
 
-        .main_bottom_img {
-            position: absolute;
-            bottom: calc(100% - 140%);
-            right: -12vw;
-
-            .main_img5 {
-                position: absolute;
-                right: 375px;
-                bottom: -13vh;
-            }
-
-            .main_img6 {
-                position: absolute;
-                right: 700px;
-                bottom: -17vh;
-            }
+       .main_bottom_img {
+        position: absolute;
+        bottom: -10vh;
+        right: -280px;
+        .main_img5 {
+            transform: translate(-215px, 390px) rotate(25deg);
         }
+        .main_img4 {
+            transform: translate(-269px, 432px) rotate(25deg);
+        }
+       }
     }
+
+    
+        }
+
 
     .profile {
         position: absolute;
@@ -170,7 +171,7 @@ header {
         -ms-transform: translate(-50%, -50%);
 
         .profile_img {
-            overflow: hidden; */
+            overflow: hidden; 
     /* border-radius: 50%; */
     /* max-height: 280px; */
     /* max-width: 280px; */
@@ -182,8 +183,7 @@ header {
     align-items: center;
     justify-content: center;
     margin-right: 4vw;
-    /* border: 2px solid #ddd; */
-    /* box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
+
 
             img {
                 object-fit: fill;
@@ -239,7 +239,7 @@ header {
     }
 
 
-}
+
 
 // #how_to_section 
 #how_to_section {
