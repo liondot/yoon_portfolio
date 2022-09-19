@@ -39,8 +39,6 @@ $(function () {
 
 	function contentIn() {
 
-	
-
 		if(percent >= -10 && percent > -3) {
 			$('.how_to_section .howTo_txts em.txt4').removeClass('active');
 			$('.how_to_section .howTo_txts em.txt1').addClass('active');
@@ -51,17 +49,7 @@ $(function () {
 			$('.how_to_section .howTo_txts em.txt2').addClass('active');
 		}
 
-		if(percent >= 75 && percent < 107) {
-
-            $('.how_to_section .howTo_txts em.txt1').addClass('active');
-
-		}
-
-		if(percent >= 107) {
-
-            $('.how_to_section .howTo_txts em.txt1').addClass('active');
-
-		}
+	
 
 		if(percent < 12 ) {
 
