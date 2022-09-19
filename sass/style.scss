@@ -1,33 +1,33 @@
 @import './partial/var';
 
-
-
 * {
-    box-sizing: border-box;
     padding: 0;
     margin: 0;
-    text-decoration: none;
     list-style: none;
     color: #333;
 }
 
 body,
 html {
-    overflow-x: hidden;
-    width: 100%;
-    height: 100%;
     font-size: 14px;
+    width: 100%;    
+    box-sizing: border-box;
+}
+
+body {
     position: relative;
-    
+    overflow-x: hidden;
+    box-sizing: border-box;
 }
 
 section {
     display: block;
+    margin: 0 auto;
     border-top: 2px solid orange;
 }
 
 .container {
-    max-width: 1400px;
+    width: 1400px;
     height: 100%;
     margin: 0 auto;
 }
@@ -241,15 +241,11 @@ header {
 // #how_to_section 
 #how_to_section {
     height: 3000px;
-
     .container {
         position: relative;
         border:1px solid green;
         height: 3000px;
-        overflow: auto;
-        
         .inner {
-            
             width: 100%;
             height: 100%;
             border: 2px solid red;
@@ -263,16 +259,23 @@ header {
             left: 0;
             em {
                 font-size: 2rem;
-                margin-bottom: 2rem;
-                // padding-bottom: 2rem;
+                line-height: 6rem;
                 visibility: hidden;
                 transform: translateY(-1000px);
-                opacity:1;
+                opacity:0;
                 &.active {
-                animation : transformY .5s 1 ease-in forwards;
-
+                    visibility: visible;
+                transform: translateY(-1000px);
+                opacity:1;
+                // animation : transformY .5s 1 ease-in forwards;
                 }
             }
+
+            .txt2 {
+                color: red;
+
+            }
+          
 
             @keyframes transformY {
                 0%{
@@ -286,7 +289,6 @@ header {
                     opacity: 1;
                     visibility: visible;
                 }
-                
             }
 
 
