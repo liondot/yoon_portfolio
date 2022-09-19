@@ -39,8 +39,7 @@ $(function () {
 
 	function contentIn() {
 
-		// var deviceImg = $('.device_fix .slide_wrap figure');
-		// var imgWidth = deviceImg.width();
+	
 
 		if(percent >= -10 && percent > -3) {
 			$('.how_to_section .howTo_txts em.txt4').removeClass('active');
@@ -54,20 +53,22 @@ $(function () {
 
 		if(percent >= 75 && percent < 107) {
 
-			$('.fix_motion .text_box .txt03').addClass('active');
+            $('.how_to_section .howTo_txts em.txt1').addClass('active');
+
 		}
 
 		if(percent >= 107) {
 
-			$('.fix_motion .text_box .txt04').addClass('active');
+            $('.how_to_section .howTo_txts em.txt1').addClass('active');
+
 		}
 
 		if(percent < 12 ) {
 
-			// $('.how_to_section .howTo_txts em.txt1').removeClass('active');
-            // $('.how_to_section .howTo_txts em.txt2').removeClass('active');
-            // $('.how_to_section .howTo_txts em.txt3').removeClass('active');
-            // $('.how_to_section .howTo_txts em.txt4').removeClass('active');
+			$('.how_to_section .howTo_txts em.txt1').removeClass('active');
+            $('.how_to_section .howTo_txts em.txt2').removeClass('active');
+            $('.how_to_section .howTo_txts em.txt3').removeClass('active');
+            $('.how_to_section .howTo_txts em.txt4').removeClass('active');
 			
 		}
 
