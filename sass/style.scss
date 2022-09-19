@@ -24,6 +24,8 @@ html {
 section {
     display: block;
     border-top: 2px solid orange;
+    height: 100vh;
+    position: relative;
 }
 
 .container {
@@ -105,8 +107,9 @@ header {
 
 // #main_section
 #main_section {
-    position: relative;
-    height: 1080px;
+    .container {
+        border: 2px solid green;
+    }
     .main_images {
         img {
             width: 100%;
@@ -119,7 +122,7 @@ header {
 
         .main_top_img {
             position: absolute;
-            top: -5vh;
+            top: calc(100% - 140%);
             left: -9vw;
 
             .main_img2 {
@@ -137,7 +140,7 @@ header {
 
         .main_bottom_img {
             position: absolute;
-            bottom: -2vh;
+            bottom: calc(100% - 140%);
             right: -12vw;
 
             .main_img5 {
@@ -167,18 +170,20 @@ header {
         -ms-transform: translate(-50%, -50%);
 
         .profile_img {
-            overflow: hidden;
-            border-radius: 50%;
-            max-height: 280px;
-            max-width: 280px;
-            min-width: 200px;
-            min-height: 200px;
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            margin-right: 4vw;
-            border: 2px solid #ddd;
-            box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+            overflow: hidden; */
+    /* border-radius: 50%; */
+    /* max-height: 280px; */
+    /* max-width: 280px; */
+    /* min-width: 200px; */
+    /* min-height: 200px; */
+    /* width: 300px; */
+    /* height: 300px; */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 4vw;
+    /* border: 2px solid #ddd; */
+    /* box-shadow: rgb(50 50 93 / 25%) 0px 13px 27px -5px, rgb(0 0 0 / 30%) 0px 8px 16px -8px;
 
             img {
                 object-fit: fill;
@@ -230,8 +235,6 @@ header {
                 }
             }
         }
-
-
 
     }
 
