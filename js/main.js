@@ -255,11 +255,10 @@ $(function(){
 
 	function contentIn() {
 
+
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 		console.log('contentin퍼센트', percent)
-
-		console.log('imgWidth', imgWidth)
 
 		if(percent >= 0 && percent < 20) {
 			imageChange(imgWidth * 0);
@@ -357,6 +356,25 @@ $(function(){
 
 	init();
 });
+
+
+// contact me 
+const contact_form = document.querySelector('#contact_form')
+const contact_btn = document.querySelector("#contact_btn");
+const social_btn = document.querySelector("#social_btn");
+const container = contact_form.querySelector(".container");
+
+social_btn.addEventListener("click", () => {
+  container.classList.add("change_mod");
+});
+
+contact_btn.addEventListener("click", () => {
+  container.classList.remove("change_mod");
+});
+
+
+// final_notice 
+
 
 
 // /************** 숫자를 바꿔 보며 원을 그려보세요:) 잘못넣으면 오류가 생기니 따옴표 지우지말고 조심조심 바꾸세요 ^.^; *******/
