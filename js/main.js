@@ -1,6 +1,6 @@
 'use-strict';
 
-// section 2 font 
+
 $(function () {
 
 	let scrollTxt = $('.scroll_txt');
@@ -34,9 +34,6 @@ $(function () {
 	let cloneBodyOffsetTop;
 	let cloneBodyScrollTop;
 	let cloneBodyRealHeight;
-	// var winScrollTop;
-	// var scrollPerecnt;
-	// var percent;
 	let isMobile;
 
 	/*리사이즈, 스크롤할때 변해야 할 값들*/
@@ -46,6 +43,7 @@ $(function () {
 	let scrollRealHeight;
 	let scrollPercent;
 	let percent;
+
 
 	let toyCloneHeight;
 	let toyCloneOffsetTop;
@@ -159,7 +157,7 @@ $(function () {
 			webLine.eq(0).removeClass('active')
 		}
 		//스크롤이 toy_clone 섹션에 위치하면 라인 애니메이션 실행 
-		if (percent > 135) {
+		if (percent > 130) {
 			webLine.eq(1).addClass('active')
 		} else if (percent < 139 || percent > 200) {
 			webLine.eq(1).removeClass('active')
