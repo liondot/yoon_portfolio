@@ -11,63 +11,16 @@ $(function () {
 	let scrollTxtTop;
 	let scrollTxtBottom;
 
+	// my skill 
+	let scrollBody = $('.my_skill');
+	let titText = scrollBody.find('.intro_txt');
+	let maskLeft = scrollBody.find('.left_mask');
+	let maskRight = scrollBody.find('.right_mask');
+	let bgImage = scrollBody.find('.bg_img');
+	let bgImageTwo = scrollBody.find('.bg_img2')
+	let endingContent = scrollBody.find('.ending_txt');
 
-
-	function setProperty() {
-		winScrollTop = $(window).scrollTop();
-		scrollTxtTop = scrollTxt.offset().top;
-		scrollTxtBottom = scrollTxtTop + scrollTxt.height();
-		textInOut()
-		console.log('winscrolltop', winScrollTop)
-	}
-
-	function moveFunc() {
-		setProperty()
-
-		if (winScrollTop > scrollTxtTop && winScrollTop <= scrollTxtBottom) {
-			textInOut()
-		} else {}
-	}
-
-	function textInOut() {
-		var dis = winScrollTop / ((scrollBox.height() - scrollTxtTop) / 4);
-		var gap = 1;
-
-		allText.each(function (index, arr) {
-			$(arr).attr( //제이쿼리 attr 메소드로 엘리먼트의 속성을 수정.
-				'style',
-				'--progress:' + (Math.max(0, dis - (index * gap))) + ''
-			)
-		})
-	}
-
-	function init() {
-
-		moveFunc()
-	}
-
-	$(window).scroll(function () {
-		moveFunc()
-	})
-
-	$(window).resize(function () {
-		init()
-	})
-
-	init()
-});
-
-// section 3 my skill & project
-$(function () {
-
-	var scrollBody = $('.my_skill');
-	var titText = scrollBody.find('.intro_txt');
-	var maskLeft = scrollBody.find('.left_mask');
-	var maskRight = scrollBody.find('.right_mask');
-	var bgImage = scrollBody.find('.bg_img');
-	var bgImageTwo = scrollBody.find('.bg_img2')
-	var endingContent = scrollBody.find('.ending_txt');
-
+	// 메인타이틀 라인  
 	let webLine = $('.web_line');
 	let myProject = $('#my_project')
 	let projectCont = myProject.find('.contents')
@@ -76,16 +29,23 @@ $(function () {
 	let toyClone = $('#clone_toy_project');
 	let toyContainer = toyClone.find('.container');
 	let ctTitle = toyClone.find('.ct_title');
-	console.log(toyContainer)
+
+	let cloneBodyScrollHeight;
+	let cloneBodyOffsetTop;
+	let cloneBodyScrollTop;
+	let cloneBodyRealHeight;
+	// var winScrollTop;
+	// var scrollPerecnt;
+	// var percent;
+	let isMobile;
 
 	/*리사이즈, 스크롤할때 변해야 할 값들*/
-	var scrollHeight;
-	var sectionOffsetTop;
-	var sectionScrollTop;
-	var scrollRealHeight;
-	var winScrollTop;
-	var scrollPercent;
-	var percent;
+	let scrollHeight;
+	let sectionOffsetTop;
+	let sectionScrollTop;
+	let scrollRealHeight;
+	let scrollPercent;
+	let percent;
 
 	let toyCloneHeight;
 	let toyCloneOffsetTop;
@@ -95,12 +55,15 @@ $(function () {
 	let toyPer;
 
 
-	function changeOverlap() {
-		setProperty();
-		motionRender();
-	};
 
 	function setProperty() {
+		// section 2 scroll_text 위치 값   
+		winScrollTop = $(window).scrollTop();
+		scrollTxtTop = scrollTxt.offset().top;
+		scrollTxtBottom = scrollTxtTop + scrollTxt.height();
+		textInOut()
+		
+		// my skill & project 위치값
 		scrollHeight = scrollBody.height();
 		sectionOffsetTop = scrollBody.offset().top;
 		scrollRealHeight = (scrollHeight - $(window).height());
@@ -120,18 +83,45 @@ $(function () {
 
 		console.log('toyCloneOffsetTop', toyCloneOffsetTop)
 		console.log('toyPer', toyPer)
-	};
 
+	}
 
+	function moveFunc() {
+		setProperty()
+		motionRender();
+
+		if (winScrollTop > scrollTxtTop && winScrollTop <= scrollTxtBottom) {
+			textInOut()
+		} else {}
+
+		// toyclone project 모바일버전 pc
+		if(isMobile) {
+			contentInMobile();
+		} else {
+			contentIn();
+		}
+	}
+
+	function textInOut() {
+		var dis = winScrollTop / ((scrollBox.height() - scrollTxtTop) / 4);
+		var gap = 1;
+
+		allText.each(function (index, arr) {
+			$(arr).attr( 
+				'style',
+				'--progress:' + (Math.max(0, dis - (index * gap))) + ''
+			)
+		})
+	}
 
 
 	function motionRender() {
-		var maskStartValue = 50;
-		var maskEndValue = -10;
-		var zoomValue = 1.5;
-		var zoomOutValue = 1;
-		var maskVal = Math.max(maskEndValue, maskStartValue - (scrollPercent * maskStartValue));
-		var scaleVal = Math.max(zoomOutValue, zoomValue - (scrollPercent * zoomValue));
+		let maskStartValue = 50;
+		let maskEndValue = -10;
+		let zoomValue = 1.5;
+		let zoomOutValue = 1;
+		let maskVal = Math.max(maskEndValue, maskStartValue - (scrollPercent * maskStartValue));
+		let scaleVal = Math.max(zoomOutValue, zoomValue - (scrollPercent * zoomValue));
 
 		maskLeft
 			.css({
@@ -197,91 +187,37 @@ $(function () {
 	};
 
 
-	function init() {
-		changeOverlap();
-	};
-
-	$(window).scroll(function (e) {
-		changeOverlap();
-	});
-
-
-	$(window).resize(function () {
-		changeOverlap();
-	});
-
-
-	init();
-});
-
-
-// clone_toy_project
-$(function(){
-
-	var scrollBody = $('#clone_toy_project');
-	var scrollHeight;
-	var sectionOffsetTop;
-	var sectionScrolTop;
-	var scrollRealHeight;
-	var winScrollTop;
-	var scrollPerecnt;
-	var percent;
-	var isMobile;
-
-	function scrollFunc() {
-
-		setProperty();
-
-
-		if(isMobile) {
-			contentInMobile();
-		} else {
-			contentIn();
-		}
-	};
-
-	function setProperty() {
-		isMobile = $(window).width() <= 1024 ? true : false;
-		scrollHeight = scrollBody.height();
-		sectionOffsetTop = scrollBody.offset().top;
-		scrollRealHeight = (scrollHeight - $(window).height());
-		winScrollTop = $(window).scrollTop();
-		sectionScrolTop = winScrollTop - sectionOffsetTop;
-
-		scrollPerecnt =  sectionScrolTop / scrollRealHeight;
-		percent = scrollPerecnt * 100;
-
-	};
-
 	function contentIn() {
-
-
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
-		console.log('contentin퍼센트', percent)
+		console.log('toyPer', toyPer)
+		console.log('deviceImg', deviceImg)
+		console.log('imgWidth', imgWidth)
 
-		if(percent >= 0 && percent < 20) {
+		
+		if(toyPer >= 0 && toyPer < 20) {
 			imageChange(imgWidth * 0);
 			$('#clone_toy_project .text_box .txt01').addClass('active');
+
 		}
 
-		if(percent >= 20 && percent < 54) {
+		if(toyPer >= 20 && toyPer < 54) {
 			imageChange(imgWidth * 1);
 			$('#clone_toy_project .text_box .txt02').addClass('active');
 		}
 
-		if(percent >= 54 && percent < 85) {
+		if(toyPer >= 54 && toyPer < 85) {
 			imageChange(imgWidth * 2);
 			$('#clone_toy_project .text_box .txt03').addClass('active');
 		}
 
-		if(percent >= 85 ) {
+		if(toyPer >= 85 ) {
 			imageChange(imgWidth * 3);
 			console.log(imgWidth*3)
 			$('#clone_toy_project .text_box .txt04').addClass('active');
 		}
 
-		if(percent < 0 ) {
+		if(toyPer < 0 ) {
 			$('#clone_toy_project .text_box .txt01').removeClass('active');
 			$('#clone_toy_project .text_box .txt02').removeClass('active');
 			$('#clone_toy_project .text_box .txt03').removeClass('active');
@@ -294,26 +230,27 @@ $(function(){
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 	
+		console.log('imgWidth', imgWidth)
 
-		if(percent >= 5 && percent < 25){
+		if(toyPer >= 5 && toyPer < 25){
 			imageChange(imgWidth * 0);
 			$('#clone_toy_project .text_box p').removeClass('active');
 			$('#clone_toy_project .text_box .txt01').addClass('active');
 		}
 
-		if(percent >= 25 && percent < 45) {
+		if(toyPer >= 25 && toyPer < 45) {
 			imageChange(imgWidth * 1);
 			$('#clone_toy_project .text_box p').removeClass('active');
 			$('#clone_toy_project .text_box .txt02').addClass('active');
 		}
 
-		if(percent >= 45 && percent < 65) {
+		if(toyPer >= 45 && toyPer < 65) {
 			imageChange(imgWidth * 2);
 			$('#clone_toy_project .text_box p').removeClass('active');
 			$('#clone_toy_project .text_box .txt03').addClass('active');
 		}
 
-		if(percent >= 65 && percent <= 85) {
+		if(toyPer >= 65 && toyPer <= 85) {
 			imageChange(imgWidth * 3);
 			$('#clone_toy_project .text_box p').removeClass('active');
 			$('#clone_toy_project .text_box .txt04').addClass('active');
@@ -321,12 +258,12 @@ $(function(){
 		}
 
 
-		if(percent > 85) {
+		if(toyPer > 85) {
 			imageChange(imgWidth * 3);
 			$('#clone_toy_project .text_box p').removeClass('active');
 		}
 
-		if(percent < 0) {
+		if(toyPer < 0) {
 			(imgWidth * 0);
 			$('#clone_toy_project .text_box p').removeClass('active');
 		}
@@ -342,35 +279,38 @@ $(function(){
 
 
 
+
 	function init() {
-		scrollFunc();
-	};
 
-	$(window).scroll(function() {
-		scrollFunc();
-	});
+		moveFunc()
+	}
 
-	$(window).resize(function() {
-		scrollFunc();
-	});
+	$(window).scroll(function () {
+		moveFunc()
+	})
 
-	init();
+	$(window).resize(function () {
+		init()
+	})
+
+	init()
 });
+
+
 
 
 // contact me 
-const contact_form = document.querySelector('#contact_form')
-const contact_btn = document.querySelector("#contact_btn");
-const social_btn = document.querySelector("#social_btn");
-const container = contact_form.querySelector(".container");
+contactForm = $('#contact_form')
+contactBtn = $('#contact_btn')
+socialBtn = $('#social_btn')
+contactContainer = contactForm.find('.container')
 
-social_btn.addEventListener("click", () => {
-  container.classList.add("change_mod");
-});
-
-contact_btn.addEventListener("click", () => {
-  container.classList.remove("change_mod");
-});
+socialBtn.click(function(){
+	contactContainer.addClass('change_mod')
+})
+contactBtn.click(function(){
+	contactContainer.removeClass('change_mod')
+})
 
 
 // final_notice 
