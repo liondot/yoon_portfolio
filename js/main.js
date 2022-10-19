@@ -20,7 +20,6 @@ $(function () {
 	let maskLeft = mySkill.find('.left_mask');
 	let maskRight = mySkill.find('.right_mask');
 	let bgImage = mySkill.find('.bg_img');
-	let bgImageTwo = mySkill.find('.bg_img2');
 	let endingContent = mySkill.find('.ending_txt');
 
 
@@ -31,13 +30,11 @@ $(function () {
 
 	// toy project 
 	let toyClone = $('#clone_toy_project');
-	let toyContainer = toyClone.find('.container');
-	let ctTitle = toyClone.find('.ct_title');
+	
+	// contact_form 
+	let contactForm = $('#contact_form');
+	console.log(contactForm)
 
-	let cloneBodymySkillHeight;
-	let cloneBodyOffsetTop;
-	let cloneBodyScrollTop;
-	let cloneBodyRealHeight;
 	let isMobile;
 
 	let toyCloneHeight;
@@ -54,6 +51,9 @@ $(function () {
 	let designSkillText = skillDesign.find('.skill_txt');
 	let designSkillBar = skillDesign.find('.skill_bar');
 
+	// final_notice 
+	let motionArea = $('.motion_area')
+
 
 	let mySkillHeight;
 	let mySkillRealHeight;
@@ -62,8 +62,7 @@ $(function () {
 	let valuePercent;
 	let parallaxSpeed = 1200;
 
-	let valConThisTop
-	let valConPercent
+
 
 	let maxNum;
 
@@ -111,15 +110,15 @@ $(function () {
 	function render(valueTextPercent, valueHeightPercent) {
 		if (maxNum > 100) { //100이 넘어갈 때 더이상 값이 올리가지 않음, 100으로 최대값 맞춤
 
-			// codeSkillText.text("100 " + '%')
-			// designSkillText.text("100 " + '%')
+			codeSkillText.text("100 " + '%')
+			designSkillText.text("100 " + '%')
 
-			// codeSkillBar.css({ 
-			// 	width: "40" + '%'
-			// });
-			// designSkillBar.css({ 
-			// 	width: "40" + '%'
-			// });
+			codeSkillBar.css({ 
+				width: "40" + '%'
+			});
+			designSkillBar.css({ 
+				width: "40" + '%'
+			});
 
 
 		} else if (maxNum < 100) {
@@ -176,6 +175,7 @@ $(function () {
 		setProperty()
 		motionRender();
 
+	//  scroll_txt영역이 윈도우창에 도착했을 때 텍스트 나타남  
 		if (winScrollTop > scrollTxtTop && winScrollTop <= scrollTxtBottom) {
 			textInOut()
 		} else {}
@@ -188,6 +188,7 @@ $(function () {
 		}
 	}
 
+	// scroll_txt 영역 함수 
 	function textInOut() {
 		var dis = winScrollTop / ((scrollBox.height() - scrollTxtTop) / 4);
 		var gap = 1;
@@ -240,22 +241,43 @@ $(function () {
 		}
 
 
-
+		// 스롤이 my skill 섹션에 도착하면 라인 애니메이션 실행 
+		if (percent > 11) {
+			webLine.eq(0).addClass('active')
+		} else if (percent < 11 || percent > 200) {
+			webLine.eq(0).removeClass('active')
+		}
 
 		// 스롤이 my_project 섹션에 도착하면 라인 애니메이션 실행 
 		if (percent > 105) {
-			webLine.eq(0).addClass('active')
+			webLine.eq(1).addClass('active')
 		} else if (percent < 105 || percent > 200) {
-			webLine.eq(0).removeClass('active')
+			webLine.eq(1).removeClass('active')
 		}
 		//스크롤이 toy_clone 섹션에 위치하면 라인 애니메이션 실행 
 		if (percent > 135) {
-			webLine.eq(1).addClass('active')
+			webLine.eq(2).addClass('active')
 		} else if (percent < 139 || percent > 200) {
-			webLine.eq(1).removeClass('active')
+			webLine.eq(2).removeClass('active')
 		}
 
 
+		console.log('percent', percent)
+		let finalNotice = $('#final_notice')
+		if(percent > 180 && percent < 220){
+			finalNotice.css({backgroundColor: 'black'})
+		}else {
+			finalNotice.css({backgroundColor: 'white'})
+		}
+
+		if(percent > 185 && percent < 215){
+			motionArea.addClass('active')
+			finalNotice.addClass('active')
+		} else if (percent < 185 || percent > 215){
+			motionArea.removeClass('active')
+			finalNotice.removeClass('active')
+		}
+	
 
 		// my_project 스크롤 위치에 도착하면 컨텐츠 애니메이션 실행 
 		if (percent > 107 && percent < 200) {
@@ -298,7 +320,6 @@ $(function () {
 
 		if (toyPer >= 85) {
 			imageChange(imgWidth * 3);
-			console.log(imgWidth * 3)
 			$('#clone_toy_project .text_box .txt04').addClass('active');
 		}
 
@@ -375,6 +396,7 @@ $(function () {
 	contactBtn.click(function () {
 		contactContainer.removeClass('change_mod')
 	})
+
 
 
 
