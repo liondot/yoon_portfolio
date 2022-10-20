@@ -33,7 +33,12 @@ $(function () {
 	
 	// contact_form 
 	let contactForm = $('#contact_form');
-	console.log(contactForm)
+	let contactContainer = contactForm.find('.container')
+	let contactMe = contactForm.find('.contact_me')
+	let developerImg = contactForm.find('.developer_img')
+	let contactOffsetTop;
+	let contactBottom;
+
 
 	let isMobile;
 
@@ -69,6 +74,11 @@ $(function () {
 
 	function setProperty() {
 		winScrollTop = $(window).scrollTop();
+
+		// contactme 위치에 있을 때 애니메이션 실행 값 
+		contactOffsetTop = contactForm.offset().top
+		contactBottom = contactOffsetTop + contactForm.height()
+
 
 		// section 2 scroll_text 위치 값   
 		scrollTxtTop = scrollTxt.offset().top;
@@ -210,6 +220,17 @@ $(function () {
 		let maskVal = Math.max(maskEndValue, maskStartValue - (skillScrollPercent * maskStartValue));
 		let scaleVal = Math.max(zoomOutValue, zoomValue - (skillScrollPercent * zoomValue));
 
+		// 컨텍트 미 영역에 들어올때 애니메이션 실행 
+		if(winScrollTop > contactOffsetTop && winScrollTop < contactBottom) {
+			contactContainer.addClass('active')
+			contactMe.addClass('active')
+			developerImg.addClass('active')
+		} else {
+			contactContainer.removeClass('active')
+			contactMe.removeClass('active')
+			developerImg.removeClass('active')
+
+		}
 		// my skill 화면 열림 maskLeft, maskRight
 		maskLeft
 			.css({
@@ -231,7 +252,7 @@ $(function () {
 		} else {
 			titText.removeClass('active');
 		}
-
+		
 		if (percent >= 10) {
 			endingContent.addClass('active');
 			skills.addClass('active')
