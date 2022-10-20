@@ -30,6 +30,17 @@ $(function () {
 
 	// toy project 
 	let toyClone = $('#clone_toy_project');
+
+	let isMobile;
+
+	let toyCloneHeight;
+	let toyCloneOffsetTop;
+	let toyCloneBottom;
+	let toyCloneScrollTop;
+	let toyClonePercent;
+	let toyCloneRealHeight;
+	let toyPer;
+
 	
 	// contact_form 
 	let contactForm = $('#contact_form');
@@ -40,14 +51,6 @@ $(function () {
 	let contactBottom;
 
 
-	let isMobile;
-
-	let toyCloneHeight;
-	let toyCloneOffsetTop;
-	let toyCloneScrollTop;
-	let toyClonePercent;
-	let toyCloneRealHeight;
-	let toyPer;
 
 	let skillCode = $('.skill_code');
 	let codeSkillText = skillCode.find('.skill_txt');
@@ -108,6 +111,7 @@ $(function () {
 
 		toyCloneOffsetTop = toyClone.offset().top;
 		toyCloneHeight = toyClone.height();
+		toyCloneBottom = toyCloneOffsetTop + toyCloneHeight;
 		toyCloneRealHeight = (toyCloneHeight - $(window).height());
 		toyCloneScrollTop = winScrollTop - toyCloneOffsetTop;
 		toyClonePercent = toyCloneScrollTop / toyCloneRealHeight;
@@ -116,7 +120,7 @@ $(function () {
 	}
 
 
-
+// 나의 스킬 랜더 
 	function render(valueTextPercent, valueHeightPercent) {
 		if (maxNum > 100) { //100이 넘어갈 때 더이상 값이 올리가지 않음, 100으로 최대값 맞춤
 
@@ -184,6 +188,7 @@ $(function () {
 	function moveFunc() {
 		setProperty()
 		motionRender();
+		webLineClone()
 
 	//  scroll_txt영역이 윈도우창에 도착했을 때 텍스트 나타남  
 		if (winScrollTop > scrollTxtTop && winScrollTop <= scrollTxtBottom) {
@@ -198,7 +203,7 @@ $(function () {
 		}
 	}
 
-	// scroll_txt 영역 함수 
+	// scroll_txt 인아웃 애니메이션
 	function textInOut() {
 		var dis = winScrollTop / ((scrollBox.height() - scrollTxtTop) / 4);
 		var gap = 1;
@@ -275,12 +280,7 @@ $(function () {
 		} else if (percent < 105 || percent > 200) {
 			webLine.eq(1).removeClass('active')
 		}
-		//스크롤이 toy_clone 섹션에 위치하면 라인 애니메이션 실행 
-		if (percent > 135) {
-			webLine.eq(2).addClass('active')
-		} else if (percent < 139 || percent > 200) {
-			webLine.eq(2).removeClass('active')
-		}
+
 
 
 		console.log('percent', percent)
@@ -324,6 +324,10 @@ $(function () {
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
+
+		
+		
+		
 		if (toyPer >= 0 && toyPer < 20) {
 			imageChange(imgWidth * 0);
 			$('#clone_toy_project .text_box .txt01').addClass('active');
@@ -359,6 +363,7 @@ $(function () {
 		var imgWidth = deviceImg.width();
 
 		console.log('imgWidth', imgWidth)
+		
 
 		if (toyPer >= 5 && toyPer < 25) {
 			imageChange(imgWidth * 0);
@@ -398,6 +403,24 @@ $(function () {
 
 	};
 
+	function webLineClone(){
+				//스크롤이 toy_clone 섹션에 위치하면 라인 애니메이션 실행 
+		// if (percent > 135) {
+		// 	webLine.eq(2).addClass('active')
+		// } else if (percent < 139 || percent > 200) {
+		// 	webLine.eq(2).removeClass('active')
+		// }
+// toyClone
+if(winScrollTop + 300 >= toyCloneOffsetTop && winScrollTop < toyCloneBottom) {
+	webLine.eq(2).addClass('active')
+	console.log('진입')
+} else {
+	webLine.eq(2).removeClass('active')
+	console.log('아웃')
+}
+
+	}
+
 	function imageChange(moveX) {
 		let img = $('#clone_toy_project .slide_wrap .slide')
 		img.css({
@@ -423,7 +446,6 @@ $(function () {
 
 
 	function init() {
-
 		moveFunc()
 	}
 

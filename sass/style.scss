@@ -407,7 +407,7 @@ header {
                 width: 100%;
                 text-align: center;
                 color: #000;
-                font-size: 50px;
+                font-size:70px;
                 animation: in-out 1s linear forwards paused;
                 animation-delay: calc(var(--progress) * -1s);
             }
@@ -649,10 +649,8 @@ header {
                 .skill_design {
                     float: left;
                     width: 41%;
-                    margin-left: 80px;
-                    @include media ('<=tablet') {
-                       margin-left: 50px;
-                    }
+                    margin-left: 50px;
+                   
 
                     .progress {
                         display: -webkit-box;
@@ -682,11 +680,9 @@ header {
                 .skill_code {
                     float: right;
                     width: 41%;
-                    margin-right: 80px;
+                    margin-right: 50px;
                     position: relative;
-                    @include media ('<=tablet') {
-                        margin-right: 50px;
-                     }
+                    
                 }
 
                 &.active {
@@ -1154,7 +1150,7 @@ header {
             transform: translateY(-50%);
             opacity: 0;
             visibility: hidden;
-            transition: all .2s ease-in;
+            transition: all .5s ease-in;
 
             .tit_wrap {
                 color: #fff;
@@ -1214,7 +1210,7 @@ header {
                             padding-bottom: 5px;
                             text-align: center;
                             white-space: nowrap;
-                            animation: move_text_mask .5s both ease-in-out;
+                            animation: move_text_mask .8s both ease-in-out;
                             animation-play-state: paused;
                         }
                     }
@@ -1236,7 +1232,7 @@ header {
                             padding-bottom: 5px;
                             text-align: center;
                             white-space: nowrap;
-                            animation: move_text_mask .5s both ease-in-out;
+                            animation: move_text_mask .8s both ease-in-out;
                             animation-play-state: paused;
                         }
                     }
