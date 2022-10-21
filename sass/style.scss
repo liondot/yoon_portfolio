@@ -10,13 +10,11 @@
 }
 
 
-
 body,
 html {
     font-size: 14px;
     box-sizing: border-box;
     overflow-x: hidden;
-    border: 4px solid purple;
 }
 
 html {
@@ -27,24 +25,15 @@ body {
     width: 100%;
     position: relative;
     margin: 0 auto;
-  
 }
-
-// $breakpoints: (
-//   "phone": 360px,
-//   "tablet": 768px,
-//   "desktop": 1366px,
-//   "LGdesktop": 1920px
-// ) !default;
 
 section {
     display: block;
     margin: 0 auto;
     height: 100vh;
     position: relative;
-    border: 1px solid;
+    border: 1px solid transparent;
     width: 100%;
-
 }
 
 .container {
@@ -58,6 +47,7 @@ section {
     font-size: 60px;
     text-align: center;
 }
+
 // progressBar 
 // .progressBar {
 
@@ -83,151 +73,66 @@ section {
 //     }
 // }
 
-
 //header
-header {
-    position: relative;
-    z-index: 10;
+
+.vers {
+    display: none;
+}
+
+.nav_con {
+    border: 3px solid green;
+    height: 50px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
     width: 100%;
+    box-sizing: border-box;
+}
+.nav_toggle {
+    position: fixed;
+    left: 10px;
+    top: 13px;
+    z-index: 100;
+    font-size: 20px;
+    color: #555;
+    cursor: pointer;
+}
 
-
-
-    .vers {
-        display: none;
-
-        .code_ver {
-            width: 50px;
-            height: 50px;
-            border: 1px solid green;
-            border-radius: 50%;
-            display: inline-block;
-            margin: 5px;
-            font-size: 1rem;
-            text-align: center;
-            line-height: 50px;
-        }
-    }
-
-    .nav_toggle {
-        position: fixed;
-        top: 30px;
-        right: -30px;
-        cursor: pointer;
-        visibility: hidden;
-        opacity: 0;
-        transition: right .3s ease-in;
-
-        &.active {
-            visibility: visible;
-            opacity: 1;
-            right: 30px;
-
-        }
-
-        .fa-bars {
-            font-size: 25px;
-        }
-
-
-        &.active {
-            span {
-                transition: all .3s ease-in;
-
-                &:first-child {
-                    top: 50%;
-                    transform: rotate(45deg);
-                }
-
-                &:nth-of-type(2) {
-                    display: none;
-                }
-
-                &:last-child {
-                    top: 50%;
-                    transform: rotate(320deg);
-                }
-            }
-        }
-
-        span {
-            width: 100%;
-            height: .1rem;
-            background: #000;
-            position: absolute;
-            top: 0;
-            left: 0;
-
-            &:nth-child(2) {
-                top: 50%;
-                transform: $translateY-50;
-            }
-
-            &:last-child {
-                top: 100%;
-                transform: $translateY-100;
-            }
-        }
-
-
-    }
-
-    .nav_list {
-        position: fixed;
-        right: 20px;
-        top: 20%;
-        z-index: 1000;
-        transform: translateY(-50%);
-        -webkit-transform: translateY(-50%);
-        -moz-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-    }
-
-    .nav_list li {
-        margin-bottom: 15px;
-    }
-
-    .nav_list li a {
+.nav_list {
+    position: fixed;
+    left: 49px;
+    top: 3%;
+    z-index: 100;
+    display: flex;
+    line-height: 1;
+  li {
+    margin-bottom: 10px;
+    margin-right: 20px;
+    a {
         position: relative;
         display: block;
-        color: #333;
+        color: #555;
         transition: .5s;
-        -webkit-transition: .5s;
-        -moz-transition: .5s;
-        -o-transition: .5s;
-        -ms-transition: .5s;
+        -webkit-transition:.5s;
+        -moz-transition:.5s; 
+        -o-transition:.5s; 
+        -ms-transition:.5s;
+        i{
+            display: none;
+        }
+        &.active {
+            color: rgb(68, 124, 203);
+        }
+        &:hover,
+        &:focus {
+            color: rgb(68, 124, 203);
+        }
     }
-
-    .nav_list li a .fa-solid {
-        position: absolute;
-        left: -20px;
-        top: 5px;
-        width: 16px;
-        height: 16px;
-        background-image: url('../images/icon_p.png');
-        background-size: cover;
-        background-position: 0px 0px;
-        transition: transform .5s;
-        -webkit-transition: transform .5s;
-        -moz-transition: transform .5s;
-        -o-transition: transform .5s;
-        -ms-transition: transform .5s;
-    }
-
-    .nav_list li a.active {
-        color: #f0582b;
-    }
-
-    .nav_list li a.active .fa-solid {
-        background-position: 0px 16px;
-        transform: rotate(360deg);
-    }
-
-    .nav_list li a:hover,
-    .nav_list li a:focus {
-        color: #f0582b;
-        text-decoration: none;
-    }
+  }
 }
+
 
 // #main_section
 #main_section {
@@ -283,8 +188,6 @@ header {
             }
         }
     }
-
-
 }
 
 
@@ -342,7 +245,7 @@ header {
 
         .profile_subTxt {
             color: #333;
-            font-size: .8rem;
+            font-size: 1.3rem;
             margin-top: 1rem;
             @include media ('<=tablet') {
                 font-size: 1.5rem;
@@ -712,9 +615,7 @@ header {
                         i {
                             font-size: 40px;
                             color: #333;
-                            @include media ('<=tablet') {
-                                margin-left: 20px;
-                             }
+                         
                         }
 
                         em {
@@ -1142,6 +1043,7 @@ header {
     .txt_area {
         .motion_area {
             overflow: hidden;
+            width: 100%;
             font-size: 120px;
             line-height: 1;
             color: #fff;
@@ -1155,8 +1057,9 @@ header {
             .tit_wrap {
                 color: #fff;
                 text-align: center;
+                margin-top: 80px;
                 font-size: 16px;
-                padding-bottom: 100px;
+                padding-bottom: 60px;
                 display: block;
                 i {
                     font-size: 40px;

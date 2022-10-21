@@ -1,7 +1,11 @@
 'use-strict';
 
-
 $(function () {
+	let section = $('.section');
+	let offsetTop = [];
+	let offsetBottom = [];
+
+	let mainTitle = $('.main_title')
 
 	let scrollTxt = $('.scroll_txt');
 	let scrollBox = $('.scroll_box');
@@ -14,14 +18,12 @@ $(function () {
 	// my skill 
 	let mySkill = $('.my_skill');
 	let skills = $('.skills');
-	// let valCon = $('.value_con')
 
 	let titText = mySkill.find('.intro_txt');
 	let maskLeft = mySkill.find('.left_mask');
 	let maskRight = mySkill.find('.right_mask');
 	let bgImage = mySkill.find('.bg_img');
 	let endingContent = mySkill.find('.ending_txt');
-
 
 	// 메인타이틀 라인  
 	let webLine = $('.web_line');
@@ -40,7 +42,6 @@ $(function () {
 	let toyClonePercent;
 	let toyCloneRealHeight;
 	let toyPer;
-
 	
 	// contact_form 
 	let contactForm = $('#contact_form');
@@ -49,8 +50,6 @@ $(function () {
 	let developerImg = contactForm.find('.developer_img')
 	let contactOffsetTop;
 	let contactBottom;
-
-
 
 	let skillCode = $('.skill_code');
 	let codeSkillText = skillCode.find('.skill_txt');
@@ -62,7 +61,6 @@ $(function () {
 	// final_notice 
 	let motionArea = $('.motion_area')
 
-
 	let mySkillHeight;
 	let mySkillRealHeight;
 	let mySkillOffsetTop;
@@ -70,13 +68,57 @@ $(function () {
 	let valuePercent;
 	let parallaxSpeed = 1200;
 
-
-
 	let maxNum;
+
+	function navInSection(){
+		if(winScrollTop >= offsetTop[0] && offsetBottom[0] > winScrollTop) {
+			sectionInActive(0)
+		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
+			sectionInActive(1)
+		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
+			sectionInActive(2)
+			
+		} else if(winScrollTop >= offsetTop[3] && offsetBottom[3] > winScrollTop) {
+			sectionInActive(3)
+		
+		} else if(winScrollTop >= offsetTop[4] && offsetBottom[4] > winScrollTop) {
+			sectionInActive(4)
+		} else if(winScrollTop >= offsetTop[5] && offsetBottom[5] > winScrollTop) {
+			sectionInActive(5)
+		} else if(winScrollTop >= offsetTop[6] && offsetBottom[6] > winScrollTop) {
+			sectionInActive(6)
+		}
+	}
+
+	function toggle(){
+		let navToggle = $('.nav_toggle');
+		let navList = $('.nav_list');
+
+		navToggle.click(function(){
+			navList.toggle()
+		})	
+	}
+
+	function sectionInActive(index){
+		listActive(index)
+	}
+
+	function listActive(index){
+		let list = $('.nav_list li a');
+		list.removeClass('active');
+		list.eq(index).addClass('active');
+	}
 
 
 	function setProperty() {
 		winScrollTop = $(window).scrollTop();
+
+		// nav_list 각 세션에 섹션 클래스 탑값과 높이값 
+		section.each(function(index,obj){
+			offsetTop[index] = $(obj).offset().top;
+			offsetBottom[index] = offsetTop[index] + $(obj).height();
+		})
+		
 
 		// contactme 위치에 있을 때 애니메이션 실행 값 
 		contactOffsetTop = contactForm.offset().top
@@ -102,11 +144,9 @@ $(function () {
 		let maxNumber = 100;
 		maxNum = Math.floor(Math.min(maxNumber, (valueThisTop / mySkillRealHeight) * 100));
 
-
 		var valueHeightPercent = (valueThisTop / mySkillRealHeight) * 100
 		var valueTextPercent = Math.round(valueHeightPercent)
 
-		// console.log('maxNum', maxNum)
 		render(valueTextPercent, valueHeightPercent);
 
 		toyCloneOffsetTop = toyClone.offset().top;
@@ -117,6 +157,7 @@ $(function () {
 		toyClonePercent = toyCloneScrollTop / toyCloneRealHeight;
 		toyPer = toyClonePercent * 100;
 
+		
 	}
 
 
@@ -134,7 +175,6 @@ $(function () {
 				width: "40" + '%'
 			});
 
-
 		} else if (maxNum < 100) {
 			//index : 0-html , 1-css, 2-sass, 3-js, 4-jquery, 5-react
 			codeSkillText.eq(0).text(Math.floor(valueTextPercent / 1.18) + '%'); //html skill
@@ -148,7 +188,6 @@ $(function () {
 			designSkillText.eq(0).text(Math.floor(valueTextPercent / 1.2) + '%'); //photoshop skill
 			designSkillText.eq(1).text(Math.floor(valueTextPercent / 1.25) + '%'); //illust skill 
 			designSkillText.eq(2).text(Math.floor(valueTextPercent / 2) + '%'); //figma skill 
-
 
 			// skillbar render 
 			codeSkillBar.eq(0).css({ //html skill
@@ -184,11 +223,13 @@ $(function () {
 
 
 	};
+	
 
 	function moveFunc() {
-		setProperty()
+		setProperty();
 		motionRender();
-		webLineClone()
+		webLineClone();
+		navInSection();
 
 	//  scroll_txt영역이 윈도우창에 도착했을 때 텍스트 나타남  
 		if (winScrollTop > scrollTxtTop && winScrollTop <= scrollTxtBottom) {
@@ -325,9 +366,6 @@ $(function () {
 		var imgWidth = deviceImg.width();
 
 
-		
-		
-		
 		if (toyPer >= 0 && toyPer < 20) {
 			imageChange(imgWidth * 0);
 			$('#clone_toy_project .text_box .txt01').addClass('active');
@@ -404,19 +442,12 @@ $(function () {
 	};
 
 	function webLineClone(){
-				//스크롤이 toy_clone 섹션에 위치하면 라인 애니메이션 실행 
-		// if (percent > 135) {
-		// 	webLine.eq(2).addClass('active')
-		// } else if (percent < 139 || percent > 200) {
-		// 	webLine.eq(2).removeClass('active')
-		// }
+
 // toyClone
 if(winScrollTop + 300 >= toyCloneOffsetTop && winScrollTop < toyCloneBottom) {
 	webLine.eq(2).addClass('active')
-	console.log('진입')
 } else {
 	webLine.eq(2).removeClass('active')
-	console.log('아웃')
 }
 
 	}
@@ -442,15 +473,16 @@ if(winScrollTop + 300 >= toyCloneOffsetTop && winScrollTop < toyCloneBottom) {
 	})
 
 
-
-
-
 	function init() {
 		moveFunc()
+		navInSection()
+		toggle()
 	}
 
 	$(window).scroll(function () {
 		moveFunc()
+		navInSection()
+		toggle()
 	})
 
 	$(window).resize(function () {
