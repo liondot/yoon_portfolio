@@ -6,7 +6,7 @@ $(function () {
 	let offsetBottom = [];
 
 	let mainTitle = $('.main_title')
-
+ 
 	let scrollTxt = $('.scroll_txt');
 	let scrollBox = $('.scroll_box');
 	let allText = $('.fix_box .txt');
@@ -163,8 +163,7 @@ $(function () {
 
 // 나의 스킬 랜더 
 	function render(valueTextPercent, valueHeightPercent) {
-		if (maxNum > 100) { //100이 넘어갈 때 더이상 값이 올리가지 않음, 100으로 최대값 맞춤
-
+		if (maxNum > 100) { //100이 넘어갈 때 더이상 값이 올리가지 않음
 			codeSkillText.text("100 " + '%')
 			designSkillText.text("100 " + '%')
 
