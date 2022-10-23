@@ -109,10 +109,10 @@ $(function () {
 		list.eq(index).addClass('active');
 	}
 
-
 	function setProperty() {
 		winScrollTop = $(window).scrollTop();
 
+		isMobile = $(window).width() <= 900 ? true : false;
 		// nav_list 각 세션에 섹션 클래스 탑값과 높이값 
 		section.each(function(index,obj){
 			offsetTop[index] = $(obj).offset().top;
@@ -364,13 +364,14 @@ $(function () {
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
+		console.log('toyPer', toyPer)
 
-		if (toyPer >= 0 && toyPer < 20) {
+		if (toyPer >= 0 && toyPer < 32) {
 			imageChange(imgWidth * 0);
 			$('#clone_toy_project .text_box .txt01').addClass('active');
 		}
 
-		if (toyPer >= 20 && toyPer < 54) {
+		if (toyPer >= 32 && toyPer < 54) {
 			imageChange(imgWidth * 1);
 			$('#clone_toy_project .text_box .txt02').addClass('active');
 		}
@@ -396,7 +397,7 @@ $(function () {
 	// 모바일  clone toy 프로젝트 스크롤 시 텍스트 이미지 맞춤 변경  
 	function contentInMobile() {
 
-		var deviceImg = $('.device_fix .slide_wrap figure');
+		var deviceImg = $('#clone_toy_project .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
 		console.log('imgWidth', imgWidth)

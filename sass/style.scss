@@ -2,11 +2,13 @@
 @import './partial/var';
 @import './partial/breakpoint';
 
+
 * {
     padding: 0;
     margin: 0;
     list-style: none;
 }
+
 
 body,
 html {
@@ -99,7 +101,6 @@ section {
 
     @include media ('<=smallTablet') {
         top: 1.5%;
-        display: block;
         display: none;
 
         &:before {
@@ -122,7 +123,6 @@ section {
             border-bottom: 1px solid;
             padding: 10px 0;
         }
-
         a {
             position: relative;
             display: block;
@@ -422,6 +422,9 @@ section {
                 width: 50%;
                 height: 100%;
                 background: #333366;
+                @include media ('<=tablet') {
+                    display: none;
+                }
 
                 &.mask2 {
                     background: #3366cc;
@@ -445,6 +448,9 @@ section {
                 height: 100%;
                 background: #ffccff;
 
+                @include media ('<=tablet') {
+                    display: none;
+                }
                 &.mask5 {
                     background: #ffcccc;
                     z-index: 51;
@@ -588,7 +594,7 @@ section {
                     display: flex;
                     flex-direction: column;
                 }
-           
+
                 .skill_design {
                     float: left;
                     width: 41%;
@@ -598,7 +604,6 @@ section {
                         width: 100%;
                         margin-top: 50%;
                         box-sizing: border-box;
-                        padding: 0 15px;
                         margin-left: 0;
                     }
 
@@ -744,6 +749,7 @@ section {
     .main_title {
         font-size: 60px;
         text-align: center;
+        margin-top: 5%;
     }
 
     .container {
@@ -1065,6 +1071,7 @@ section {
                 float: left;
                 width: 45%;
                 margin-bottom: 400px;
+                margin-left: -30px;
 
                 .img_device {
                     position: absolute;
@@ -1073,21 +1080,34 @@ section {
                     right: 0;
                     bottom: 0;
                     z-index: 20;
+
+                    img {
+                        border-radius: 15px;
+                    }
                 }
 
                 .desktop_img {
                     position: relative;
-                    width: 518px;
+                    max-width: 520px;
+                    width: 100%;
                     height: 260px;
-                    padding-left: 52px;
+                    padding-left: 9%;
                     padding-top: 5px;
                     margin: 0 auto;
+                    @include media ('<=tablet') {
+                        padding-left: 10%;
+                    }
 
                     .slide_wrap {
                         top: 66px;
-                        width: 360px;
+                        max-width: 465px;
+                        width: 100%;
                         height: 237px;
                         overflow: hidden;
+                        border-radius: 16px;
+                        @include media ('<=tablet') {
+                            width: 90%;
+                        }
 
                         .slide {
                             width: 1440px;
@@ -1103,21 +1123,45 @@ section {
             }
         }
 
-
-
     }
+  
 
-    .no-csspositionsticky {
-        .fix_motion {
-            .fix_wrap {
-                .device_fix {
-                    position: relative;
-                    top: 600px;
-                }
-            }
-        }
-    }
 }
+
+
+
+@media only screen and (max-width: 900px) {
+    .ggang_box h2 {font-size:32px;}
+    
+    #clone_toy_project {height: 3000px;} /* 모바일 버전에서 스크롤 거리를 설정함 */
+    
+    #clone_toy_project .fix_wrap .tit {font-size:54px; margin:auto;}
+    #clone_toy_project .fix_wrap .text_box {float:none; position: sticky; left:0; top:0; z-index:50; width: 100%; padding-top:100px;}
+    #clone_toy_project .fix_wrap .text_box p {position:absolute; left:0; top:100px; width: 100%; max-width:100%; padding:0 20px; font-size:18px; text-align: center; box-sizing: border-box; opacity: 0; transition:opacity .5s;}
+    #clone_toy_project .fix_wrap .text_box p.active {opacity: 1;}
+    #clone_toy_project .fix_wrap .text_box p.txt02 {margin-top:0px;}
+    #clone_toy_project .fix_wrap .text_box p.txt03 {margin-top:0px;}
+    #clone_toy_project .fix_wrap .text_box p.txt04 {margin-top:0px; margin-bottom:0;}
+    
+    #clone_toy_project .fix_wrap .device_fix {top: calc(100vh - 360px); width: 100%;}
+    #clone_toy_project .fix_wrap .device_fix .watch_img {width: 160px; height: 272px;}
+    #clone_toy_project .fix_wrap .device_fix .watch_img .slide_wrap {top: 66px; width: 120px; height: 146px;}
+    #clone_toy_project .fix_wrap .device_fix .watch_img .slide_wrap .slide {width: 480px;}
+    #clone_toy_project .fix_wrap .device_fix .watch_img .slide_wrap .slide figure {width:120px;}
+    }
+
+    
+
+// .no-csspositionsticky {
+//     #clone_toy_project {
+//         .fix_wrap {
+//             .device_fix {
+//                 position: relative;
+//                 top: 600px;
+//             }
+//         }
+//     }
+// }
 
 
 // #final_notice 
@@ -1438,6 +1482,7 @@ section {
         border: none;
         background-color: #eee;
         padding: 10px;
+        max-width: 380px;
     }
 
 
@@ -1815,4 +1860,5 @@ section {
             left: 50%;
         }
     }
+}
 }

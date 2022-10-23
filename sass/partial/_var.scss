@@ -21,22 +21,24 @@ $oTranslate: -o-transform;
 $msTranslate: -ms-transform;
 
 // breakpoints 
+
 // $grid-breakpoints: (
-//   xs: 0,
-//   sm: 576px,
-//   md: 768px,
-//   lg: 992px,
-//   xl: 1200px,
-//   xxl: 1400px
-// );
-$grid-breakpoints: (
-	xxxs: 0,
-	xxs: 320px,
-	xs: 375px,
-	sm: 576px,
-	md: 768px,
-	lg: 1024px,
-	xl: 1200px,
-	xxl: 1400px,
-	xxxl: 1600px,
+// 	xxxs: 0,
+// 	xxs: 320px,
+// 	xs: 375px,
+// 	sm: 576px,
+// 	md: 768px,
+// 	lg: 1024px,
+// 	xl: 1200px,
+// 	xxl: 1400px,
+// 	xxxl: 1600px,
+// ) !default;	
+
+$breakpoints: (
+  "mobile": 360px,
+  "bigMobile" : 550px,
+  "smallTablet": 700px,
+  "tablet": 900px,
+  "desktop": 1366px,
+  "LGdesktop": 1920px
 ) !default;
