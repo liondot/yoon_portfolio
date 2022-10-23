@@ -41,7 +41,7 @@ $(function () {
 	let toyCloneRealHeight;
 	let toyPer;
 
-	
+
 	// contact_form 
 	let contactForm = $('#contact_form');
 	let contactContainer = contactForm.find('.container')
@@ -102,11 +102,10 @@ $(function () {
 		let maxNumber = 100;
 		maxNum = Math.floor(Math.min(maxNumber, (valueThisTop / mySkillRealHeight) * 100));
 
-
 		var valueHeightPercent = (valueThisTop / mySkillRealHeight) * 100
 		var valueTextPercent = Math.round(valueHeightPercent)
 
-		// console.log('maxNum', maxNum)
+		// my skill bar, txt 랜더 
 		render(valueTextPercent, valueHeightPercent);
 
 		toyCloneOffsetTop = toyClone.offset().top;
@@ -120,17 +119,16 @@ $(function () {
 	}
 
 
-// 나의 스킬 랜더 
+	// 나의 스킬 랜더 
 	function render(valueTextPercent, valueHeightPercent) {
-		if (maxNum > 100) { //100이 넘어갈 때 더이상 값이 올리가지 않음, 100으로 최대값 맞춤
-
+		if (maxNum > 100) { //100이 넘어갈 때 더이상 값이 올리가지 않음
 			codeSkillText.text("100 " + '%')
 			designSkillText.text("100 " + '%')
 
-			codeSkillBar.css({ 
+			codeSkillBar.css({
 				width: "40" + '%'
 			});
-			designSkillBar.css({ 
+			designSkillBar.css({
 				width: "40" + '%'
 			});
 
@@ -181,8 +179,6 @@ $(function () {
 			});
 		}
 
-
-
 	};
 
 	function moveFunc() {
@@ -190,10 +186,10 @@ $(function () {
 		motionRender();
 		webLineClone()
 
-	//  scroll_txt영역이 윈도우창에 도착했을 때 텍스트 나타남  
+		//  scroll_txt영역이 윈도우창에 도착했을 때 텍스트 나타남  
 		if (winScrollTop > scrollTxtTop && winScrollTop <= scrollTxtBottom) {
 			textInOut()
-		} else {}
+		} 
 
 		// toyclone project 모바일버전 pc
 		if (isMobile) {
@@ -226,7 +222,7 @@ $(function () {
 		let scaleVal = Math.max(zoomOutValue, zoomValue - (skillScrollPercent * zoomValue));
 
 		// 컨텍트 미 영역에 들어올때 애니메이션 실행 
-		if(winScrollTop > contactOffsetTop && winScrollTop < contactBottom) {
+		if (winScrollTop > contactOffsetTop && winScrollTop < contactBottom) {
 			contactContainer.addClass('active')
 			contactMe.addClass('active')
 			developerImg.addClass('active')
@@ -253,11 +249,10 @@ $(function () {
 		// my skill 처음, 마지막 텍스트 
 		if (percent > 0.3) {
 			titText.addClass('active');
-
 		} else {
 			titText.removeClass('active');
 		}
-		
+
 		if (percent >= 10) {
 			endingContent.addClass('active');
 			skills.addClass('active')
@@ -282,23 +277,25 @@ $(function () {
 		}
 
 
-
-		console.log('percent', percent)
 		let finalNotice = $('#final_notice')
-		if(percent > 180 && percent < 220){
-			finalNotice.css({backgroundColor: 'black'})
-		}else {
-			finalNotice.css({backgroundColor: 'white'})
+		if (percent > 180 && percent < 220) {
+			finalNotice.css({
+				backgroundColor: 'black'
+			})
+		} else {
+			finalNotice.css({
+				backgroundColor: 'white'
+			})
 		}
 
-		if(percent > 185 && percent < 215){
+		if (percent > 185 && percent < 215) {
 			motionArea.addClass('active')
 			finalNotice.addClass('active')
-		} else if (percent < 185 || percent > 215){
+		} else if (percent < 185 || percent > 215) {
 			motionArea.removeClass('active')
 			finalNotice.removeClass('active')
 		}
-	
+
 
 		// my_project 스크롤 위치에 도착하면 컨텐츠 애니메이션 실행 
 		if (percent > 107 && percent < 200) {
@@ -325,9 +322,6 @@ $(function () {
 		var imgWidth = deviceImg.width();
 
 
-		
-		
-		
 		if (toyPer >= 0 && toyPer < 20) {
 			imageChange(imgWidth * 0);
 			$('#clone_toy_project .text_box .txt01').addClass('active');
@@ -363,7 +357,7 @@ $(function () {
 		var imgWidth = deviceImg.width();
 
 		console.log('imgWidth', imgWidth)
-		
+
 
 		if (toyPer >= 5 && toyPer < 25) {
 			imageChange(imgWidth * 0);
@@ -403,21 +397,15 @@ $(function () {
 
 	};
 
-	function webLineClone(){
-				//스크롤이 toy_clone 섹션에 위치하면 라인 애니메이션 실행 
-		// if (percent > 135) {
-		// 	webLine.eq(2).addClass('active')
-		// } else if (percent < 139 || percent > 200) {
-		// 	webLine.eq(2).removeClass('active')
-		// }
-// toyClone
-if(winScrollTop + 300 >= toyCloneOffsetTop && winScrollTop < toyCloneBottom) {
-	webLine.eq(2).addClass('active')
-	console.log('진입')
-} else {
-	webLine.eq(2).removeClass('active')
-	console.log('아웃')
-}
+	// toyClone webline animation
+	function webLineClone() {
+		if (winScrollTop + 300 >= toyCloneOffsetTop && winScrollTop < toyCloneBottom) {
+			webLine.eq(2).addClass('active')
+			console.log('진입')
+		} else {
+			webLine.eq(2).removeClass('active')
+			console.log('아웃')
+		}
 
 	}
 
