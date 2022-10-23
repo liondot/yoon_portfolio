@@ -47,8 +47,6 @@
 
         <!-- 폰트어썸  -->
         <script src="https://kit.fontawesome.com/c741f3b9be.js" crossorigin="anonymous"></script>
-
-        
     </head>
 
 
@@ -80,42 +78,62 @@
                     <div class="code_ver"><a href="">View</a></div>
                 </div>
 
+                <div class="nav_con">
                 <div class="nav_toggle">
                     <i class="fa-solid fa-bars"></i>
                 </div>
-                <!-- <ul class="nav_list">
+
+                <ul class="nav_list"> <!-- 네비게이션 -->
                     <li>
                         <a href="#main_section" class="active">
-                            <i class="fa-solid fa-check"></i>
+                            <i class="fa-solid fa-chevron-up"></i>
                             <span>Home</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#how_to_section">
-                            <i class="fa-solid fa-check"></i>
+                        <a href="#scroll_txt">
+                            <i class="fa-solid fa-chevron-up"></i>
                             <span>How to</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#section3">
-                            <i class="fa-solid fa-check"></i>
-                            <span>section3</span>
+                        <a href="#my_skill">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span>My skill</span>
                         </a>
                     </li>
                     <li>
-                        <a href="#section4">
-                            <i class="fa-solid fa-check"></i>
-                            <span>section4</span>
+                        <a href="#my_project">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span>Project</span>
                         </a>
                     </li>
-
-                </ul> -->
+                    <li>
+                        <a href="#clone_toy_project">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span>Toy Project</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#final_notice">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span>Thank you</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#contact_form">
+                            <i class="fa-solid fa-chevron-up"></i>
+                            <span>Contact</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
             </header>
             <!-- 메인 섹션  -->
             <section id="main_section" class="section main_section">
                 <h2 class="ir_so">메인영역</h2>
                 <div class="container">
-                    <!-- <div class="main_images">
+                    <div class="main_images">
                         <div class="main_top_img">
                             <img class="main_img main_img1" src="./asset/images/web_img.png" alt="">
                             <img class="main_img main_img2" src="./asset/images/web2_img.png" alt="">
@@ -126,7 +144,7 @@
                             <img class="main_img main_img5" src="./asset/images/web_img.png" alt="">
                             <img class="main_img main_img6" src="./asset/images/web_img.png" alt="">
                         </div>
-                    </div> -->
+                    </div>
                     <div class="profile">
                         <div class="profile_img">
                             <img src="./asset/images/profile.png" alt="프로필 이미지">
@@ -180,7 +198,7 @@
                         <div class="ending_txt">
                             <div class="tb_row">
                                 <div class="tb_cell">
-                                    <p>
+                                    <p class="main_title">
                                         my skill
                                     </p>
                                 </div>
@@ -212,8 +230,6 @@
                                         <i class="fa-solid fa-bezier-curve"></i>
                                         <em>illustrator</em>
                                     </div>
-
-
                                 </div>
                                 <div class="progress figma">
                                     <span class="skill_bar bar_figma"></span>
@@ -225,8 +241,6 @@
                                         </i>
                                         <em>Figma</em>
                                     </div>
-
-
                                 </div>
                             </div>
                             <div class="skill_code">
@@ -281,7 +295,7 @@
                 </article>
             </section>
             <!-- 프로젝트 섹션  -->
-            <section id="my_project">
+            <section id="my_project" class="section">
                 <h2 class="ir_so">프로젝트</h2>
                 <div class="main_title">My Project</div>
                 <div class="container">
@@ -412,7 +426,7 @@
                 </div>
             </section>
             <!-- 토이프로젝트 섹션  -->
-            <section id="clone_toy_project">
+            <section id="clone_toy_project" class="section">
                 <h2 class="ir_so">토이 & 클론코딩</h2>
                 <div class="container">
                     <div class="main_title ct_title">Clone & Toy</div>
@@ -521,7 +535,7 @@
                 </div>
             </section>
             <!-- 파이널 노티스 섹션  -->
-            <section id="final_notice" class="final_notice">
+            <section id="final_notice" class="section final_notice">
                 <article class="txt_area">
                     <div class="motion_area">
                         <a href="#main_section"     class="tit_wrap">
@@ -576,7 +590,7 @@
                 </article>
             </section>
             <!-- 컨텍트 폼 섹션  -->
-        <section id="contact_form">
+        <section id="contact_form" class="section">
             <div class="container">
                 <h2 class="ir_so">contact me</h2>
                 <div class="forms_container">
@@ -595,10 +609,7 @@
                                 <i class="fas fa-phone"></i>
                                 <input type="number" placeholder="연락처" />
                             </div>
-                            <div class="input_field">
-                                <i class="fas fa-envelope-open"></i>
-                                <input type="email" placeholder="메일주소" />
-                            </div>
+                                <textarea placeholder="메세지를 입력하세요" name="" id="" cols="30" rows="10"></textarea>
                             <input type="submit" value="보내기" class="btn solid" />
                         </form>
                         <form action="#" class="social_form">
@@ -773,7 +784,7 @@
                                 <a class="web_btn_link" href="https://liondot.github.io/museum-responsive/"><i
                                         class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
                                 <a class="web_btn_link" href="https://github.com/liondot/museum-responsive"><i
-                                        class="fa-brands fa-github-square"></i><span>github</span></a>
+                                        class="fa-brands fa-github-square"></i> <span>github</span></a>
                             </div>
                         </div>
                     </div>
