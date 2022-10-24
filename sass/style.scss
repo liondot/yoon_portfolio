@@ -598,7 +598,7 @@ section {
                 .skill_design {
                     float: left;
                     width: 41%;
-                    margin-left: 50px;
+                    margin-left: 90px;
 
                     @include media ('<=tablet') {
                         width: 100%;
@@ -658,7 +658,7 @@ section {
                 .skill_code {
                     float: right;
                     width: 41%;
-                    margin-right: 50px;
+                    margin-right: 90px;
                     position: relative;
 
                     @include media ('<=tablet') {
@@ -1065,12 +1065,11 @@ section {
             .device_fix {
                 position: sticky;
                 position: -webkit-sticky;
-                top: calc(50vh - 120px);
+                top: calc(50vh - 150px);
                 left: 0;
                 z-index: 40;
                 float: left;
                 width: 45%;
-                margin-bottom: 400px;
                 margin-left: -30px;
 
                 .img_device {
