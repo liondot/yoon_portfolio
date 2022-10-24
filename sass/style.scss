@@ -99,30 +99,12 @@ section {
     display: flex;
     line-height: 1;
 
-    @include media ('<=smallTablet') {
-        top: 1.5%;
-        display: none;
-
-        &:before {
-            content: '';
-            width: 240px;
-            height: 400%;
-            position: absolute;
-            top: -10px;
-            left: -100px;
-            background-color: #ddd;
-        }
-    }
-
+   
 
     li {
         margin-bottom: 10px;
         margin-right: 20px;
 
-        @include media ('<=smallTablet') {
-            border-bottom: 1px solid;
-            padding: 10px 0;
-        }
         a {
             position: relative;
             display: block;
@@ -221,10 +203,7 @@ section {
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
 
-    @include media ('<=tablet') {
-        flex-direction: column;
-        text-align: center;
-    }
+  
 
     .profile_img {
         overflow: hidden;
@@ -241,13 +220,7 @@ section {
     }
 
     .profile_txt {
-        @include media ('<=tablet') {
-            margin-top: 20px;
-
-            em {
-                font-size: 2rem;
-            }
-        }
+       
 
         span {
             font-size: 1.5rem;
@@ -267,9 +240,7 @@ section {
             font-size: 1.3rem;
             margin-top: 1rem;
 
-            @include media ('<=tablet') {
-                font-size: 1.5rem;
-            }
+           
         }
 
         .contact {
@@ -333,13 +304,6 @@ section {
                 animation: in-out 1s linear forwards paused;
                 animation-delay: calc(var(--progress) * -1s);
 
-                @include media ('<=tablet') {
-                    font-size: 50px;
-                }
-
-                @include media ('<=smallTablet') {
-                    font-size: 30px;
-                }
 
             }
 
@@ -422,9 +386,7 @@ section {
                 width: 50%;
                 height: 100%;
                 background: #333366;
-                @include media ('<=tablet') {
-                    display: none;
-                }
+               
 
                 &.mask2 {
                     background: #3366cc;
@@ -448,9 +410,6 @@ section {
                 height: 100%;
                 background: #ffccff;
 
-                @include media ('<=tablet') {
-                    display: none;
-                }
                 &.mask5 {
                     background: #ffcccc;
                     z-index: 51;
@@ -522,10 +481,7 @@ section {
                             line-height: 1;
                             margin-top: 4%;
 
-                            @include media ('<=tablet') {
-                                font-size: 40px;
-                                margin-top: 8%;
-                            }
+                        
                         }
                     }
 
@@ -589,25 +545,14 @@ section {
                 width: 100%;
                 box-sizing: border-box;
 
-                @include media ('<=tablet') {
-                    font-size: 30px;
-                    display: flex;
-                    flex-direction: column;
-                }
+              
 
                 .skill_design {
                     float: left;
                     width: 41%;
                     margin-left: 90px;
 
-                    @include media ('<=tablet') {
-                        width: 100%;
-                        margin-top: 50%;
-                        box-sizing: border-box;
-                        margin-left: 0;
-                    }
-
-
+                  
                     .progress {
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -616,26 +561,14 @@ section {
                         -ms-flex-pack: end;
                         justify-content: flex-end;
 
-                        @include media ('<=tablet') {
-                            justify-content: flex-start;
-
-                        }
-
+                      
                         .skill_icon {
                             margin-left: 15px;
 
-                            @include media ('<=tablet') {
-                                order: 1;
-                                margin-left: 0;
-                            }
-
+                         
                         }
 
-                        .skill_txt {
-                            @include media ('<=tablet') {
-                                order: 2;
-                            }
-                        }
+                      
 
                         .skill_bar {
                             display: block;
@@ -647,10 +580,6 @@ section {
                             border-radius: 20px;
                             position: relative;
 
-                            @include media ('<=tablet') {
-                                order: 3;
-                            }
-
                         }
                     }
                 }
@@ -661,10 +590,6 @@ section {
                     margin-right: 90px;
                     position: relative;
 
-                    @include media ('<=tablet') {
-                        margin-right: 10px;
-                        width: 95%;
-                    }
                 }
 
                 &.active {
@@ -680,10 +605,6 @@ section {
                     display: flex;
                     margin: 5% 0;
 
-                    @include media ('<=tablet') {
-                        margin: 3%;
-                    }
-
                     .skill_icon {
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -695,21 +616,11 @@ section {
                         align-items: center;
                         width: 54px;
 
-                        @include media ('<=tablet') {
-                            display: flex;
-                            justify-content: space-between;
-                            height: 50px;
-
-                        }
 
                         i {
                             font-size: 40px;
                             color: #333;
 
-                            @include media ('<=tablet') {
-                                font-size: 22px;
-
-                            }
 
                         }
 
@@ -817,48 +728,27 @@ section {
             overflow: hidden;
             margin: 100px 0;
 
-            @include media ('<=smallTablet') {
-                display: flex;
-                flex-direction: column;
-                border: 3px solid green;
-                align-items: center;
-            }
-
+        
 
             .web_txt {
                 float: left;
                 width: 35%;
                 padding: 50px;
 
-                @include media ('<=tablet') {
-                    padding: 30px;
-                }
-
-                @include media ('<=smallTablet') {
-                    width: 75%;
-                    text-align: center;
-
-                }
 
                 span {
                     font-size: 1rem;
 
                 }
 
-                em {
-                    @include media ('<=smallTablet') {
-                        font-size: 1.2rem;
-                    }
-                }
+            
 
                 .sub_txt {
                     font-size: 1rem;
                     display: block;
                     margin: 5px 0 10px;
 
-                    @include media ('<=smallTablet') {
-                        font-size: 1.5rem;
-                    }
+                  
                 }
 
                 .project_skill {
@@ -880,10 +770,7 @@ section {
                     display: flex;
                     margin: 30px 0 0 0;
 
-                    @include media ('<=smallTablet') {
-                        justify-content: center;
-                    }
-
+                
                     em {
                         display: flex;
                         flex-direction: column;
@@ -909,10 +796,7 @@ section {
                 width: 53%;
                 margin: 15px 0;
 
-                @include media ('<=smallTablet') {
-                    width: auto;
-                }
-
+             
                 .images_de_mo {
                     display: flex;
                     display: -webkit-box;
@@ -1093,10 +977,7 @@ section {
                     padding-left: 9%;
                     padding-top: 5px;
                     margin: 0 auto;
-                    @include media ('<=tablet') {
-                        padding-left: 10%;
-                    }
-
+                   
                     .slide_wrap {
                         top: 66px;
                         max-width: 465px;
@@ -1104,10 +985,8 @@ section {
                         height: 237px;
                         overflow: hidden;
                         border-radius: 16px;
-                        @include media ('<=tablet') {
-                            width: 90%;
-                        }
-
+                        
+                       
                         .slide {
                             width: 1440px;
                             transition: all .3s ease;
@@ -1859,5 +1738,4 @@ section {
             left: 50%;
         }
     }
-}
 }
