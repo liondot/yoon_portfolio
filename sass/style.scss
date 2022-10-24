@@ -79,7 +79,17 @@ section {
     display: none;
 }
 
-
+.nav_con {
+    border: 3px solid green;
+    height: 50px;
+    background-color: #fff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    width: 100%;
+    box-sizing: border-box;
+}
 .nav_toggle {
     position: fixed;
     left: 10px;
@@ -550,9 +560,9 @@ section {
                 .skill_design {
                     float: left;
                     width: 41%;
-                    margin-left: 90px;
+                    margin-left: 50px;
+                   
 
-                  
                     .progress {
                         display: -webkit-box;
                         display: -ms-flexbox;
@@ -587,7 +597,7 @@ section {
                 .skill_code {
                     float: right;
                     width: 41%;
-                    margin-right: 90px;
+                    margin-right: 50px;
                     position: relative;
 
                 }
@@ -971,8 +981,7 @@ section {
 
                 .desktop_img {
                     position: relative;
-                    max-width: 520px;
-                    width: 100%;
+                    width: 518px;
                     height: 260px;
                     padding-left: 9%;
                     padding-top: 5px;
@@ -980,13 +989,10 @@ section {
                    
                     .slide_wrap {
                         top: 66px;
-                        max-width: 465px;
-                        width: 100%;
+                        width: 360px;
                         height: 237px;
                         overflow: hidden;
-                        border-radius: 16px;
-                        
-                       
+
                         .slide {
                             width: 1440px;
                             transition: all .3s ease;
@@ -1214,8 +1220,6 @@ section {
     animation-play-state: running;
 }
 
-
-
 // contact me 
 #contact_form {
 
@@ -1342,25 +1346,6 @@ section {
             font-size: 1rem;
         }
 
-        &.textarea {
-            width: 100%;
-        }
-
-
-    }
-
-    textarea {
-        background-color: transparent;
-        outline: none;
-        display: block !important;
-        width: 100% !important;
-        border-radius: 25px;
-        margin: 10px;
-        height: 130px;
-        border: none;
-        background-color: #eee;
-        padding: 10px;
-        max-width: 380px;
     }
 
 
