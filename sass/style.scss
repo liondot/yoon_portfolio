@@ -89,6 +89,7 @@ section {
     z-index: 100;
     width: 100%;
     box-sizing: border-box;
+    display: none;
 }
 .nav_toggle {
     position: fixed;
@@ -552,7 +553,7 @@ section {
                 .skill_design {
                     float: left;
                     width: 41%;
-                    margin-left: 50px;
+                    margin-left: 100px;
                    
 
                     .progress {
@@ -583,7 +584,7 @@ section {
                 .skill_code {
                     float: right;
                     width: 41%;
-                    margin-right: 50px;
+                    margin-right: 100px;
                     position: relative;
                     
                 }
@@ -978,7 +979,8 @@ section {
 
                 .desktop_img {
                     position: relative;
-                    width: 518px;
+                    max-width: 560px;
+                    width: 100%;
                     height: 260px;
                     padding-left: 52px;
                     padding-top: 5px;
@@ -986,9 +988,15 @@ section {
 
                     .slide_wrap {
                         top: 66px;
-                        width: 360px;
+                        width: 100%;
                         height: 237px;
                         overflow: hidden;
+                        border-radius: 30px;
+
+    margin-left: 10px;
+    margin-top: 2px;
+    max-width: 500px;
+}
 
                         .slide {
                             width: 1440px;
@@ -1187,8 +1195,6 @@ section {
     animation-play-state: running;
 }
 
-
-
 // contact me 
 #contact_form {
 
@@ -1311,7 +1317,20 @@ section {
             padding: 0.7rem 0;
             font-size: 1rem;
         }
+       
 
+    }
+
+    textarea {
+        border: none;
+        background: #eee;
+        border-radius: 30px;
+        width: 100%;
+        max-width: 348px;
+        padding: 15px;
+        margin-top: 10px;
+        outline: none;
+    }
     }
 
 
@@ -1686,4 +1705,3 @@ section {
             left: 50%;
         }
     }
-}
