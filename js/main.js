@@ -5,6 +5,11 @@ $(function () {
 	let offsetTop = [];
 	let offsetBottom = [];
 
+	let navCon = $('.nav_con')
+	let navToggle = navCon.find('.nav_toggle')
+	let navList = navCon.find('.nav_list')
+
+
 	let mainTitle = $('.main_title')
  
 	let scrollTxt = $('.scroll_txt');
@@ -77,10 +82,8 @@ $(function () {
 			sectionInActive(1)
 		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
 			sectionInActive(2)
-			
 		} else if(winScrollTop >= offsetTop[3] && offsetBottom[3] > winScrollTop) {
 			sectionInActive(3)
-		
 		} else if(winScrollTop >= offsetTop[4] && offsetBottom[4] > winScrollTop) {
 			sectionInActive(4)
 		} else if(winScrollTop >= offsetTop[5] && offsetBottom[5] > winScrollTop) {
@@ -90,15 +93,7 @@ $(function () {
 		}
 	}
 
-	function toggle(){
-		let navToggle = $('.nav_toggle');
-		let navList = $('.nav_list');
-
-		navToggle.click(function(){
-			navList.toggle()
-		})	
-	}
-
+	// 해당 섹션안에 진입할 때 menu 활성화 
 	function sectionInActive(index){
 		listActive(index)
 	}
@@ -109,6 +104,7 @@ $(function () {
 		list.eq(index).addClass('active');
 	}
 
+// 애니메이션 값 셋팅
 	function setProperty() {
 		winScrollTop = $(window).scrollTop();
 
@@ -119,11 +115,9 @@ $(function () {
 			offsetBottom[index] = offsetTop[index] + $(obj).height();
 		})
 		
-
 		// contactme 위치에 있을 때 애니메이션 실행 값 
 		contactOffsetTop = contactForm.offset().top
 		contactBottom = contactOffsetTop + contactForm.height()
-
 
 		// section 2 scroll_text 위치 값   
 		scrollTxtTop = scrollTxt.offset().top;
@@ -157,11 +151,13 @@ $(function () {
 		toyClonePercent = toyCloneScrollTop / toyCloneRealHeight;
 		toyPer = toyClonePercent * 100;
 
+		console.log('percnet', percent)
 		
 	}
 
 
-// 나의 스킬 랜더 
+
+// 나의 스킬 랜더UI 
 	function render(valueTextPercent, valueHeightPercent) {
 		if (maxNum > 100) { //100이 넘어갈 때 더이상 값이 올리가지 않음
 			codeSkillText.text("100 " + '%')
@@ -176,8 +172,8 @@ $(function () {
 
 		} else if (maxNum < 100) {
 			//index : 0-html , 1-css, 2-sass, 3-js, 4-jquery, 5-react
-			codeSkillText.eq(0).text(Math.floor(valueTextPercent / 1.18) + '%'); //html skill
-			codeSkillText.eq(1).text(Math.floor(valueTextPercent / 1.15) + '%'); //css skill 
+			codeSkillText.eq(0).text(Math.floor(valueTextPercent / 1.17) + '%'); //html skill
+			codeSkillText.eq(1).text(Math.floor(valueTextPercent / 1.19) + '%'); //css skill 
 			codeSkillText.eq(2).text(Math.floor(valueTextPercent / 1.4) + '%'); //sass skill
 			codeSkillText.eq(3).text(Math.floor(valueTextPercent / 1.9) + '%'); //js skill 
 			codeSkillText.eq(4).text(Math.floor(valueTextPercent / 1.8) + '%'); //jquery skill
@@ -208,19 +204,16 @@ $(function () {
 				width: valueHeightPercent / 1.8 + '%'
 			});
 
-			designSkillBar.eq(0).css({ //phosothop skill
-				width: valueHeightPercent / 1.1 + '%'
+			designSkillBar.eq(0).css({ //photoshop skill
+				width: valueHeightPercent / 1.3 + '%'
 			});
 			designSkillBar.eq(1).css({ //illust skill
-				width: valueHeightPercent / 1.2 + '%'
+				width: valueHeightPercent / 1.5 + '%'
 			});
 			designSkillBar.eq(2).css({ //figma skill
 				width: valueHeightPercent / 2 + '%'
 			});
 		}
-
-
-
 	};
 	
 
@@ -230,6 +223,27 @@ $(function () {
 		webLineClone();
 		navInSection();
 
+
+		// 스크롤이 my project영역일때 메인타이틀과 웹라인 영역 나타남
+		if(percent > 104) {
+			mainTitle.eq(1).addClass('active')
+			webLine.eq(1).addClass('active')
+			
+		} else if (percent < 104 || percent > 140) {
+			mainTitle.eq(1).removeClass('active')
+			webLine.eq(1).removeClass('active')
+		}
+
+		// 스크롤이 frontend, toyproject영역일때 메인타이틀과 웹라인 영역 나타남
+		if(percent > 133) {
+			mainTitle.eq(2).addClass('active')
+			webLine.eq(2).addClass('active')
+		} else if (percent < 133 || percent > 180) {
+			mainTitle.eq(2).removeClass('active')
+			webLine.eq(2).removeClass('active')
+		}
+
+	
 	//  scroll_txt영역이 윈도우창에 도착했을 때 텍스트 나타남  
 		if (winScrollTop > scrollTxtTop && winScrollTop <= scrollTxtBottom) {
 			textInOut()
@@ -255,6 +269,8 @@ $(function () {
 			)
 		})
 	}
+
+
 
 	// my skill 좌우 사라지는 배경 위치 애니메이션 
 	function motionRender() {
@@ -315,15 +331,14 @@ $(function () {
 		}
 
 		// 스롤이 my_project 섹션에 도착하면 라인 애니메이션 실행 
-		if (percent > 105) {
+		if (percent > 107) {
 			webLine.eq(1).addClass('active')
-		} else if (percent < 105 || percent > 200) {
+		} else if (percent < 107 || percent > 200) {
 			webLine.eq(1).removeClass('active')
 		}
 
 
 
-		console.log('percent', percent)
 		let finalNotice = $('#final_notice')
 		if(percent > 180 && percent < 220){
 			finalNotice.css({backgroundColor: 'black'})
@@ -357,14 +372,14 @@ $(function () {
 			projectCont.eq(2).removeClass('active')
 		}
 
+
+
 	};
 
 	// clone toy 프로젝트 스크롤 시 텍스트 이미지 맞춤 변경 
 	function contentIn() {
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
-
-		console.log('toyPer', toyPer)
 
 		if (toyPer >= 0 && toyPer < 32) {
 			imageChange(imgWidth * 0);
@@ -472,17 +487,23 @@ if(winScrollTop + 300 >= toyCloneOffsetTop && winScrollTop < toyCloneBottom) {
 		contactContainer.removeClass('change_mod')
 	})
 
+	// toggle  
+	$(function() {
+		navToggle.on('click', function() {
+			navList.toggleClass('active', 200, 'easeOutSine');
+			navCon.toggleClass('active', 200, 'easeOutSine');
+		});
+	});
+
 
 	function init() {
 		moveFunc()
 		navInSection()
-		toggle()
 	}
 
 	$(window).scroll(function () {
 		moveFunc()
 		navInSection()
-		toggle()
 	})
 
 	$(window).resize(function () {
