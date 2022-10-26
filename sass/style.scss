@@ -587,6 +587,10 @@ section {
                          
                         }
 
+
+                        .skill_txt {
+                            color: rgb(255, 60, 142);
+                        }
                       
 
                         .skill_bar {
@@ -758,8 +762,7 @@ section {
             box-sizing: border-box;
             overflow: hidden;
             margin: 100px 0;
-
-        
+            transition: all .2s ease-in-out;
 
             .web_txt {
                 float: left;
@@ -874,8 +877,9 @@ section {
     }
 }
 
-// clone & toy project 
-#clone_toy_project {
+// frontend project 
+
+#frontend_project {
     .main_title {
         opacity: 0;
         visibility: hidden;
@@ -944,7 +948,14 @@ section {
 
         .fix_wrap {
             position: relative;
-
+            .tit {
+                position:relative; 
+                z-index:50; 
+                margin-bottom:170px; 
+                font-size:200px; 
+                color:#333; 
+                text-align: center;
+            }
             &:after {
                 clear: both;
                 display: block;
@@ -1002,17 +1013,23 @@ section {
                 width: 45%;
                 margin-left: -30px;
 
-                .img_device {
-                    position: absolute;
-                    top: 0;
-                    left: 0;
-                    right: 0;
-                    bottom: 0;
-                    z-index: 20;
-
-                    img {
-                        border-radius: 15px;
-                    }
+                .desktop_img {
+                    position:relative; 
+                    width: 240px; 
+                    height:409px; 
+                    margin:0 auto; 
+                    .img_device {
+                        position: absolute;
+                        top: 0;
+                        left: 0;
+                        right: 0;
+                        bottom: 0;
+                        z-index: 20;
+                        img {
+                            border-radius: 15px;
+                        }
+                }
+               
                 }
 
                 .desktop_img {
@@ -1024,15 +1041,18 @@ section {
                     margin: 0 auto;
                     width: 100%;
                     .slide_wrap {
-                        top: 66px;
+                        top: 7px;
                         max-width: 500px;
                         height: 237px;
                         overflow: hidden;
                         width: 100%;
-                        border-radius: 20px;
+                        border-radius: 15px;
                         border: 2px solid green;
+                        position: absolute;
+                        z-index:10;
 
                         .slide {
+                        
                             width: 1440px;
                             transition: all .3s ease;
 
@@ -1051,40 +1071,6 @@ section {
 
 }
 
-
-
-@media only screen and (max-width: 900px) {
-    .ggang_box h2 {font-size:32px;}
-    
-    #clone_toy_project {height: 3000px;} /* 모바일 버전에서 스크롤 거리를 설정함 */
-    
-    #clone_toy_project .fix_wrap .tit {font-size:54px; margin:auto;}
-    #clone_toy_project .fix_wrap .text_box {float:none; position: sticky; left:0; top:0; z-index:50; width: 100%; padding-top:100px;}
-    #clone_toy_project .fix_wrap .text_box p {position:absolute; left:0; top:100px; width: 100%; max-width:100%; padding:0 20px; font-size:18px; text-align: center; box-sizing: border-box; opacity: 0; transition:opacity .5s;}
-    #clone_toy_project .fix_wrap .text_box p.active {opacity: 1;}
-    #clone_toy_project .fix_wrap .text_box p.txt02 {margin-top:0px;}
-    #clone_toy_project .fix_wrap .text_box p.txt03 {margin-top:0px;}
-    #clone_toy_project .fix_wrap .text_box p.txt04 {margin-top:0px; margin-bottom:0;}
-    
-    #clone_toy_project .fix_wrap .device_fix {top: calc(100vh - 360px); width: 100%;}
-    #clone_toy_project .fix_wrap .device_fix .watch_img {width: 160px; height: 272px;}
-    #clone_toy_project .fix_wrap .device_fix .watch_img .slide_wrap {top: 66px; width: 120px; height: 146px;}
-    #clone_toy_project .fix_wrap .device_fix .watch_img .slide_wrap .slide {width: 480px;}
-    #clone_toy_project .fix_wrap .device_fix .watch_img .slide_wrap .slide figure {width:120px;}
-    }
-
-    
-
-// .no-csspositionsticky {
-//     #clone_toy_project {
-//         .fix_wrap {
-//             .device_fix {
-//                 position: relative;
-//                 top: 600px;
-//             }
-//         }
-//     }
-// }
 
 
 // #final_notice 
@@ -1645,137 +1631,7 @@ section {
         pointer-events: all;
     }
 
-    @media (max-width: 870px) {
-        .container {
-            min-height: 800px;
-            height: 100vh;
-        }
 
-        .contact_me {
-            width: 100%;
-            top: 95%;
-            transform: translate(-50%, -100%);
-            transition: 1s 0.8s ease-in-out;
-        }
-
-        .contact_me,
-        .container.change_mod .contact_me {
-            left: 50%;
-        }
-
-        .panels_container {
-            grid-template-columns: 1fr;
-            grid-template-rows: 1fr 2fr 1fr;
-        }
-
-        .panel {
-            flex-direction: row;
-            justify-content: space-around;
-            align-items: center;
-            padding: 2.5rem 8%;
-            grid-column: 1 / 2;
-        }
-
-        .right_panel {
-            grid-row: 3 / 4;
-        }
-
-        .left_panel {
-            grid-row: 1 / 2;
-        }
-
-        .image {
-            width: 200px;
-            transition: transform 0.9s ease-in-out;
-            transition-delay: 0.6s;
-        }
-
-        .panel .content {
-            padding-right: 15%;
-            transition: transform 0.9s ease-in-out;
-            transition-delay: 0.8s;
-        }
-
-        .panel h3 {
-            font-size: 1.2rem;
-        }
-
-        .panel p {
-            font-size: 0.7rem;
-            padding: 0.5rem 0;
-        }
-
-        .btn.transparent {
-            width: 110px;
-            height: 35px;
-            font-size: 0.7rem;
-        }
-
-        .container:before {
-            width: 1500px;
-            height: 1500px;
-            transform: translateX(-50%);
-            left: 30%;
-            bottom: 68%;
-            right: initial;
-            top: initial;
-            transition: 2s ease-in-out;
-        }
-
-        .container.change_mod:before {
-            transform: translate(-50%, 100%);
-            bottom: 32%;
-            right: initial;
-        }
-
-        .container.change_mod .left_panel .image,
-        .container.change_mod .left_panel .content {
-            transform: translateY(-300px);
-        }
-
-        .container.change_mod .right_panel .image,
-        .container.change_mod .right_panel .content {
-            transform: translateY(0px);
-        }
-
-        .right_panel .image,
-        .right_panel .content {
-            transform: translateY(300px);
-        }
-
-        .container.change_mod .contact_me {
-            top: 5%;
-            transform: translate(-50%, 0);
-        }
-    }
-
-    @media (max-width: 570px) {
-        form {
-            padding: 0 1.5rem;
-        }
-
-        .image {
-            display: none;
-        }
-
-        .panel .content {
-            padding: 0.5rem 1rem;
-        }
-
-        .container {
-            padding: 1.5rem;
-        }
-
-        .container:before {
-            bottom: 72%;
-            left: 50%;
-        }
-
-        .container.change_mod:before {
-            bottom: 28%;
-            left: 50%;
-        }
-    }
 }
 
 
@@ -1784,10 +1640,16 @@ section {
 
 // media query mobile, tablet
 @include mobile {
+    * {
+        box-sizing: border-box;
+    }
     body {
         background-color: #ddd;
+        .main_title {
+            font-size: 40px !important;
+        }
     }
-    // main_Section 
+    //모바일 main_Section 
     .main_images {
         display: none;
     }
@@ -1805,19 +1667,22 @@ section {
     
     }
     
-    // how to section 
+    // 모바일 how to section 
     .fix_box .txt {
         font-size: 50px !important;
     }
  
-
-    // my skill section
-  
-
+   // 모바일 my skill section
     #my_skill {
         box-sizing: border-box;
         width: 100%;
-        border: 2px solid green;
+        .intro_txt {
+            width: 100%;
+            text-align: center;
+        }
+        .web_line {
+            top: 6%;
+        }
         .left_mask, 
         .right_mask {
             display: none;
@@ -1829,26 +1694,154 @@ section {
                 color: #333;
             }
         }
+        .skills{
+            .progress {
+                margin: 2% 0;
+                padding-right: 20px;
+                box-sizing: border-box;
+                .skill_icon {
+                    i {
+                    font-size: 30px;
+                    }
+                }
+            }
+           
+        }
         .skill_code {
             width: 100%;
             margin-right: 0;
+            box-sizing: border-box;
+            padding-right: 10px;
+            .skill_icon {
+                margin-left: 15px;
+            }
         }
         .skill_design {
             width: 100%;
             margin-left: 0;
+            .progress {
+                justify-content: flex-start;
+                .skill_icon {
+                    order: 1;
+                }
+                .skill_txt {
+                    order: 2;
+                }
+                .skill_bar {
+                    order: 3;
+                }
+            }
+        }
+    }
+    
+   // 모바일 project 
+    #my_project {
+        .container {
+            .web_line {
+                margin-bottom: 50px;
+             }
+             .web_cont {
+                .web_txt {
+                width: 100%;
+                box-sizing: border-box;
+                text-align: center;
+                span {
+                    font-size: 2rem;
+                }
+                .sub_txt {
+                    font-size: 1.4rem;
+                }
+                em {
+                    font-size: 1.3rem;
+                }
+                .project_icon {
+                    justify-content: center;
+                }
+                }
+                .web_images {
+                    width: 100%;
+                    .images_de_mo {
+                        align-items: center;
+                    }
+                }
+             }
+        }
+    
+  }
+
+
+//   모바일 frontend project 
+  #frontend_project {
+    .fix_wrap {
+    height: 1500px;
+
+        .tit {font-size:54px; margin:auto;}
+        .text_box {
+            float: none !important;
+            position: sticky !important;
+            left: 0;
+            top: 0;
+            z-index: 50;
+            width: 100% !important;
+            box-sizing: border-box;
+            p{
+                position:absolute; 
+                left:0; 
+                top:100px; 
+                width: 100%; 
+                max-width:100% !important; 
+                padding:0 20px; 
+                font-size:18px; 
+                text-align: center; 
+                box-sizing: border-box; 
+                opacity: 0; 
+                transition:opacity .5s !important;
+                &.active {
+                    opacity: 1 !important;
+                }
+                &.txt02 {
+                    margin-top: 0 !important;
+                }
+                &.txt03 {
+                    margin-top: 0 !important;
+                }
+                &.txt04 {
+                    margin-top: 0 !important;
+                    margin-bottom: 0 !important;
+                }
+            }
+        }
+        .device_fix {
+            top: calc(100vh - 360px) !important; 
+            width: 100% !important;
+            .desktop_img {
+                width: 390px !important; 
+                height: auto !important;
+                padding-left: 8% !important;
+            }
+            .slide_wrap {
+                top: 4px !important; 
+                width: 320px !important; 
+                height: auto !important;
+                border-radius: 15px !important;
+                left: 35px !important;
+            }
+            .slide {
+                width: 480px;
+            }
+            .figure {
+                width: 120px;
+            }
         }
     }
   }
 
-  @include tablet {
-    body {
-        background-color: #00ff00;
-      
-    }
+//   모바일 final_notice
+  #final_notice {
+   .txt_area .motion_area {
+    font-size: 63px;
+   }
   }
 
-  @include desktop {
-    body {
-        background-color: #90ffff;
-    }
   }
+

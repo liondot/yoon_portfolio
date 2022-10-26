@@ -35,18 +35,21 @@ $(function () {
 	let myProject = $('#my_project')
 	let projectCont = myProject.find('.contents')
 
-	// toy project 
-	let toyClone = $('#clone_toy_project');
+	// frontend project 
+	let frontendSec = $('#frontend_project');
 
 	let isMobile;
 
-	let toyCloneHeight;
-	let toyCloneOffsetTop;
-	let toyCloneBottom;
-	let toyCloneScrollTop;
-	let toyClonePercent;
-	let toyCloneRealHeight;
-	let toyPer;
+	let frontendHeight;
+	let frontendOffsetTop;
+	let frontendBottom;
+	let frontendScrollTop;
+	let frontendPercent;
+	let frontendRealHeight;
+	let frontendPer;
+
+	// final notice 
+	let finalNotice = $('#final_notice')
 	
 	// contact_form 
 	let contactForm = $('#contact_form');
@@ -55,6 +58,8 @@ $(function () {
 	let developerImg = contactForm.find('.developer_img')
 	let contactOffsetTop;
 	let contactBottom;
+
+
 
 	let skillCode = $('.skill_code');
 	let codeSkillText = skillCode.find('.skill_txt');
@@ -143,13 +148,13 @@ $(function () {
 
 		render(valueTextPercent, valueHeightPercent);
 
-		toyCloneOffsetTop = toyClone.offset().top;
-		toyCloneHeight = toyClone.height();
-		toyCloneBottom = toyCloneOffsetTop + toyCloneHeight;
-		toyCloneRealHeight = (toyCloneHeight - $(window).height());
-		toyCloneScrollTop = winScrollTop - toyCloneOffsetTop;
-		toyClonePercent = toyCloneScrollTop / toyCloneRealHeight;
-		toyPer = toyClonePercent * 100;
+		frontendOffsetTop = frontendSec.offset().top;
+		frontendHeight = frontendSec.height();
+		frontendBottom = frontendOffsetTop + frontendHeight;
+		frontendRealHeight = (frontendHeight - $(window).height());
+		frontendScrollTop = winScrollTop - frontendOffsetTop;
+		frontendPercent = frontendScrollTop / frontendRealHeight;
+		frontendPer = frontendPercent * 100;
 
 		console.log('percnet', percent)
 		
@@ -220,7 +225,6 @@ $(function () {
 	function moveFunc() {
 		setProperty();
 		motionRender();
-		webLineClone();
 		navInSection();
 
 
@@ -234,14 +238,27 @@ $(function () {
 			webLine.eq(1).removeClass('active')
 		}
 
-		// 스크롤이 frontend, toyproject영역일때 메인타이틀과 웹라인 영역 나타남
-		if(percent > 133) {
+
+		// 스크롤이 frontend project영역일때 PC, MOBILE 메인타이틀과 웹라인 영역 나타남
+		function frontendMainTitle(){
+		if(percent > 134) {
 			mainTitle.eq(2).addClass('active')
 			webLine.eq(2).addClass('active')
-		} else if (percent < 133 || percent > 180) {
+		} else if (percent < 134 || percent > 180) {
 			mainTitle.eq(2).removeClass('active')
 			webLine.eq(2).removeClass('active')
 		}
+	}
+
+	function moFrontendMainTitle(){
+		if(percent > 150) {
+			mainTitle.eq(2).addClass('active')
+			webLine.eq(2).addClass('active')
+		} else if (percent < 150 || percent > 180) {
+			mainTitle.eq(2).removeClass('active')
+			webLine.eq(2).removeClass('active')
+		}
+	}
 
 	
 	//  scroll_txt영역이 윈도우창에 도착했을 때 텍스트 나타남  
@@ -252,10 +269,17 @@ $(function () {
 		// toyclone project 모바일버전 pc
 		if (isMobile) {
 			contentInMobile();
+			moFrontendMainTitle();
+			moMyProjectCon();
+			moFinalNoticeFun();
 		} else {
 			contentIn();
+			frontendMainTitle();
+			myProjectCon();
+			finalNoticeFun();
 		}
 	}
+
 
 	// scroll_txt 인아웃 애니메이션
 	function textInOut() {
@@ -339,7 +363,138 @@ $(function () {
 
 
 
-		let finalNotice = $('#final_notice')
+
+	};
+
+	// frontend 프로젝트 스크롤 시 텍스트 이미지 맞춤 변경 
+	function contentIn() {
+		var deviceImg = $('.device_fix .slide_wrap figure');
+		var imgWidth = deviceImg.width();
+
+		if (frontendPer >= 0 && frontendPer < 32) {
+			imageChange(imgWidth * 0);
+			$('#frontend_project .text_box .txt01').addClass('active');
+		}
+
+		if (frontendPer >= 32 && frontendPer < 54) {
+			imageChange(imgWidth * 1);
+			$('#frontend_project .text_box .txt02').addClass('active');
+		}
+
+		if (frontendPer >= 54 && frontendPer < 85) {
+			imageChange(imgWidth * 2);
+			$('#frontend_project .text_box .txt03').addClass('active');
+		}
+
+		if (frontendPer >= 85) {
+			imageChange(imgWidth * 3);
+			$('#frontend_project .text_box .txt04').addClass('active');
+		}
+
+		if (frontendPer < 0) {
+			$('#frontend_project .text_box .txt01').removeClass('active');
+			$('#frontend_project .text_box .txt02').removeClass('active');
+			$('#frontend_project .text_box .txt03').removeClass('active');
+			$('#frontend_project .text_box .txt04').removeClass('active');
+		}
+	};
+
+	// 모바일  FRONTEND 프로젝트 스크롤 시 텍스트 이미지 맞춤 변경  
+	function contentInMobile() {
+
+		var deviceImg = $('#frontend_project .slide_wrap figure');
+		var imgWidth = deviceImg.width();
+
+		console.log('imgWidth', imgWidth)
+		
+
+		if (frontendPer >= 5 && frontendPer < 25) {
+			imageChange(imgWidth * 0);
+			$('#frontend_project .text_box p').removeClass('active');
+			$('#frontend_project .text_box .txt01').addClass('active');
+		}
+
+		if (frontendPer >= 25 && frontendPer < 45) {
+			imageChange(imgWidth * 1);
+			$('#frontend_project .text_box p').removeClass('active');
+			$('#frontend_project .text_box .txt02').addClass('active');
+		}
+
+		if (frontendPer >= 45 && frontendPer < 65) {
+			imageChange(imgWidth * 2);
+			$('#frontend_project .text_box p').removeClass('active');
+			$('#frontend_project .text_box .txt03').addClass('active');
+		}
+
+		if (frontendPer >= 65 && frontendPer <= 85) {
+			imageChange(imgWidth * 3);
+			$('#frontend_project .text_box p').removeClass('active');
+			$('#frontend_project .text_box .txt04').addClass('active');
+
+		}
+
+
+		if (frontendPer > 85) {
+			imageChange(imgWidth * 3);
+			$('#frontend_project .text_box p').removeClass('active');
+		}
+
+		if (frontendPer < 0) {
+			(imgWidth * 0);
+			$('#frontend_project .text_box p').removeClass('active');
+		}
+
+	};
+
+
+
+	function imageChange(moveX) {
+		let img = $('#frontend_project .slide_wrap .slide')
+		img.css({
+			transform: 'translateX(' + -moveX + 'px)'
+		})
+	}
+
+	
+		// my_project 스크롤 위치에 도착하면 컨텐츠 애니메이션 실행 pc, mobile
+		function myProjectCon(){
+			if (percent > 107 && percent < 200) {
+				projectCont.eq(0).addClass('active')
+			} else if (percent < 107 || percent > 200) {
+				projectCont.eq(0).removeClass('active')
+			}
+			if (percent >= 114 && percent < 200) {
+				projectCont.eq(1).addClass('active')
+			} else if (percent < 114 || percent > 200) {
+				projectCont.eq(1).removeClass('active')
+			}
+			if (percent >= 122 && percent < 200) {
+				projectCont.eq(2).addClass('active')
+			} else if (percent < 112 || percent > 200) {
+				projectCont.eq(2).removeClass('active')
+			}
+		}
+
+		function moMyProjectCon(){
+			if (percent > 107 && percent < 200) {
+				projectCont.eq(0).addClass('active')
+			} else if (percent < 107 || percent > 200) {
+				projectCont.eq(0).removeClass('active')
+			}
+			if (percent >= 121 && percent < 200) {
+				projectCont.eq(1).addClass('active')
+			} else if (percent < 121 || percent > 200) {
+				projectCont.eq(1).removeClass('active')
+			}
+			if (percent >= 134 && percent < 200) {
+				projectCont.eq(2).addClass('active')
+			} else if (percent < 134 || percent > 200) {
+				projectCont.eq(2).removeClass('active')
+			}
+		}
+	
+		// finalNotice bg, txt 애니메이션 pc mobile ver
+	function finalNoticeFun() {
 		if(percent > 180 && percent < 220){
 			finalNotice.css({backgroundColor: 'black'})
 		}else {
@@ -353,127 +508,23 @@ $(function () {
 			motionArea.removeClass('active')
 			finalNotice.removeClass('active')
 		}
-	
-
-		// my_project 스크롤 위치에 도착하면 컨텐츠 애니메이션 실행 
-		if (percent > 107 && percent < 200) {
-			projectCont.eq(0).addClass('active')
-		} else if (percent < 107 || percent > 200) {
-			projectCont.eq(0).removeClass('active')
-		}
-		if (percent >= 114 && percent < 200) {
-			projectCont.eq(1).addClass('active')
-		} else if (percent < 114 || percent > 200) {
-			projectCont.eq(1).removeClass('active')
-		}
-		if (percent >= 122 && percent < 200) {
-			projectCont.eq(2).addClass('active')
-		} else if (percent < 112 || percent > 200) {
-			projectCont.eq(2).removeClass('active')
-		}
-
-
-
-	};
-
-	// clone toy 프로젝트 스크롤 시 텍스트 이미지 맞춤 변경 
-	function contentIn() {
-		var deviceImg = $('.device_fix .slide_wrap figure');
-		var imgWidth = deviceImg.width();
-
-		if (toyPer >= 0 && toyPer < 32) {
-			imageChange(imgWidth * 0);
-			$('#clone_toy_project .text_box .txt01').addClass('active');
-		}
-
-		if (toyPer >= 32 && toyPer < 54) {
-			imageChange(imgWidth * 1);
-			$('#clone_toy_project .text_box .txt02').addClass('active');
-		}
-
-		if (toyPer >= 54 && toyPer < 85) {
-			imageChange(imgWidth * 2);
-			$('#clone_toy_project .text_box .txt03').addClass('active');
-		}
-
-		if (toyPer >= 85) {
-			imageChange(imgWidth * 3);
-			$('#clone_toy_project .text_box .txt04').addClass('active');
-		}
-
-		if (toyPer < 0) {
-			$('#clone_toy_project .text_box .txt01').removeClass('active');
-			$('#clone_toy_project .text_box .txt02').removeClass('active');
-			$('#clone_toy_project .text_box .txt03').removeClass('active');
-			$('#clone_toy_project .text_box .txt04').removeClass('active');
-		}
-	};
-
-	// 모바일  clone toy 프로젝트 스크롤 시 텍스트 이미지 맞춤 변경  
-	function contentInMobile() {
-
-		var deviceImg = $('#clone_toy_project .slide_wrap figure');
-		var imgWidth = deviceImg.width();
-
-		console.log('imgWidth', imgWidth)
-		
-
-		if (toyPer >= 5 && toyPer < 25) {
-			imageChange(imgWidth * 0);
-			$('#clone_toy_project .text_box p').removeClass('active');
-			$('#clone_toy_project .text_box .txt01').addClass('active');
-		}
-
-		if (toyPer >= 25 && toyPer < 45) {
-			imageChange(imgWidth * 1);
-			$('#clone_toy_project .text_box p').removeClass('active');
-			$('#clone_toy_project .text_box .txt02').addClass('active');
-		}
-
-		if (toyPer >= 45 && toyPer < 65) {
-			imageChange(imgWidth * 2);
-			$('#clone_toy_project .text_box p').removeClass('active');
-			$('#clone_toy_project .text_box .txt03').addClass('active');
-		}
-
-		if (toyPer >= 65 && toyPer <= 85) {
-			imageChange(imgWidth * 3);
-			$('#clone_toy_project .text_box p').removeClass('active');
-			$('#clone_toy_project .text_box .txt04').addClass('active');
-
-		}
-
-
-		if (toyPer > 85) {
-			imageChange(imgWidth * 3);
-			$('#clone_toy_project .text_box p').removeClass('active');
-		}
-
-		if (toyPer < 0) {
-			(imgWidth * 0);
-			$('#clone_toy_project .text_box p').removeClass('active');
-		}
-
-	};
-
-	function webLineClone(){
-
-// toyClone
-if(winScrollTop + 300 >= toyCloneOffsetTop && winScrollTop < toyCloneBottom) {
-	webLine.eq(2).addClass('active')
-} else {
-	webLine.eq(2).removeClass('active')
-}
-
 	}
 
-	function imageChange(moveX) {
-		let img = $('#clone_toy_project .slide_wrap .slide')
-		img.css({
-			transform: 'translateX(' + -moveX + 'px)'
-		})
-	}
+	function moFinalNoticeFun() {
+		if(percent > 193 && percent < 220){
+			finalNotice.css({backgroundColor: 'black'})
+		}else {
+			finalNotice.css({backgroundColor: 'white'})
+		}
 
+		if(percent > 198 && percent < 215){
+			motionArea.addClass('active')
+			finalNotice.addClass('active')
+		} else if (percent < 198 || percent > 215){
+			motionArea.removeClass('active')
+			finalNotice.removeClass('active')
+		}
+	}
 	// contact me 버튼 클릭시 해당 영역으로 이동
 	contactForm = $('#contact_form')
 	contactBtn = $('#contact_btn')
