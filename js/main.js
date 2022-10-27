@@ -81,8 +81,9 @@ $(function () {
 	let maxNum;
 
 	function navInSection(){
-		if(winScrollTop >= offsetTop[0] && offsetBottom[0] > winScrollTop) {
+		if(winScrollTop >= offsetTop[0] && offsetBottom[0] + 1 > winScrollTop) {
 			sectionInActive(0)
+			mainImgAni()		
 		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
 			sectionInActive(1)
 		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
@@ -96,7 +97,16 @@ $(function () {
 		} else if(winScrollTop >= offsetTop[6] && offsetBottom[6] > winScrollTop) {
 			sectionInActive(6)
 		}
+
 	}
+
+function mainImgAni(){
+	setTimeout(function() {
+		$('.main_images').removeClass('active')
+
+		},); // 3000ms(3초)가 경과하면 이 함수가 실행됩니다. 
+}
+
 
 	// 해당 섹션안에 진입할 때 menu 활성화 
 	function sectionInActive(index){
@@ -112,8 +122,8 @@ $(function () {
 // 애니메이션 값 셋팅
 	function setProperty() {
 		winScrollTop = $(window).scrollTop();
-
 		isMobile = $(window).width() <= 900 ? true : false;
+
 		// nav_list 각 세션에 섹션 클래스 탑값과 높이값 
 		section.each(function(index,obj){
 			offsetTop[index] = $(obj).offset().top;
@@ -181,7 +191,7 @@ $(function () {
 			codeSkillText.eq(1).text(Math.floor(valueTextPercent / 1.19) + '%'); //css skill 
 			codeSkillText.eq(2).text(Math.floor(valueTextPercent / 1.4) + '%'); //sass skill
 			codeSkillText.eq(3).text(Math.floor(valueTextPercent / 1.9) + '%'); //js skill 
-			codeSkillText.eq(4).text(Math.floor(valueTextPercent / 1.8) + '%'); //jquery skill
+			codeSkillText.eq(4).text(Math.floor(valueTextPercent / 1.5) + '%'); //jquery skill
 			codeSkillText.eq(5).text(Math.floor(valueTextPercent / 1.6) + '%'); //react skill 
 
 			//index: 0-photoshop, 1-illustrator, 2-figma
@@ -203,14 +213,14 @@ $(function () {
 				width: valueHeightPercent / 2 + '%'
 			});
 			codeSkillBar.eq(4).css({ //jquery skill
-				width: valueHeightPercent / 1.9 + '%'
+				width: valueHeightPercent / 1.8 + '%'
 			});
 			codeSkillBar.eq(5).css({ //react skill
-				width: valueHeightPercent / 1.8 + '%'
+				width: valueHeightPercent / 1.85 + '%'
 			});
 
 			designSkillBar.eq(0).css({ //photoshop skill
-				width: valueHeightPercent / 1.3 + '%'
+				width: valueHeightPercent / 1.45 + '%'
 			});
 			designSkillBar.eq(1).css({ //illust skill
 				width: valueHeightPercent / 1.5 + '%'
@@ -333,7 +343,6 @@ $(function () {
 		// my skill 처음, 마지막 텍스트 
 		if (percent > 0.3) {
 			titText.addClass('active');
-
 		} else {
 			titText.removeClass('active');
 		}
@@ -361,13 +370,11 @@ $(function () {
 			webLine.eq(1).removeClass('active')
 		}
 
-
-
-
 	};
 
 	// frontend 프로젝트 스크롤 시 텍스트 이미지 맞춤 변경 
 	function contentIn() {
+		console.log('frontendPer', frontendPer)
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
@@ -381,12 +388,12 @@ $(function () {
 			$('#frontend_project .text_box .txt02').addClass('active');
 		}
 
-		if (frontendPer >= 54 && frontendPer < 85) {
+		if (frontendPer >= 64 && frontendPer < 85) {
 			imageChange(imgWidth * 2);
 			$('#frontend_project .text_box .txt03').addClass('active');
 		}
 
-		if (frontendPer >= 85) {
+		if (frontendPer >= 95) {
 			imageChange(imgWidth * 3);
 			$('#frontend_project .text_box .txt04').addClass('active');
 		}
@@ -407,45 +414,37 @@ $(function () {
 
 		console.log('imgWidth', imgWidth)
 		
-
 		if (frontendPer >= 5 && frontendPer < 25) {
 			imageChange(imgWidth * 0);
 			$('#frontend_project .text_box p').removeClass('active');
 			$('#frontend_project .text_box .txt01').addClass('active');
 		}
-
 		if (frontendPer >= 25 && frontendPer < 45) {
 			imageChange(imgWidth * 1);
 			$('#frontend_project .text_box p').removeClass('active');
 			$('#frontend_project .text_box .txt02').addClass('active');
 		}
-
 		if (frontendPer >= 45 && frontendPer < 65) {
 			imageChange(imgWidth * 2);
 			$('#frontend_project .text_box p').removeClass('active');
 			$('#frontend_project .text_box .txt03').addClass('active');
 		}
-
 		if (frontendPer >= 65 && frontendPer <= 85) {
 			imageChange(imgWidth * 3);
 			$('#frontend_project .text_box p').removeClass('active');
 			$('#frontend_project .text_box .txt04').addClass('active');
 
 		}
-
-
 		if (frontendPer > 85) {
 			imageChange(imgWidth * 3);
 			$('#frontend_project .text_box p').removeClass('active');
 		}
-
 		if (frontendPer < 0) {
 			(imgWidth * 0);
 			$('#frontend_project .text_box p').removeClass('active');
 		}
 
 	};
-
 
 
 	function imageChange(moveX) {
@@ -495,16 +494,16 @@ $(function () {
 	
 		// finalNotice bg, txt 애니메이션 pc mobile ver
 	function finalNoticeFun() {
-		if(percent > 180 && percent < 220){
+		if(percent > 188 && percent < 230){
 			finalNotice.css({backgroundColor: 'black'})
 		}else {
 			finalNotice.css({backgroundColor: 'white'})
 		}
 
-		if(percent > 185 && percent < 215){
+		if(percent > 190 && percent < 225){
 			motionArea.addClass('active')
 			finalNotice.addClass('active')
-		} else if (percent < 185 || percent > 215){
+		} else if (percent < 190 || percent > 225){
 			motionArea.removeClass('active')
 			finalNotice.removeClass('active')
 		}

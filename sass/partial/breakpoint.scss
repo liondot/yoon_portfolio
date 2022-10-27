@@ -1,7 +1,7 @@
 @import "./var";
 
 @mixin mobile {
-  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}){
+  @media (min-width: #{$breakpoint-mobile}) and (max-width: #{$breakpoint-tablet - 1px}) {
     @content;
   }
 }
@@ -17,9 +17,3 @@
     @content;
   }
 }
-// "mobile": 360px,
-//   "bigMobile" : 550px,
-//   "smallTablet": 700px,
-//   "tablet": 900px,
-//   "desktop": 1366px,
-//   "LGdesktop": 1920px
