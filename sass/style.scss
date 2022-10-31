@@ -88,7 +88,7 @@ section {
     z-index: 100;
     width: 100%;
     box-sizing: border-box;
-    background-color: transparent;
+    background-color: transparent; 
     &.active {
         background-color: #fff;
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
@@ -97,15 +97,24 @@ section {
     .nav_toggle {
         position: fixed;
         right: 10px;
-        top: 9px;
+        top:3px;
         z-index: 999;
         font-size: 25px;
         cursor: pointer;
         color: #8d8d8d;
+
+        i {
+            color: #000;
+            
+        }
+        &.active i {
+            color: #8d8d8d;
+        }
+
     }
     .nav_list {
         position: fixed;
-        right: 30px;
+        right: 70px;
         top: 14px;
         z-index: 900;
         display: none;  
@@ -167,7 +176,7 @@ section {
                 .main_img {
                     transition-property: transform; 
                     transition-timing-function: ease-in;
-                    transition-duration: .5s;
+                    transition-duration: .3s;
                 &.main_img1 {
                     transform: translate(-200%,50%) rotate(25deg);
                 }
@@ -186,7 +195,7 @@ section {
                 .main_img {
                     transition-property: transform; 
                     transition-timing-function: ease-in;
-                    transition-duration: .5s;
+                    transition-duration: .3s;
                     &.main_img6 {
                         transform: translate(200%,-50%) rotate(25deg);
                     }
@@ -261,7 +270,13 @@ section {
     -moz-transform: translate(-50%, -50%);
     -o-transform: translate(-50%, -50%);
     -ms-transform: translate(-50%, -50%);
-
+   
+    &.active .profile_img,
+    &.active .profile_txt{
+        visibility: visible;
+        opacity: 1;
+        transform: translateX(0);
+    }
   
 
     .profile_img {
@@ -270,8 +285,10 @@ section {
         align-items: center;
         justify-content: center;
         margin-right: 4vw;
-
-
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease-in;
+        transform: translateX(-30px);
         img {
             object-fit: fill;
             object-position: bottom;
@@ -279,11 +296,12 @@ section {
     }
 
     .profile_txt {
-       
-
+        visibility: hidden;
+        opacity: 0;
+        transition: all .5s ease-in;
+        transform: translateX(30px);
         span {
             font-size: 1.5rem;
-
             em {
                 font-size: 1rem;
             }
@@ -295,18 +313,15 @@ section {
         }
 
         .profile_subTxt {
-            color: #333;
-            font-size: 1.3rem;
+            color: #666;
+            font-size: 1rem;
             margin-top: 1rem;
-
-           
         }
 
         .contact {
             display: flex;
             display: -webkit-box;
             display: -ms-flexbox;
-
             span {
                 margin: 2px;
                 margin-right: 8px;
@@ -316,7 +331,6 @@ section {
         .button_contact {
             display: inline-block;
             margin-top: 20px;
-
             button {
                 cursor: pointer;
                 font-size: 1rem;
@@ -337,13 +351,11 @@ section {
     position: relative;
     box-sizing: border-box;
     height: 5000px;
-
     .scroll_box {
         height: inherit;
         background-color: #fff;
         box-sizing: border-box;
         width: 100%;
-
         .fix_box {
             height: 100vh;
             box-sizing: border-box;
@@ -351,7 +363,6 @@ section {
             position: -webkit-sticky;
             top: 0px;
             left: 0px;
-
             .txt {
                 position: absolute;
                 left: 0;
@@ -362,10 +373,7 @@ section {
                 font-size: 70px;
                 animation: in-out 1s linear forwards paused;
                 animation-delay: calc(var(--progress) * -1s);
-
-
             }
-
         }
 
 
@@ -539,8 +547,6 @@ section {
                             color: rgb(76, 70, 96);
                             line-height: 1;
                             margin-top: 4%;
-
-                        
                         }
                     }
 
@@ -553,13 +559,11 @@ section {
                         position: absolute;
                         left: 50%;
                         top: 10%;
-
                         &.active {
                             .square {
                                 top: 100%;
                             }
                         }
-
                         .square {
                             width: 10px;
                             height: 10px;
@@ -572,9 +576,7 @@ section {
                             transition: top .5s ease;
                         }
                     }
-
                 }
-
                 &:after {
                     position: absolute;
                     left: 0;
@@ -623,8 +625,6 @@ section {
                       
                         .skill_icon {
                             margin-left: 15px;
-
-                         
                         }
 
 
@@ -666,7 +666,7 @@ section {
                     display: -webkit-box;
                     display: -ms-flexbox;
                     display: flex;
-                    margin: 5% 0;
+                    margin: 3% 0;
 
                     .skill_icon {
                         display: -webkit-box;
@@ -678,10 +678,10 @@ section {
                         margin-right: 15px;
                         align-items: center;
                         width: 54px;
-
+                        justify-content: center;
 
                         i {
-                            font-size: 40px;
+                            font-size: 30px;
                             color: #333;
 
 
@@ -1084,7 +1084,7 @@ section {
                     width: 100%;
                     .slide_wrap {
                         top: 7px;
-                        max-width: 500px;
+                        max-width: 440px;
                         height: 237px;
                         overflow: hidden;
                         width: 100%;
@@ -1770,11 +1770,10 @@ span {
                 box-sizing: border-box;
                 .skill_icon {
                     i {
-                    font-size: 30px;
+                    font-size: 20px;
                     }
                 }
             }
-           
         }
         .skill_code {
             width: 100%;
@@ -1786,7 +1785,8 @@ span {
                 margin-top: 5px;
             }
             .skill_bar {
-                height: 25px;
+                height: 25px !important;
+                margin-top: 22px;
             }
         }
         .skill_design {
@@ -1803,7 +1803,7 @@ span {
                 }
                 .skill_bar {
                     order: 3;
-                    height: 25px;
+                    height: 25px !important;
                     margin-top: 24px;
                 }
             }
@@ -2050,7 +2050,6 @@ span {
         box-sizing: border-box;
     }
     body {
-        background-color: #ddd;
       
         // 토글 
         .nav_con {
@@ -2105,7 +2104,10 @@ span {
     }
         // 모바일 how to section 
         .fix_box .txt {
-            font-size: 50px !important;
+            font-size: 30px !important;
+            span {
+                display: block;
+            }
         }
      
        // 모바일 my skill section
@@ -2132,12 +2134,12 @@ span {
             }
             .skills{
                 .progress {
-                    margin: 2% 0;
+                    margin: 0% 0;
                     padding-right: 20px;
                     box-sizing: border-box;
                     .skill_icon {
                         i {
-                        font-size: 30px;
+                        font-size: 20px;
                         }
                     }
                 }
@@ -2151,6 +2153,10 @@ span {
                 .skill_icon {
                     margin-left: 15px;
                     margin-top: 5px;
+                }
+                .skill_bar {
+                    height: 25px;
+                    margin-top: 22px;
                 }
             }
             .skill_design {
@@ -2167,6 +2173,8 @@ span {
                     }
                     .skill_bar {
                         order: 3;
+                        height: 25px;
+                        margin-top: 22px;
                     }
                 }
             }

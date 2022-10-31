@@ -9,8 +9,12 @@ $(function () {
 	let navToggle = navCon.find('.nav_toggle')
 	let navList = navCon.find('.nav_list')
 
-
 	let mainTitle = $('.main_title')
+
+	// main section 
+	let mainSection = $('#main_section')
+	let sectionMainTop;
+	let sectionMainBottom;
  
 	let scrollTxt = $('.scroll_txt');
 	let scrollBox = $('.scroll_box');
@@ -30,15 +34,16 @@ $(function () {
 	let bgImage = mySkill.find('.bg_img');
 	let endingContent = mySkill.find('.ending_txt');
 
-	// 메인타이틀 라인  
-	let webLine = $('.web_line');
+	// MYproject 
 	let myProject = $('#my_project')
+	let webLine = $('.web_line');
 	let projectCont = myProject.find('.contents')
 
 	// frontend project 
 	let frontendSec = $('#frontend_project');
 
 	let isMobile;
+	let sectionIsMoving = false;
 
 	let frontendHeight;
 	let frontendOffsetTop;
@@ -59,8 +64,6 @@ $(function () {
 	let contactOffsetTop;
 	let contactBottom;
 
-
-
 	let skillCode = $('.skill_code');
 	let codeSkillText = skillCode.find('.skill_txt');
 	let codeSkillBar = skillCode.find('.skill_bar');
@@ -80,32 +83,56 @@ $(function () {
 
 	let maxNum;
 
-	function navInSection(){
-		if(winScrollTop >= offsetTop[0] && offsetBottom[0] + 1 > winScrollTop) {
-			sectionInActive(0)
-			mainImgAni()		
-		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
-			sectionInActive(1)
-		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
-			sectionInActive(2)
-		} else if(winScrollTop >= offsetTop[3] && offsetBottom[3] > winScrollTop) {
-			sectionInActive(3)
-		} else if(winScrollTop >= offsetTop[4] && offsetBottom[4] > winScrollTop) {
-			sectionInActive(4)
-		} else if(winScrollTop >= offsetTop[5] && offsetBottom[5] > winScrollTop) {
-			sectionInActive(5)
-		} else if(winScrollTop >= offsetTop[6] && offsetBottom[6] > winScrollTop) {
-			sectionInActive(6)
+	function moveStartRender() {
+		if (!navToggle.hasClass('active')) {
+			navToggle.addClass('active')
+			$('.main_images').addClass('active')
+			$('html').stop(true).animate({
+				scrollTop: sectionMainBottom,
+			}, 1000, function () {
+				sectionIsMoving = false;
+				console.log('call back')
+			})
+		} else {
+			navToggle.removeClass('active')
+			$('.main_images').removeClass('active')
+
+			$('html').stop(true).animate({
+				scrollTop: sectionMainTop,
+			}, 500, function () {
+				sectionIsMoving = false;
+				console.log('call back')
+			})
 		}
 
 	}
 
-function mainImgAni(){
-	setTimeout(function() {
-		$('.main_images').removeClass('active')
 
-		},); // 3000ms(3초)가 경과하면 이 함수가 실행됩니다. 
-}
+	function navInSection(){
+		if(winScrollTop >= offsetTop[0] && offsetBottom[0] + 1 > winScrollTop) {
+			sectionInActive(0)
+			$('.profile').addClass('active')
+		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
+			sectionInActive(1)
+			navToggle.addClass('active')
+		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
+			sectionInActive(2)
+			navToggle.addClass('active')
+		} else if(winScrollTop >= offsetTop[3] && offsetBottom[3] > winScrollTop) {
+			sectionInActive(3)
+			navToggle.addClass('active')
+		} else if(winScrollTop >= offsetTop[4] && offsetBottom[4] > winScrollTop) {
+			sectionInActive(4)
+			navToggle.addClass('active')
+		} else if(winScrollTop >= offsetTop[5] && offsetBottom[5] > winScrollTop) {
+			sectionInActive(5)
+			navToggle.addClass('active')
+		} else if(winScrollTop >= offsetTop[6] && offsetBottom[6] > winScrollTop) {
+			sectionInActive(6)
+			navToggle.addClass('active')
+		}
+
+	}
 
 
 	// 해당 섹션안에 진입할 때 menu 활성화 
@@ -129,7 +156,19 @@ function mainImgAni(){
 			offsetTop[index] = $(obj).offset().top;
 			offsetBottom[index] = offsetTop[index] + $(obj).height();
 		})
-		
+	
+		// 메인섹션 set 
+		sectionMainTop = mainSection.offset().top;
+		sectionMainBottom = sectionMainTop + mainSection.height();
+	
+		if (winScrollTop > sectionMainTop && winScrollTop < sectionMainBottom) {
+			if (!sectionIsMoving) {
+				sectionIsMoving = true;
+				moveStartRender()
+			}
+		}
+
+
 		// contactme 위치에 있을 때 애니메이션 실행 값 
 		contactOffsetTop = contactForm.offset().top
 		contactBottom = contactOffsetTop + contactForm.height()
