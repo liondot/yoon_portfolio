@@ -91,7 +91,6 @@ $(function () {
 				scrollTop: sectionMainBottom,
 			}, 1000, function () {
 				sectionIsMoving = false;
-				console.log('call back')
 			})
 		} else {
 			navToggle.removeClass('active')
@@ -101,7 +100,6 @@ $(function () {
 				scrollTop: sectionMainTop,
 			}, 500, function () {
 				sectionIsMoving = false;
-				console.log('call back')
 			})
 		}
 
@@ -290,10 +288,10 @@ $(function () {
 
 		// 스크롤이 frontend project영역일때 PC, MOBILE 메인타이틀과 웹라인 영역 나타남
 		function frontendMainTitle(){
-		if(percent > 134) {
+		if(percent > 135) {
 			mainTitle.eq(2).addClass('active')
 			webLine.eq(2).addClass('active')
-		} else if (percent < 134 || percent > 180) {
+		} else if (percent < 135 || percent > 180) {
 			mainTitle.eq(2).removeClass('active')
 			webLine.eq(2).removeClass('active')
 		}

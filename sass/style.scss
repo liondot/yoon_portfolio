@@ -312,6 +312,21 @@ section {
             color: #777;
         }
 
+        .front_social_media {
+            a {
+                border-radius: 50%;
+                width: 25px;
+                display: inline-block;
+                height: 25px;
+                margin: 10px 1px;
+                text-align: center;
+                line-height: 25px;
+                font-size: 20px;
+                color: #555;
+            }
+        
+        }
+
         .profile_subTxt {
             color: #666;
             font-size: 1rem;
@@ -931,7 +946,7 @@ section {
         }
     }
 
-    margin-top: 100px;
+    margin-top: 150px;
     position: relative;
     height: 2500px;
 
@@ -1077,30 +1092,40 @@ section {
                 .desktop_img {
                     position: relative;
                     max-width: 560px;
+                    max-height: 400px;
+                    height: 100%;
                     height: 260px;
                     padding-left: 10%;
                     padding-top: 5px;
                     margin: 0 auto;
                     width: 100%;
+
                     .slide_wrap {
                         top: 7px;
-                        max-width: 440px;
-                        height: 237px;
                         overflow: hidden;
-                        width: 100%;
+                        width: 81%;
                         border-radius: 15px;
-                        border: 2px solid green;
                         position: absolute;
                         z-index:10;
+                        background-color: #000;
+                        max-width: 500px;
 
                         .slide {
-                        
+                            display: -webkit-box;
+                            display: -ms-flexbox;
+                            display: flex;
                             width: 1440px;
                             transition: all .3s ease;
-
                             figure {
-                                float: left;
-                                width: 360px;
+                                 box-sizing: border-box;
+                                 max-width: 500px;
+                                 width: 100%;
+                                 background-color: #000;
+                                img {
+                                    border: 1px solid red;
+                                    width: 500px;
+                                }
+
                             }
                         }
                     }
