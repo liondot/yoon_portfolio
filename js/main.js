@@ -413,7 +413,6 @@ $(function () {
 
 	// frontend 프로젝트 스크롤 시 텍스트 이미지 맞춤 변경 
 	function contentIn() {
-		console.log('frontendPer', frontendPer)
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
@@ -559,16 +558,17 @@ $(function () {
 	}
 
 	function moFinalNoticeFun() {
-		if(percent > 193 && percent < 220){
-			finalNotice.css({backgroundColor: 'black'})
+		if(percent > 200 && percent < 230){
+			$('body').css({backgroundColor:'black'})
+
 		}else {
-			finalNotice.css({backgroundColor: 'white'})
+			$('body').css({backgroundColor:'white'})
 		}
 
-		if(percent > 198 && percent < 215){
+		if(percent > 204&& percent < 225){
 			motionArea.addClass('active')
 			finalNotice.addClass('active')
-		} else if (percent < 198 || percent > 215){
+		} else if (percent <210 || percent > 225){
 			motionArea.removeClass('active')
 			finalNotice.removeClass('active')
 		}

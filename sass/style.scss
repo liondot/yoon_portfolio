@@ -25,6 +25,7 @@ body {
     width: 100%;
     position: relative;
     margin: 0 auto;
+    transition: background .3s ease;
 }
 
 section {
@@ -1065,6 +1066,7 @@ section {
                 padding-top: 300px;
                 padding-right: 30px;
                 padding-left: 50px;
+                height: 1950px;
 
                 p {
                     max-width: 80%;
@@ -1967,6 +1969,7 @@ section {
                 z-index: 50;
                 width: 100% !important;
                 box-sizing: border-box;
+                height: auto !important;
 
                 p {
                     position: absolute;
@@ -2395,6 +2398,7 @@ section {
                 z-index: 50;
                 width: 100% !important;
                 box-sizing: border-box;
+                height: auto !important;
 
                 p {
                     position: absolute;
@@ -2460,6 +2464,8 @@ section {
 
     //   모바일 final_notice
     #final_notice {
+    height: 3000px;
+
         .txt_area .motion_area {
             font-size: 63px;
         }
