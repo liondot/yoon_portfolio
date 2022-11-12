@@ -368,7 +368,6 @@ section {
     height: 5000px;
     .scroll_box {
         height: inherit;
-        background-color: #fff;
         box-sizing: border-box;
         width: 100%;
         .fix_box {
@@ -739,7 +738,7 @@ section {
     .main_title {
         font-size: 60px;
         text-align: center;
-        margin-top: 5%;
+        margin-top: 15%;
         transition: all .3s ease-in;
         opacity: 0;
         visibility: hidden;
@@ -940,13 +939,14 @@ section {
         opacity: 0;
         visibility: hidden;
         transition: all .3s ease-in;
+        
         &.active {
             opacity: 1;
             visibility: visible;
         }
     }
 
-    margin-top: 150px;
+    margin-top: 100px;
     position: relative;
     height: 2500px;
 
@@ -966,7 +966,7 @@ section {
         height: 80px;
         background: #999;
         display: block;
-        margin: 20px auto 150px;
+        margin: 20px auto;
         opacity: 0;
         visibility: hidden;
         transition: all .3s ease-in;
@@ -1001,6 +1001,10 @@ section {
         width: 100%;
         max-width: 1400px;
         height: 2500px;
+
+        .contents {
+            margin-top: 220px;
+        }
 
         .fix_wrap {
             position: relative;
@@ -2292,7 +2296,9 @@ span {
                 .slide_wrap {
                     top: 4px !important; 
                     width: 320px !important; 
-                    height: auto !important;
+                    // height: auto !important;
+                height: 220px !important;
+
                     border-radius: 15px !important;
                     left: 35px !important;
                 }

@@ -276,32 +276,41 @@ $(function () {
 
 
 		// 스크롤이 my project영역일때 메인타이틀과 웹라인 영역 나타남
-		if(percent > 104) {
+		if(percent > 107) {
 			mainTitle.eq(1).addClass('active')
 			webLine.eq(1).addClass('active')
 			
-		} else if (percent < 104 || percent > 140) {
+		} else if (percent < 107 || percent > 140) {
 			mainTitle.eq(1).removeClass('active')
 			webLine.eq(1).removeClass('active')
 		}
 
 
+		// // 스롤이 my_project 섹션에 도착하면 타이틀 라인 애니메이션 실행 
+		// if (percent > 107) {
+		// 	webLine.eq(1).addClass('active')
+		// } else if (percent < 107 || percent > 200) {
+		// 	webLine.eq(1).removeClass('active')
+		// }
+
+
+
 		// 스크롤이 frontend project영역일때 PC, MOBILE 메인타이틀과 웹라인 영역 나타남
 		function frontendMainTitle(){
-		if(percent > 135) {
+		if(percent > 146) {
 			mainTitle.eq(2).addClass('active')
 			webLine.eq(2).addClass('active')
-		} else if (percent < 135 || percent > 180) {
+		} else if (percent < 146 || percent > 180) {
 			mainTitle.eq(2).removeClass('active')
 			webLine.eq(2).removeClass('active')
 		}
 	}
 
 	function moFrontendMainTitle(){
-		if(percent > 150) {
+		if(percent > 163) {
 			mainTitle.eq(2).addClass('active')
 			webLine.eq(2).addClass('active')
-		} else if (percent < 150 || percent > 180) {
+		} else if (percent < 163 || percent > 180) {
 			mainTitle.eq(2).removeClass('active')
 			webLine.eq(2).removeClass('active')
 		}
@@ -393,18 +402,11 @@ $(function () {
 		}
 
 
-		// 스롤이 my skill 섹션에 도착하면 라인 애니메이션 실행 
+		// 스롤이 my skill 섹션에 도착하면 타이틀 라인 애니메이션 실행 
 		if (percent > 11) {
 			webLine.eq(0).addClass('active')
 		} else if (percent < 11 || percent > 200) {
 			webLine.eq(0).removeClass('active')
-		}
-
-		// 스롤이 my_project 섹션에 도착하면 라인 애니메이션 실행 
-		if (percent > 107) {
-			webLine.eq(1).addClass('active')
-		} else if (percent < 107 || percent > 200) {
-			webLine.eq(1).removeClass('active')
 		}
 
 	};
@@ -494,38 +496,48 @@ $(function () {
 	
 		// my_project 스크롤 위치에 도착하면 컨텐츠 애니메이션 실행 pc, mobile
 		function myProjectCon(){
-			if (percent > 107 && percent < 200) {
+			if (percent > 112 && percent < 200) {
 				projectCont.eq(0).addClass('active')
 			} else if (percent < 107 || percent > 200) {
 				projectCont.eq(0).removeClass('active')
 			}
-			if (percent >= 114 && percent < 200) {
+			if (percent >= 120 && percent < 200) {
 				projectCont.eq(1).addClass('active')
-			} else if (percent < 114 || percent > 200) {
+			} else if (percent < 116 || percent > 200) {
 				projectCont.eq(1).removeClass('active')
 			}
-			if (percent >= 122 && percent < 200) {
+			if (percent >= 128 && percent < 200) {
 				projectCont.eq(2).addClass('active')
-			} else if (percent < 112 || percent > 200) {
+			} else if (percent < 125 || percent > 200) {
 				projectCont.eq(2).removeClass('active')
+			}
+			if (percent >= 135 && percent < 200) {
+				projectCont.eq(3).addClass('active')
+			} else if (percent < 133 || percent > 200) {
+				projectCont.eq(3).removeClass('active')
 			}
 		}
 
 		function moMyProjectCon(){
-			if (percent > 107 && percent < 200) {
+			if (percent > 112 && percent < 200) {
 				projectCont.eq(0).addClass('active')
 			} else if (percent < 107 || percent > 200) {
 				projectCont.eq(0).removeClass('active')
 			}
-			if (percent >= 121 && percent < 200) {
+			if (percent >= 125 && percent < 200) {
 				projectCont.eq(1).addClass('active')
 			} else if (percent < 121 || percent > 200) {
 				projectCont.eq(1).removeClass('active')
 			}
-			if (percent >= 134 && percent < 200) {
+			if (percent >= 138 && percent < 200) {
 				projectCont.eq(2).addClass('active')
-			} else if (percent < 134 || percent > 200) {
+			} else if (percent < 130 || percent > 200) {
 				projectCont.eq(2).removeClass('active')
+			}
+			if (percent >= 151 && percent < 200) {
+				projectCont.eq(3).addClass('active')
+			} else if (percent < 151 || percent > 200) {
+				projectCont.eq(3).removeClass('active')
 			}
 		}
 	
