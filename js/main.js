@@ -542,16 +542,16 @@ $(function () {
 	
 		// finalNotice bg, txt 애니메이션 pc mobile ver
 	function finalNoticeFun() {
-		if(percent > 188 && percent < 230){
-			finalNotice.css({backgroundColor: 'black'})
+		if(percent > 195 && percent < 230){
+			$('body').css({backgroundColor:'black'})
 		}else {
-			finalNotice.css({backgroundColor: 'white'})
+			$('body').css({backgroundColor:'white'})
 		}
 
-		if(percent > 190 && percent < 225){
+		if(percent > 198 && percent < 225){
 			motionArea.addClass('active')
 			finalNotice.addClass('active')
-		} else if (percent < 190 || percent > 225){
+		} else if (percent < 210 || percent > 225){
 			motionArea.removeClass('active')
 			finalNotice.removeClass('active')
 		}
