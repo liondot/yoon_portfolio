@@ -21,6 +21,7 @@ $(function () {
 	let allText = $('.fix_box .txt');
 
 	let winScrollTop;
+	let winScrollTopHalf = winScrollTop / 2
 	let scrollTxtTop;
 	let scrollTxtBottom;
 
@@ -110,6 +111,7 @@ $(function () {
 		if(winScrollTop >= offsetTop[0] && offsetBottom[0] + 1 > winScrollTop) {
 			sectionInActive(0)
 			$('.profile').addClass('active')
+
 		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
 			sectionInActive(1)
 			navToggle.addClass('active')
@@ -124,7 +126,7 @@ $(function () {
 			navToggle.addClass('active')
 		} else if(winScrollTop >= offsetTop[5] && offsetBottom[5] > winScrollTop) {
 			sectionInActive(5)
-			navToggle.addClass('active')
+			navToggle.removeClass('active')
 		} else if(winScrollTop >= offsetTop[6] && offsetBottom[6] > winScrollTop) {
 			sectionInActive(6)
 			navToggle.addClass('active')
@@ -168,8 +170,8 @@ $(function () {
 
 
 		// contactme 위치에 있을 때 애니메이션 실행 값 
-		contactOffsetTop = contactForm.offset().top
-		contactBottom = contactOffsetTop + contactForm.height()
+		// contactOffsetTop = contactForm.offset().top
+		// contactBottom = contactOffsetTop + contactForm.height()
 
 		// section 2 scroll_text 위치 값   
 		scrollTxtTop = scrollTxt.offset().top;
@@ -202,8 +204,6 @@ $(function () {
 		frontendScrollTop = winScrollTop - frontendOffsetTop;
 		frontendPercent = frontendScrollTop / frontendRealHeight;
 		frontendPer = frontendPercent * 100;
-
-		console.log('percnet', percent)
 		
 	}
 
@@ -286,15 +286,6 @@ $(function () {
 		}
 
 
-		// // 스롤이 my_project 섹션에 도착하면 타이틀 라인 애니메이션 실행 
-		// if (percent > 107) {
-		// 	webLine.eq(1).addClass('active')
-		// } else if (percent < 107 || percent > 200) {
-		// 	webLine.eq(1).removeClass('active')
-		// }
-
-
-
 		// 스크롤이 frontend project영역일때 PC, MOBILE 메인타이틀과 웹라인 영역 나타남
 		function frontendMainTitle(){
 		if(percent > 146) {
@@ -322,17 +313,19 @@ $(function () {
 			textInOut()
 		} else {}
 
-		// toyclone project 모바일버전 pc
+		// 모바일버전 pc
 		if (isMobile) {
 			contentInMobile();
 			moFrontendMainTitle();
 			moMyProjectCon();
 			moFinalNoticeFun();
+			contactMo()
 		} else {
 			contentIn();
 			frontendMainTitle();
 			myProjectCon();
 			finalNoticeFun();
+			contact();
 		}
 	}
 
@@ -350,7 +343,32 @@ $(function () {
 		})
 	}
 
+	function contact() {
+	
+		if(percent > 193) {
+			contactContainer.addClass('active')
+			contactMe.addClass('active')
+			developerImg.addClass('active')
 
+		} else if (percent <193 || percent > 200) {
+			contactContainer.removeClass('active')
+			contactMe.removeClass('active')
+			developerImg.removeClass('active')
+		}
+	}
+	function contactMo() {
+	console.log('per',percent)
+		if(percent > 198) {
+			contactContainer.addClass('active')
+			contactMe.addClass('active')
+			developerImg.addClass('active')
+
+		} else if (percent <198 || percent > 200) {
+			contactContainer.removeClass('active')
+			contactMe.removeClass('active')
+			developerImg.removeClass('active')
+		}
+	}
 
 	// my skill 좌우 사라지는 배경 위치 애니메이션 
 	function motionRender() {
@@ -361,17 +379,7 @@ $(function () {
 		let maskVal = Math.max(maskEndValue, maskStartValue - (skillScrollPercent * maskStartValue));
 		let scaleVal = Math.max(zoomOutValue, zoomValue - (skillScrollPercent * zoomValue));
 
-		// 컨텍트 미 영역에 들어올때 애니메이션 실행 
-		if(winScrollTop > contactOffsetTop && winScrollTop < contactBottom) {
-			contactContainer.addClass('active')
-			contactMe.addClass('active')
-			developerImg.addClass('active')
-		} else {
-			contactContainer.removeClass('active')
-			contactMe.removeClass('active')
-			developerImg.removeClass('active')
 
-		}
 		// my skill 화면 열림 maskLeft, maskRight
 		maskLeft
 			.css({
@@ -421,22 +429,22 @@ $(function () {
 			$('#frontend_project .text_box .txt01').addClass('active');
 		}
 
-		if (frontendPer >= 32 && frontendPer < 54) {
+		if (frontendPer >= 32 && frontendPer < 58) {
 			imageChange(imgWidth * 1);
 			$('#frontend_project .text_box .txt02').addClass('active');
 		}
 
-		if (frontendPer >= 64 && frontendPer < 85) {
+		if (frontendPer >= 58 && frontendPer < 79) {
 			imageChange(imgWidth * 2);
 			$('#frontend_project .text_box .txt03').addClass('active');
 		}
 
-		if (frontendPer >= 95) {
+		if (frontendPer >= 79) {
 			imageChange(imgWidth * 3);
 			$('#frontend_project .text_box .txt04').addClass('active');
 		}
 
-		if (frontendPer < 0) {
+		if (frontendPer < 0 || frontendPer > 110) {
 			$('#frontend_project .text_box .txt01').removeClass('active');
 			$('#frontend_project .text_box .txt02').removeClass('active');
 			$('#frontend_project .text_box .txt03').removeClass('active');
@@ -450,7 +458,6 @@ $(function () {
 		var deviceImg = $('#frontend_project .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
-		console.log('imgWidth', imgWidth)
 		
 		if (frontendPer >= 5 && frontendPer < 25) {
 			imageChange(imgWidth * 0);
@@ -471,7 +478,6 @@ $(function () {
 			imageChange(imgWidth * 3);
 			$('#frontend_project .text_box p').removeClass('active');
 			$('#frontend_project .text_box .txt04').addClass('active');
-
 		}
 		if (frontendPer > 85) {
 			imageChange(imgWidth * 3);
@@ -542,33 +548,34 @@ $(function () {
 	
 		// finalNotice bg, txt 애니메이션 pc mobile ver
 	function finalNoticeFun() {
-		if(percent > 195 && percent < 230){
-			$('body').css({backgroundColor:'black'})
+		if(percent > 205 && percent < 230){
+			$('body').css({backgroundColor:'black'
+		})
 		}else {
 			$('body').css({backgroundColor:'white'})
 		}
 
-		if(percent > 198 && percent < 225){
+		if(percent > 209 && percent < 240){
 			motionArea.addClass('active')
 			finalNotice.addClass('active')
-		} else if (percent < 210 || percent > 225){
+		} else if (percent < 213 ){
 			motionArea.removeClass('active')
 			finalNotice.removeClass('active')
 		}
 	}
 
 	function moFinalNoticeFun() {
-		if(percent > 200 && percent < 230){
+		if(percent > 222 && percent < 255){
 			$('body').css({backgroundColor:'black'})
 
 		}else {
 			$('body').css({backgroundColor:'white'})
 		}
 
-		if(percent > 204&& percent < 225){
+		if(percent > 223 && percent < 255){
 			motionArea.addClass('active')
 			finalNotice.addClass('active')
-		} else if (percent <210 || percent > 225){
+		} else if (percent < 230 || percent > 225){
 			motionArea.removeClass('active')
 			finalNotice.removeClass('active')
 		}

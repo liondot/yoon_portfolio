@@ -13,13 +13,21 @@
         <title>윤선화</title>
 
         <!-- jquery  -->
-     
+
         <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/smoothness/jquery-ui.css">
         <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+        <!-- jquery modal  -->
+        <!-- jQuery Modal -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+<!-- featherlight -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/featherlight/1.7.2/featherlight.min.js"></script>
 
         <!-- css  -->
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/style.css">
+        <!-- featherlight  -->
+        <link rel="stylesheet" href="">
 
         <!-- 파비콘 -->
 
@@ -49,6 +57,7 @@
 
         <!-- 폰트어썸  -->
         <script src="https://kit.fontawesome.com/c741f3b9be.js" crossorigin="anonymous"></script>
+
     </head>
 
 
@@ -73,63 +82,57 @@
         <div class="wrapper">
             <!-- 헤더영역  -->
             <header>
-                <!-- <div class="vers">
-                    <p class="vers_notice">지금 보고있는 웹사이트를 다른 코드 버전으로 만나보세요!</p>
-                    <div class="code_ver"><a href="">Js</a></div>
-                    <div class="code_ver"><a href="">React</a></div>
-                    <div class="code_ver"><a href="">View</a></div>
-                </div> -->
-
+        
                 <div class="nav_con">
-                <div class="nav_toggle">
-                    <i class="fa-solid fa-bars"></i>
-                </div>
+                    <div class="nav_toggle">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
 
-                <ul class="nav_list"> 
-                    <li>
-                        <a href="#main_section" class="active">
-                            <i class="fa-solid fa-chevron-up"></i>
-                            <span>Home</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#scroll_txt">
-                            <i class="fa-solid fa-chevron-up"></i>
-                            <span>How to</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#my_skill">
-                            <i class="fa-solid fa-chevron-up"></i>
-                            <span>My skill</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#my_project">
-                            <i class="fa-solid fa-chevron-up"></i>
-                            <span>Project</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#frontend_project">
-                            <i class="fa-solid fa-chevron-up"></i>
-                            <span>Frontend</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#final_notice">
-                            <i class="fa-solid fa-chevron-up"></i>
-                            <span>Thank you</span>
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#contact_form">
-                            <i class="fa-solid fa-chevron-up"></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
+                    <ul class="nav_list">
+                        <li>
+                            <a href="#main_section" class="active">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <span>Home</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#scroll_txt">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <span>How to</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#my_skill">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <span>My skill</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#my_project">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <span>Project</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#frontend_project">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <span>Frontend</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#contact_form">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <span>Contact</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="#final_notice">
+                                <i class="fa-solid fa-chevron-up"></i>
+                                <span>Thank you</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
             </header>
             <!-- 메인 섹션  -->
             <section id="main_section" class="section main_section">
@@ -171,7 +174,9 @@
                                 </a>
                             </div>
                             <p class="profile_subTxt">
-                                사용자 입장에서 다양한 디바이스와 브라우저에서 동일한 구조와 정보를 제공 받을 수 있는 웹사이트를 만들기 위해 온라인강의나 클론코딩, 토이프로젝트를 진행하며  다양한 기능과 기술을  익히고 있습니다. 원리를 이해하고 원하는 기능이 필요할 때 바로 배우고 적용할 수 있는 개발자가 되기 위해 업무 시간 외에도 여러 기술들을 공부하여 자기 계발에 힘쓰는 개발자입니다.
+                                사용자 입장에서 다양한 디바이스와 브라우저에서 동일한 구조와 정보를 제공 받을 수 있는 웹사이트를 만들기 위해 온라인강의나 클론코딩, 토이프로젝트를 진행하며
+                                다양한 기능과 기술을 익히고 있습니다. 원리를 이해하고 원하는 기능이 필요할 때 바로 배우고 적용할 수 있는 개발자가 되기 위해 업무 시간 외에도 여러
+                                기술들을 공부하여 자기 계발에 힘쓰는 개발자입니다.
                             </p>
                             <div class="button_contact">
                                 <a href="#contact_form"><button>Contact me</button></a>
@@ -222,7 +227,7 @@
                                     <div class="square"></div>
                                 </div>
                             </div>
-                            
+
                         </div>
                         <div class="skills">
                             <div class="skill_design">
@@ -275,7 +280,7 @@
                                     <div class="skill_icon">
                                         <i class="fa-brands fa-css3-alt"></i>
                                         <em>css</em>
-                                    </div>  
+                                    </div>
                                     <p class="skill_txt txt_css">
                                         0%
                                     </p>
@@ -330,15 +335,12 @@
                                 <span>여가마켓</span>
                                 <span class="sub_txt">랜딩페이지</span>
                                 <p class="project_skill">
-                                    <i class="fa-brands fa-html5"></i>
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                    <i class="fa-brands fa-sass"></i><i class="fa-solid fa-mobile"></i>
+                                    <i class="fa-sharp fa-solid fa-desktop"></i>
+                                    <i class="fa-solid fa-laptop"></i>
+                                    <i class="fa-solid fa-mobile"></i>
+
                                 </p>
-                                <em> 사용자에게 첫인상으로 기억되는 메인 섹션에 풀스크린을 활성화 하여
-                                    동적이고 강렬한 느낌을 주었습니다. 프로젝트 영역 각 카테고리에
-                                    javascript를 이용하여 탭을 클릭하면 해당하는 영역으로
-                                    이동하는 동시에 바운스 모션 효과를 적용해 카드ui에 움직임을
-                                    부드럽고 생동적인 느낌으로 주었습니다.
+                                <em> 여가생활 중고거래 플랫폼인 여가마켓에 사전예약 랜딩페이지를 모바일과 태블릿 PC에서도 볼 수 있도록 반응형웹으로 제작했습니다. 컨텐츠의 부드러운 움직임으로 역동적인 시각효과를 주었습니다.
                                 </em>
                                 <p class="project_icon">
                                     <em><img src="asset/images/web_img/laptop.gif" alt=""><span>퍼블리싱</span></em>
@@ -365,29 +367,25 @@
                                 <span>유가네 닭갈비</span>
                                 <span class="sub_txt">랜딩페이지</span>
                                 <p class="project_skill">
-                                    <i class="fa-brands fa-html5"></i>
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                    <i class="fa-brands fa-sass"></i>
-                                    
+                                    <i class="fa-sharp fa-solid fa-desktop"></i>
+                                    <i class="fa-solid fa-laptop"></i>
+                                    <i class="fa-solid fa-mobile"></i>
+
                                 </p>
-                                <em> 사용자에게 첫인상으로 기억되는 메인 섹션에 풀스크린을 활성화 하여
-                                    동적이고 강렬한 느낌을 주었습니다. 프로젝트 영역 각 카테고리에
-                                    javascript를 이용하여 탭을 클릭하면 해당하는 영역으로
-                                    이동하는 동시에 바운스 모션 효과를 적용해 카드ui에 움직임을
-                                    부드럽고 생동적인 느낌으로 주었습니다.
+                                <em> 유가네 닭갈비 메인페이지, 랜딩페이지를 다양한 디바이스에서 볼 수 있도록 반응형 제작하였습니다. SPA라이브러리를 사용하여 애니메이션 효과를 주어 역동적인 움직임을 주었습니다
                                 </em>
                                 <p class="project_icon">
                                     <em><img src="asset/images/web_img/laptop.gif" alt=""><span>퍼블리싱</span></em>
                                 </p>
                             </div>
                             <div class="web_images">
-                                <a class="images_de_mo" href="https://github.com/liondot/yoogane"
-                                    target="_blank">
+                                <a class="images_de_mo" href="https://github.com/liondot/yoogane" target="_blank">
                                     <img class="web_device" src="asset/images/web_img/yoogane_pc.png" alt="">
                                     <img class="web_mobile" src="asset/images/web_img/yoogane_mo.png" alt="">
                                 </a>
                                 <div class="web_btn">
-                                    <a class="web_btn_link" href="https://liondot.github.io/webAgency_website/"><i class="fa-solid fa-desktop"></i><span>Live Server</span></a>
+                                    <a class="web_btn_link" href="https://www.yoogane.co.kr/intro/main/main.html"><i
+                                            class="fa-solid fa-desktop"></i><span>Live Server</span></a>
                                     <a class="web_btn_link" href="https://github.com/liondot/yoogane"><i
                                             class="fa-brands fa-github-square"></i><span>github</span></a>
                                 </div>
@@ -398,22 +396,15 @@
                         <div class="web_cont">
                             <div class="web_txt">
                                 <span>포메인</span>
-                                <span class="sub_txt">메인 원페이지 웹사이트</span>
+                                <span class="sub_txt">클론코딩</span>
                                 <p class="project_skill">
-                                    <i class="fa-brands fa-html5"></i>
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                    <i class="fa-brands fa-sass"></i>
-                                    <i class="fa-light fa-mobile"></i>
+                                    <i class="fa-sharp fa-solid fa-desktop"></i>
+                                    <i class="fa-solid fa-mobile"></i>
                                 </p>
-                                <em> 사용자에게 첫인상으로 기억되는 메인 섹션에 풀스크린을 활성화 하여
-                                    동적이고 강렬한 느낌을 주었습니다. 프로젝트 영역 각 카테고리에
-                                    javascript를 이용하여 탭을  클릭하면 해당하는 영역으로
-                                    이동하는 동시에 바운스 모션 효과를 적용해 카드ui에 움직임을
-                                    부드럽고 생동적인 느낌으로 주었습니다.
+                                <em>
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus, eligendi?
                                 </em>
                                 <p class="project_icon">
-                                    <em><img src="asset/images/web_img/document.gif" alt=""><span>기획</span></em>
-                                    <em><img src="asset/images/web_img/layers.gif" alt=""><span>디자인</span></em>
                                     <em><img src="asset/images/web_img/laptop.gif" alt=""><span>퍼블리싱</span></em>
                                 </p>
                             </div>
@@ -438,20 +429,12 @@
                                 <span>티블</span>
                                 <span class="sub_txt">랜딩페이지</span>
                                 <p class="project_skill">
-                                    <i class="fa-brands fa-html5"></i>
-                                    <i class="fa-brands fa-css3-alt"></i>
-                                    <i class="fa-brands fa-sass"></i>
-                                    <i class="fa-light fa-mobile"></i>
+                                    <i class="fa-sharp fa-solid fa-desktop"></i>
+                                    <i class="fa-solid fa-mobile"></i>
                                 </p>
-                                <em> 사용자에게 첫인상으로 기억되는 메인 섹션에 풀스크린을 활성화 하여
-                                    동적이고 강렬한 느낌을 주었습니다. 프로젝트 영역 각 카테고리에
-                                    javascript를 이용하여 탭을  클릭하면 해당하는 영역으로
-                                    이동하는 동시에 바운스 모션 효과를 적용해 카드ui에 움직임을
-                                    부드럽고 생동적인 느낌으로 주었습니다.
+                                <em>고객상담 랜딩페이지 제작: 상담 담당자가 고객 데이터베이스를 확인할 수 있도록 구글sheet를 연동하였으며, fullpage.js를 이용하여 스크롤에 따른 화면전환이 부드럽고 사용자와 상호작용이 가능한 랜딩페이지를 제작하였습니다. 
                                 </em>
                                 <p class="project_icon">
-                                    <em><img src="asset/images/web_img/document.gif" alt=""><span>기획</span></em>
-                                    <em><img src="asset/images/web_img/layers.gif" alt=""><span>디자인</span></em>
                                     <em><img src="asset/images/web_img/laptop.gif" alt=""><span>퍼블리싱</span></em>
                                 </p>
                             </div>
@@ -462,9 +445,9 @@
                                     <img class="web_mobile" src="asset/images/web_img/tble_mo.png" alt="">
                                 </a>
                                 <div class="web_btn">
-                                    <a class="web_btn_link" href="https://liondot.github.io/webAgency_website/"><i
+                                    <a class="web_btn_link" href="https://liondot.github.io/tble_landing_2.0"><i
                                             class="fa-solid fa-desktop"></i><span>Live Demo</span></a>
-                                    <a class="web_btn_link" href="https://github.com/liondot/webAgency_website"><i
+                                    <a class="web_btn_link" href="https://github.com/liondot/tble_landing_2.0"><i
                                             class="fa-brands fa-github-square"></i><span>github</span></a>
                                 </div>
                             </div>
@@ -482,78 +465,73 @@
                     </div>
                     <div class="contents">
                         <article class="fix_wrap inner">
-                            <div class="text_box">
-                                <a href="https:naver.com" target="_blank">
+                            <div class="text_box"> 
+                              
+                                <a href="">
                                     <p class="txt01">
                                         <span class="main_text">Pet Maker </span>
-                                        <em class="tool">
-                                            <i class="fa-brands fa-html5"></i>
-                                            <i class="fa-brands fa-css3-alt"></i>
-                                            <i class="fa-brands fa-sass"></i>
-                                            <i class="fa-brands fa-square-js"></i>
-                                        </em>
                                         <em class="explane">
-                                            Lorem ipsum dolor sit amet,
-                                            quisquam! Aperiam beatae esse quaerat nostrum deleniti id illo libero
-                                            eligendi
-                                            laudantium, vel non dolorem deserunt quidem repellat.
+                                            cat open API를 사용하여 제작한 토이프로젝트입니다.
+                                            기술에 맞는 ui를 보여주기위해 styled-component를 
+                                            사용하였고 
+                                            입력창에 영문을 입력한 후 생성을 누르면 
+                                            입력한 텍스트와 함께 고양이 사진이 보여집니다. 
+                                            맘에 드는 사진에 하트를 누르면 이미지가 저장되고.
+                                            좋아요를 누른 사진의 리스트를 확인할 수 있습니다. 
+
+                                            <br>
+                                            <br>
+                                            
+                                            *인풋창에 한글입력이나 빈 값일 경우 노티스 <br>
+                                            <br>
+                                            - useState, useEffect 상태만들기 <br>
+                                            - fetch Open API <br>
+                                            - styled-component
+                                            
                                         </em>
                                     </p>
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="#movie" rel="modal:open" target="_blank">
                                     <p class="txt02">
                                         <span class="main_text">무비 웹 서비스</span>
-                                        <em class="tool">
-                                            <i class="fa-brands fa-html5"></i>
-                                            <i class="fa-brands fa-css3-alt"></i>
-                                            <i class="fa-brands fa-sass"></i>
-                                            <i class="fa-brands fa-square-js"></i>
-                                        </em>
                                         <em class="explane">
-                                            eos, a repudiandae perferendis fugiat, ipsa voluptatem ab quibusdam in.
-                                            Quis,
-                                            quisquam! Aperiam beatae esse quaerat nostrum deleniti id illo libero
-                                            eligendi
-                                            laudantium, vel non dolorem deserunt quidem repellat.
+                                           웹페이지를 리액트를 사용하여 사용작용을 높이는 효과를 주었습니다
                                         </em>
                                     </p>
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="#carrot" rel="modal:open" target="_blank">
                                     <p class="txt03">
-                                        <span class="main_text">두더지 게임</span>
-                                        <em class="tool">
-                                            <i class="fa-brands fa-html5"></i>
-                                            <i class="fa-brands fa-css3-alt"></i>
-                                            <i class="fa-brands fa-sass"></i>
-                                            <i class="fa-brands fa-square-js"></i>
-                                        </em>
+                                        <span class="main_text">당근 찾기</span>
+                                        
                                         <em class="explane">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                                            quisquam! Aperiam beatae esse quaerat nostrum deleniti id illo libero
-                                            eligendi
-                                            laudantium, vel non dolorem deserunt quidem repellat.
+                                            javascript 를 이용하여 제작한 게임입니다. 
+                                            게임이 리셋될 때 마다 아이템들이 다른 위치에 놓일 수 있게 랜덤한 위치값을 만들어 작업하였고 시간안에 당근을 찾지 못하거나 버그를 눌러
+                                            게임에서 실패하게되면 스코어가 1씩 감소하고 성공할 경우
+                                            "you win"이라는 메세지를 팝업으로 띄어줍니다. 
+                                        
+                                            <br>
+                                            <br>
+                                            - 함수, 조건문, 매개변수, 반복문, style 제어 
                                         </em>
                                     </p>
                                 </a>
-                                <a href="" target="_blank">
+                                <a href="#number" rel="modal:open" target="_blank">
                                     <p class="txt04">
-                                        <span class="main_text">숫자 맞추기 게임</span>
-                                        <em class="tool">
-                                            <i class="fa-brands fa-html5"></i>
-                                            <i class="fa-brands fa-css3-alt"></i>
-                                            <i class="fa-brands fa-sass"></i>
-                                            <i class="fa-brands fa-square-js"></i>
-                                        </em>
+                                        <span class="main_text">숫자 맞추기</span>
+                                         
                                         <em class="explane">
-                                            Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque illo
-                                            explicabo
-                                            sapiente susci¬øpit quia repellat delectus ex reprehenderit enim omnis
-                                            recusandae
-
+                                            숫자 맞추기 게임은 바닐라 자바스크립트를 이용하여 만든 토이프로젝트입니다. 
+                                            사용자가 1~100까지 중 원하는 숫자를 입력하면 정답에 가까운 힌트를 받게 됩니다. 사용자가 입력한 값보다 정답이 높을경우 up, 낮을경우 down과 연관있는 gif파일의 짤방을 힌트로 받게 됩니다. 
+                                            총 5번의 기회가 있으며 입력한 값이 중복인 경우나 1~100사이가 아닌 숫자일 
+                                            경우 노티스를 띄웁니다.
+                                            <br>
+                                            <br>
+                                            -event, 함수, 조건문, 배열 사용 
                                         </em>
                                     </p>
                                 </a>
                             </div>
+                           
                             <div class="device_fix">
                                 <div class="desktop_img">
                                     <figure class="img_device">
@@ -568,7 +546,7 @@
                                                 <img src="asset/images/movie_service.png">
                                             </figure>
                                             <figure>
-                                                <img src="asset/images/game1.png">
+                                                <img src="asset/images/carrot.png">
                                             </figure>
                                             <figure>
                                                 <img src="asset/images/game2.png">
@@ -581,11 +559,89 @@
                     </div>
                 </div>
             </section>
-            <!-- 파이널 노티스 섹션  -->
-            <section id="final_notice" class="section final_notice">
+           
+            <!-- 컨텍트 폼 섹션  -->
+            <section id="contact_form" class="section">
+                <div class="container">
+                    <h2 class="ir_so">contact me</h2>
+                    <div class="forms_container">
+                        <div class="contact_me">
+                            <form action="#" class="contact_me_form">
+                                <h2 class="title">Contact Me</h2>
+                                <div class="input_field">
+                                    <i class="fas fa-building"></i>
+                                    <input type="text" placeholder="회사명" />
+                                </div>
+                                <div class="input_field">
+                                    <i class="fas fa-user"></i>
+                                    <input type="text" placeholder="성함/ 직함" />
+                                </div>
+                                <div class="input_field">
+                                    <i class="fas fa-phone"></i>
+                                    <input type="number" placeholder="연락처" />
+                                </div>
+                                <textarea placeholder="메세지를 입력하세요" name="" id="" cols="30" rows="10"></textarea>
+                                <input type="submit" value="보내기" class="btn solid" />
+                            </form>
+                            <form action="#" class="social_form">
+                                <h2 class="title">My Social</h2>
+
+                                <div class="social_media">
+                                    <a href="https://github.com/liondot" class="social_icon">
+                                        <i class="fa-brands fa-github">
+                                            <em class="ir_pm">github</em>
+                                        </i>
+                                    </a>
+                                    <a href="https://www.youtube.com/channel/UCeuThQ3TG45huqyM6-ezYZg"
+                                        class="social_icon">
+                                        <i class="fa-brands fa-square-youtube">
+                                            <em class="ir_pm">youtube</em>
+                                        </i>
+                                    </a>
+                                    <a href="https://www.pinterest.co.kr/sunflo_512/" class="social_icon">
+                                        <i class="fa-brands fa-pinterest-p">
+                                            <em class="ir_pm">pinterest</em>
+                                        </i>
+                                    </a>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+
+                    <div class="panels_container">
+                        <div class="panel left_panel">
+                            <div class="content">
+                                <h3>Go To My Social</h3>
+                                <p>
+                                    My Social 버튼을 누르면 <br> 저의 소셜을 확인하실 수 있습니다.
+                                </p>
+                                <button class="btn transparent" id="social_btn">
+                                    <i class="fas fa-angle-left"> </i> My Social
+                                </button>
+                            </div>
+                            <img src="asset/images/developer.svg" class="image developer_img" alt="" />
+                        </div>
+                        <div class="panel right_panel">
+                            <div class="content">
+                                <h3>Go To Contact Me</h3>
+                                <p>
+                                    Contact Me 버튼을 누르면 <br>
+                                    연락처를 남길 수 있습니다.
+                                </p>
+                                <button class="btn transparent" id="contact_btn">
+                                    Contact Me <i class="fas fa-angle-right"> </i>
+                                </button>
+                            </div>
+                            <img src="asset/images/social.svg" class="image" alt="" />
+                        </div>
+                    </div>
+                </div>
+            </section>
+             <!-- 파이널 노티스 섹션  -->
+             <section id="final_notice" class="section final_notice">
                 <article class="txt_area">
                     <div class="motion_area">
-                        <a href="#main_section"     class="tit_wrap">
+                        <a href="#main_section" class="tit_wrap">
                             <i class="fa-solid fa-chevron-up"></i>
                             <p class="up_message">메인으로 올라가기!</p>
                         </a>
@@ -625,93 +681,11 @@
                                 </p>
                             </div>
                         </div>
-                        <div class="scroll_area">
-                            <p>Contac Me</p>
-                            <em>Scroll Down</em>
-                            <i class="fa-solid fa-angles-up">
-                            </i>
-                        </div>
                     </div>
                 </article>
             </section>
-            <!-- 컨텍트 폼 섹션  -->
-        <section id="contact_form" class="section">
-            <div class="container">
-                <h2 class="ir_so">contact me</h2>
-                <div class="forms_container">
-                    <div class="contact_me">
-                        <form action="#" class="contact_me_form">
-                            <h2 class="title">Contact Me</h2>
-                            <div class="input_field">
-                                <i class="fas fa-building"></i>
-                                <input type="text" placeholder="회사명" />
-                            </div>
-                            <div class="input_field">
-                                <i class="fas fa-user"></i>
-                                <input type="text" placeholder="성함/ 직함" />
-                            </div>
-                            <div class="input_field">
-                                <i class="fas fa-phone"></i>
-                                <input type="number" placeholder="연락처" />
-                            </div>
-                                <textarea placeholder="메세지를 입력하세요" name="" id="" cols="30" rows="10"></textarea>
-                            <input type="submit" value="보내기" class="btn solid" />
-                        </form>
-                        <form action="#" class="social_form">
-                            <h2 class="title">My Social</h2>
 
-                            <div class="social_media">
-                                <a href="https://github.com/liondot" class="social_icon">
-                                    <i class="fa-brands fa-github">
-                                        <em class="ir_pm">github</em>
-                                    </i>
-                                </a>
-                                <a href="https://www.youtube.com/channel/UCeuThQ3TG45huqyM6-ezYZg" class="social_icon">
-                                    <i class="fa-brands fa-square-youtube">
-                                        <em class="ir_pm">youtube</em>
-                                    </i>
-                                </a>
-                                <a href="https://www.pinterest.co.kr/sunflo_512/" class="social_icon">
-                                    <i class="fa-brands fa-pinterest-p">
-                                        <em class="ir_pm">pinterest</em>
-                                    </i>
-                                </a>
-                            </div>
-                        </form>
-                    </div>
-                </div>
 
-                <div class="panels_container">
-                    <div class="panel left_panel">
-                        <div class="content">
-                            <h3>Go To My Social</h3>
-                            <p>
-                                My Social 버튼을 누르면 <br> 저의 소셜을 확인하실 수 있습니다.
-                            </p>
-                            <button class="btn transparent" id="social_btn">
-                                <i class="fas fa-angle-left"> </i> My Social
-                            </button>
-                        </div>
-                        <img src="asset/images/developer.svg" class="image developer_img" alt="" />
-                    </div>
-                    <div class="panel right_panel">
-                        <div class="content">
-                            <h3>Go To Contact Me</h3>
-                            <p>
-                                Contact Me 버튼을 누르면 <br>
-                                연락처를 남길 수 있습니다.
-                            </p>
-                            <button class="btn transparent" id="contact_btn">
-                                Contact Me <i class="fas fa-angle-right"> </i>
-                            </button>
-                        </div>
-                        <img src="asset/images/social.svg" class="image" alt="" />
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    
 
         </div>
 
@@ -723,7 +697,7 @@
         <script src="js/modernizr-custom.js"></script>
         <script src="js/ie-checker.js"></script>
         <script src="js/main.js"></script>
-        
+
     </body>
 
     </html>

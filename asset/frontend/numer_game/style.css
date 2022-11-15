@@ -1,0 +1,145 @@
+body {
+  background-size: cover;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-family: 'Noto Sans KR', sans-serif;
+  letter-spacing: -1px;
+  background: rgb(255, 245, 245);
+  overflow-x: hidden;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  border-radius: 20px;
+  text-align: center;
+  background-color: skyblue;
+  padding: 15px;
+  width: 100%;
+  max-width: 700px;
+}
+
+.title {
+  margin: 0;
+}
+
+.sub_title {
+  margin: 0;
+  color: wheat;
+  margin-bottom: 30px;
+}
+
+.notice_area {
+  font-size: 20px;
+  color: #fff;
+}
+
+.result_area {
+  height: 40px;
+  color: red;
+  text-align: center;
+  line-height: 2;
+}
+
+.button_style:not(:last-child) {
+  height: 30px;
+  width: 50px;
+  margin-top: 5px;
+  border-radius: 50px;
+  font-size: 15px;
+  font-weight: bold;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  margin-right: 5px;
+  transition: all .3s;
+}
+
+.button_style:hover {
+  background: #000;
+  color: #fff;
+}
+
+.button_style:last-child {
+  display: flex;
+  border: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.chance_area {
+  padding: 10px 20px;
+  margin: 20px;
+  background: rgb(44, 44, 44);
+  border-radius: 20px;
+  display: inline-block;
+  color: #fff;
+}
+
+.image_area {
+  width: 500px;
+  object-fit: 100%;
+  object-position: center;
+}
+
+.user_value {
+  height: 30px;
+  width: 50%;
+  border: 1px solid gray;
+  outline: none;
+  font-size: 20px;
+  border-radius: 20px;
+  text-indent: 20px;
+  margin-right: 10px;
+}
+
+#result_view {
+  display: block;
+  margin: 0 auto;
+  margin-top: 20px;
+  width: 150px;
+  height: 30px;
+}
+
+@media screen and (max-width: 600px) {
+
+  body {
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .container {
+    margin: 0 10rem;
+    width: 90vw;
+    padding: 10px ;
+    margin: 10px;
+  }
+
+  .title {
+    font-size: 1.5rem;
+  }
+
+  .image_area {
+    width: 80vw;
+  }
+
+  .user_value {
+    width: 100%;
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+
+  .button_style:not(:last-child) {
+    width: 50%;
+    margin: 0 auto;
+    text-align: center;
+    margin: 5px auto;
+  }
+
+  
+}

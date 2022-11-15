@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>숫자를 맞춰라</title>
+  <link rel="stylesheet" href="style.css">
+
+  <!-- font  -->
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500;700&family=Roboto:ital,wght@0,100;0,400;0,500;0,700;1,100;1,400&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="container">
+      <h1 class="title">UP & DOWN 숫자 맞추기!</h1>
+
+      <div class="chance_area">
+        <span>남은 기회 :</span> 
+      </div>
+      <p class="notice_area">좀비가 되기 싫다면 정답을 맞춰라!!!</p>
+      <div>
+        <img class="image_area" src="https://media1.giphy.com/media/9DinPR8bzFsmf74j9W/giphy.gif" alt="">
+      </div>
+      <div class="result_area"></div>
+      <input id="user_input" type="number" class="user_value" placeholder="1~100사이의 숫자를 입력하시오!">
+      <button id="play_button" class="button_style">GO!</button>
+      <button id="reset_button" class="button_style">리셋</button>
+    </div>
+
+
+  <script src="main.js"></script>
+</body>
+</html>

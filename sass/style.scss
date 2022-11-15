@@ -26,6 +26,7 @@ body {
     position: relative;
     margin: 0 auto;
     transition: background .3s ease;
+   
 }
 
 section {
@@ -864,7 +865,7 @@ section {
                 }
 
                 .sub_txt {
-                    font-size: 1.4rem;
+                    font-size: 1.2rem;
                     display: block;
                     margin: 5px 0 10px;
 
@@ -873,6 +874,8 @@ section {
                 em {
                     font-size: 1.2rem;
                     color: #888;
+                    font-weight: 200;
+
                 }
 
                 .project_skill {
@@ -971,6 +974,16 @@ section {
 // frontend project 
 
 #frontend_project {
+    margin-top: 100px;
+    position: relative;
+    height: 3000px;
+    .jquery-modal  {
+        .blocker {
+            z-index: 200 !important;
+        }
+    }
+ 
+
     .main_title {
         opacity: 0;
         visibility: hidden;
@@ -982,10 +995,7 @@ section {
         }
     }
 
-    margin-top: 100px;
-    position: relative;
-    height: 2500px;
-
+    
     &.active {
         background: #080808;
     }
@@ -1038,8 +1048,10 @@ section {
         max-width: 1400px;
         height: 2500px;
 
+
         .contents {
             margin-top: 220px;
+          
         }
 
         .fix_wrap {
@@ -1108,7 +1120,7 @@ section {
                 position: -webkit-sticky;
                 top: calc(50vh - 150px);
                 left: 0;
-                z-index: 40;
+                z-index: 1;
                 float: left;
                 width: 45%;
                 margin-left: -30px;
@@ -1186,189 +1198,15 @@ section {
 }
 
 
-
-// #final_notice 
-.final_notice {
-    overflow: hidden;
-    position: relative;
-    padding-top: 150px;
-    padding-bottom: 200px;
-    height: 4000px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    transition: background .5s ease-in;
-
-    .txt_area {
-        color: #fff;
-    }
-
-    .txt_area {
-        .motion_area {
-            overflow: hidden;
-            width: 100%;
-            font-size: 120px;
-            line-height: 1;
-            color: #fff;
-            position: fixed;
-            top: 50%;
-            transform: translateY(-50%);
-            opacity: 0;
-            visibility: hidden;
-            transition: all .5s ease-in;
-
-            .tit_wrap {
-                color: #fff;
-                text-align: center;
-                margin-top: 80px;
-                font-size: 16px;
-                padding-bottom: 60px;
-                display: block;
-
-                i {
-                    font-size: 40px;
-                    padding-bottom: 10px;
-                }
-
-                p {
-                    font-size: 16px;
-                    font-weight: lighter;
-                }
-            }
-
-            .scroll_area {
-                margin-top: 100px;
-                font-size: 16px;
-                text-align: center;
-
-                p {
-                    font-size: 20px;
-                    padding-bottom: 10px;
-                    font-weight: lighter;
-                }
-
-                em {
-                    font-size: 16px;
-                }
-
-                i {
-                    font-size: 30px;
-                    transform: rotate(-180deg);
-                    padding: 10px 0;
-                    display: block;
-                }
-            }
-
-            &.active {
-                opacity: 1;
-                visibility: visible;
-            }
-
-            .text_box {
-                overflow: hidden;
-                text-align: center;
-
-                .left {
-                    overflow: hidden;
-                    float: left;
-                    width: 50%;
-                    height: 100%;
-
-                    p {
-                        width: 200%;
-
-                        span.left_txt {
-                            display: inline-block;
-                            padding-bottom: 5px;
-                            text-align: center;
-                            white-space: nowrap;
-                            animation: move_text_mask .8s both ease-in-out;
-                            animation-play-state: paused;
-                        }
-                    }
-                }
-
-                .right {
-                    overflow: hidden;
-                    float: left;
-                    width: 50%;
-                    height: 100%;
-
-                    p {
-                        width: 200%;
-                        margin-left: -100%;
-                        color: #00b8ff;
-
-                        span {
-                            display: inline-block;
-                            padding-bottom: 5px;
-                            text-align: center;
-                            white-space: nowrap;
-                            animation: move_text_mask .8s both ease-in-out;
-                            animation-play-state: paused;
-                        }
-                    }
-                }
-
-                &.type02 {
-                    span {
-                        animation-delay: .3s !important;
-                    }
-
-                    .left p {
-                        color: #00b8ff;
-                    }
-
-                    .right p {
-                        color: #fff;
-                    }
-                }
-
-                &.type03 {
-                    span {
-                        animation-delay: .6s !important
-                    }
-                }
-            }
-        }
-    }
-
-    @keyframes move_text_mask {
-        0% {
-            margin-left: -50%;
-        }
-
-        50% {
-            margin-left: 50%;
-        }
-
-        100% {
-            margin-left: 0%;
-        }
-    }
-}
-
-.final_notice.active .txt_area .motion_area .text_box .left p span {
-    animation-play-state: running;
-}
-
-.final_notice.active .txt_area .motion_area .text_box .right p span {
-    animation-play-state: running;
-}
-
 // contact me 
 #contact_form {
+
 
     .container {
         position: relative;
         width: 100%;
-        background-color: #fff;
         min-height: 100vh;
-        overflow: hidden;
-        max-width: 100%;
+        max-width: 100%;    
 
         .forms_container {
             position: absolute;
@@ -1564,19 +1402,19 @@ section {
         grid-template-columns: repeat(2, 1fr);
     }
 
-    .container {
+    .container { 
         &:before {
             content: "";
             position: absolute;
-            height: 2000px;
-            width: 2000px;
+            height: 1000px;
+            width: 1000px;
             top: -10%;
-            right: 48%;
-            transform: translateY(-50%);
+            right: 55%;
+            transform: translateY(-10%);
             background-image: linear-gradient(-45deg, #444444 0%, #e4e4e4 100%);
             transition: 1.8s ease-in-out;
             border-radius: 50%;
-            z-index: 6;
+            z-index: -1;
             animation: fade_top 1s ease-in-out forwards;
             animation-play-state: paused;
             opacity: 0;
@@ -1643,7 +1481,7 @@ section {
         display: -webkit-box;
         display: -ms-flexbox;
         flex-direction: column;
-        align-items: flex-end;
+        align-items: center;
         justify-content: space-around;
         text-align: center;
         z-index: 6;
@@ -1707,7 +1545,6 @@ section {
     }
 
     .container {
-
         &.change_mod .left_panel .image,
         &.container.change_mod .left_panel .content {
             transform: translateX(-800px);
@@ -1718,7 +1555,6 @@ section {
         .contact_me {
             left: 25%;
         }
-
         form {
             &.social_form {
                 opacity: 1;
@@ -1746,6 +1582,179 @@ section {
         pointer-events: all;
     }
 
+}
+
+
+// #final_notice 
+.final_notice {
+    overflow: hidden;
+    position: relative;
+    padding-top: 150px;
+    padding-bottom: 200px;
+    height: 2000px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    transition: background .5s ease-in;
+
+    .txt_area {
+        color: #fff;
+    }
+
+    .txt_area {
+        .motion_area {
+            overflow: hidden;
+            width: 100%;
+            font-size: 120px;
+            line-height: 1;
+            color: #fff;
+            position: fixed;
+            top: 50%;
+            transform: translateY(-50%);
+            opacity: 0;
+            visibility: hidden;
+            transition: all .5s ease-in;
+
+            .tit_wrap {
+                color: #fff;
+                text-align: center;
+                font-size: 16px;
+                padding-bottom: 60px;
+                display: block;
+
+                i {
+                    font-size: 40px;
+                    padding-bottom: 10px;
+                }
+
+                p {
+                    font-size: 16px;
+                    font-weight: lighter;
+                }
+            }
+
+            .scroll_area {
+                margin-top: 100px;
+                font-size: 16px;
+                text-align: center;
+
+                p {
+                    font-size: 20px;
+                    padding-bottom: 10px;
+                    font-weight: lighter;
+                }
+
+                em {
+                    font-size: 16px;
+                }
+
+                i {
+                    font-size: 30px;
+                    transform: rotate(-180deg);
+                    padding: 15px 0;
+                    display: block;
+                }
+            }
+
+            &.active {
+                opacity: 1;
+                visibility: visible;
+            }
+
+            .text_box {
+                overflow: hidden;
+                text-align: center;
+                margin: 10px 0;
+
+                .left {
+                    overflow: hidden;
+                    float: left;
+                    width: 50%;
+                    height: 100%;
+
+                    p {
+                        width: 200%;
+
+                        span.left_txt {
+                            display: inline-block;
+                            padding-bottom: 5px;
+                            text-align: center;
+                            white-space: nowrap;
+                            animation: move_text_mask .8s both ease-in-out;
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+
+                .right {
+                    overflow: hidden;
+                    float: left;
+                    width: 50%;
+                    height: 100%;
+
+                    p {
+                        width: 200%;
+                        margin-left: -100%;
+                        color: #00b8ff;
+
+                        span {
+                            display: inline-block;
+                            padding-bottom: 5px;
+                            text-align: center;
+                            white-space: nowrap;
+                            animation: move_text_mask .8s both ease-in-out;
+                            animation-play-state: paused;
+                        }
+                    }
+                }
+
+                &.type02 {
+                    span {
+                        animation-delay: .3s !important;
+                    }
+
+                    .left p {
+                        color: #00b8ff;
+                    }
+
+                    .right p {
+                        color: #fff;
+                    }
+                }
+
+                &.type03 {
+                    span {
+                        animation-delay: .6s !important
+                    }
+                }
+            }
+        }
+    }
+
+    @keyframes move_text_mask {
+        0% {
+            margin-left: -50%;
+        }
+
+        50% {
+            margin-left: 50%;
+        }
+
+        100% {
+            margin-left: 0%;
+        }
+    }
+}
+
+.final_notice.active .txt_area .motion_area .text_box .left p span {
+    animation-play-state: running;
+}
+
+.final_notice.active .txt_area .motion_area .text_box .right p span {
+    animation-play-state: running;
 }
 
 // media query tablet
@@ -1927,6 +1936,8 @@ section {
 
                     .sub_txt {
                         font-size: 1.4rem;
+                        color: #888;
+                        font-weight: 100;
                     }
 
                     em {
@@ -2040,6 +2051,7 @@ section {
 
     //   태블랫 final_notice
     #final_notice {
+  
         .txt_area .motion_area {
             font-size: 90px;
 
@@ -2483,8 +2495,8 @@ section {
             height: 100vh;
 
             &:before {
-                width: 1500px;
-                height: 1500px;
+                width: 500px !important;
+                height: 500px !important;
                 transform: translateX(-50%);
                 left: 30%;
                 bottom: 68%;
