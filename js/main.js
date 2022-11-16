@@ -79,7 +79,6 @@ $(function () {
 	let mySkillRealHeight;
 	let mySkillOffsetTop;
 	let valueThisTop;
-	let valuePercent;
 	let parallaxSpeed = 1200;
 
 	let maxNum;
@@ -96,7 +95,6 @@ $(function () {
 		} else {
 			navToggle.removeClass('active')
 			$('.main_images').removeClass('active')
-
 			$('html').stop(true).animate({
 				scrollTop: sectionMainTop,
 			}, 500, function () {
@@ -131,7 +129,6 @@ $(function () {
 			sectionInActive(6)
 			navToggle.addClass('active')
 		}
-
 	}
 
 
@@ -165,13 +162,9 @@ $(function () {
 			if (!sectionIsMoving) {
 				sectionIsMoving = true;
 				moveStartRender()
-			}
+			} 
 		}
 
-
-		// contactme 위치에 있을 때 애니메이션 실행 값 
-		// contactOffsetTop = contactForm.offset().top
-		// contactBottom = contactOffsetTop + contactForm.height()
 
 		// section 2 scroll_text 위치 값   
 		scrollTxtTop = scrollTxt.offset().top;
@@ -499,7 +492,7 @@ $(function () {
 	}
 
 	
-		// my_project 스크롤 위치에 도착하면 컨텐츠 애니메이션 실행 pc, mobile
+		// my_project 스크롤 위치에 도착하면 컨텐츠 애니메이션 실행 pc, moveStartRender()e
 		function myProjectCon(){
 			if (percent > 112 && percent < 200) {
 				projectCont.eq(0).addClass('active')
