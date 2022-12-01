@@ -1,1 +1,10 @@
-{"version":3,"sources":[],"names":[],"mappings":"","file":"breakpoint.css"}
+{
+    "version": 3,
+    "mappings": "",
+    "sources": [
+        "../sass/partial/breakpoint.scss",
+        "../sass/partial/_var.scss"
+    ],
+    "names": [],
+    "file": "breakpoint.css"
+}
