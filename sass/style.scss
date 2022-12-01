@@ -94,6 +94,13 @@ section {
     width: 100%;
     box-sizing: border-box;
     background-color: transparent;
+    .github_icon {
+        display: inline-block;
+        font-size: 30px;
+        position: fixed;
+        bottom: 10px;
+        right: 10px;
+    }
 
     &.active {
         background-color: #fff;
@@ -1181,7 +1188,7 @@ section {
                                 background-color: #000;
 
                                 img {
-                                    border: 1px solid red;
+                                   
                                     width: 500px;
                                 }
 
@@ -1410,7 +1417,7 @@ section {
             width: 1000px;
             top: -10%;
             right: 55%;
-            transform: translateY(-10%);
+            transform: translateY(0%);
             background-image: linear-gradient(-45deg, #444444 0%, #e4e4e4 100%);
             transition: 1.8s ease-in-out;
             border-radius: 50%;
@@ -1769,6 +1776,7 @@ section {
         // 토글 
         header {
             .nav_con {
+               
                 &.active {
                     height: 460px;
                 }
@@ -1776,6 +1784,7 @@ section {
                 .nav_toggle {
                     font-size: 25px;
                 }
+                
             }
 
             .nav_list {
@@ -2044,6 +2053,12 @@ section {
 
                 .figure {
                     width: 120px;
+                    border: 3px solid green;
+
+                    img {
+                       height: 200px;         
+                       border: 3px solid green;
+                    }
                 }
             }
         }
@@ -2406,7 +2421,7 @@ section {
                 float: none !important;
                 position: sticky !important;
                 left: 0;
-                top: 0;
+                top: -60px;
                 z-index: 50;
                 width: 100% !important;
                 box-sizing: border-box;
@@ -2424,6 +2439,9 @@ section {
                     box-sizing: border-box;
                     opacity: 0;
                     transition: opacity .5s !important;
+                    .explane {
+                        font-size: 1.1rem !important;
+                    }
 
                     &.active {
                         opacity: 1 !important;
@@ -2442,6 +2460,7 @@ section {
                         margin-bottom: 0 !important;
                     }
                 }
+                
             }
 
             .device_fix {
@@ -2452,6 +2471,7 @@ section {
                     width: 390px !important;
                     height: auto !important;
                     padding-left: 8% !important;
+                    margin-top: 40px !important;
                 }
 
                 .slide_wrap {
@@ -2470,6 +2490,7 @@ section {
                 .figure {
                     width: 120px;
                 }
+                
             }
         }
     }

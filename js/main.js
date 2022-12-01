@@ -9,6 +9,10 @@ $(function () {
 	let navToggle = navCon.find('.nav_toggle')
 	let navList = navCon.find('.nav_list')
 
+	// githubicon 
+	let githubIco = navCon.find('.github_icon a i') 
+	console.log()
+
 	let mainTitle = $('.main_title')
 
 	// main section 
@@ -109,25 +113,37 @@ $(function () {
 		if(winScrollTop >= offsetTop[0] && offsetBottom[0] + 1 > winScrollTop) {
 			sectionInActive(0)
 			$('.profile').addClass('active')
+			githubIco.css("color","black")
 
 		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
 			sectionInActive(1)
 			navToggle.addClass('active')
+			githubIco.css("color","black")
+
 		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
 			sectionInActive(2)
 			navToggle.addClass('active')
+			githubIco.css("color","black")
+
 		} else if(winScrollTop >= offsetTop[3] && offsetBottom[3] > winScrollTop) {
 			sectionInActive(3)
 			navToggle.addClass('active')
+			githubIco.css("color","black")
+
 		} else if(winScrollTop >= offsetTop[4] && offsetBottom[4] > winScrollTop) {
 			sectionInActive(4)
 			navToggle.addClass('active')
+			githubIco.css("color","black")
+
 		} else if(winScrollTop >= offsetTop[5] && offsetBottom[5] > winScrollTop) {
 			sectionInActive(5)
 			navToggle.removeClass('active')
+			githubIco.css("color","black")
+
 		} else if(winScrollTop >= offsetTop[6] && offsetBottom[6] > winScrollTop) {
 			sectionInActive(6)
 			navToggle.addClass('active')
+			githubIco.css("color","white")
 		}
 	}
 
