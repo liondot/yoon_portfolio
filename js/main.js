@@ -83,6 +83,7 @@ $(function () {
 
 	let maxNum;
 
+	// 메인섹션 스크롤 애니메이션 
 	function moveStartRender() {
 		if (!navToggle.hasClass('active')) {
 			navToggle.addClass('active')
@@ -106,6 +107,7 @@ $(function () {
 	}
 
 
+	// 각 섹션 영역  
 	function navInSection(){
 		if(winScrollTop >= offsetTop[0] && offsetBottom[0] + 1 > winScrollTop) {
 			sectionInActive(0)
@@ -171,7 +173,7 @@ $(function () {
 		contactOffsetTop = contactForm.offset().top
 		contactBottom = contactOffsetTop + contactForm.height()
 
-		// section 2 scroll_text 위치 값   
+		//  scroll_text 위치 값   
 		scrollTxtTop = scrollTxt.offset().top;
 		scrollTxtBottom = scrollTxtTop + scrollTxt.height();
 		textInOut()
@@ -202,8 +204,6 @@ $(function () {
 		frontendScrollTop = winScrollTop - frontendOffsetTop;
 		frontendPercent = frontendScrollTop / frontendRealHeight;
 		frontendPer = frontendPercent * 100;
-
-		console.log('percnet', percent)
 		
 	}
 
@@ -286,15 +286,6 @@ $(function () {
 		}
 
 
-		// // 스롤이 my_project 섹션에 도착하면 타이틀 라인 애니메이션 실행 
-		// if (percent > 107) {
-		// 	webLine.eq(1).addClass('active')
-		// } else if (percent < 107 || percent > 200) {
-		// 	webLine.eq(1).removeClass('active')
-		// }
-
-
-
 		// 스크롤이 frontend project영역일때 PC, MOBILE 메인타이틀과 웹라인 영역 나타남
 		function frontendMainTitle(){
 		if(percent > 146) {
@@ -322,7 +313,7 @@ $(function () {
 			textInOut()
 		} else {}
 
-		// toyclone project 모바일버전 pc
+		// 모바일 ver 활성화 
 		if (isMobile) {
 			contentInMobile();
 			moFrontendMainTitle();
@@ -333,6 +324,7 @@ $(function () {
 			frontendMainTitle();
 			myProjectCon();
 			finalNoticeFun();
+			moveStartRender()
 		}
 	}
 
