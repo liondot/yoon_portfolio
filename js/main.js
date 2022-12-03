@@ -83,8 +83,9 @@ $(function () {
 
 	let maxNum;
 
+	// 메인섹션 스크롤 애니메이션 효과 	
 	function moveStartRender() {
-		if (!navToggle.hasClass('active')) {
+		if (!navToggle.hasClass('active') && $(window).width() > 900) {
 			navToggle.addClass('active')
 			$('.main_images').addClass('active')
 			$('html').stop(true).animate({
@@ -92,7 +93,10 @@ $(function () {
 			}, 1000, function () {
 				sectionIsMoving = false;
 			})
-		} else {
+		}else if(!navToggle.hasClass('active')) {
+			navToggle.addClass('active')
+			$('.main_images').addClass('active')
+		} else if(navToggle.hasClass('active')){
 			navToggle.removeClass('active')
 			$('.main_images').removeClass('active')
 
@@ -101,8 +105,8 @@ $(function () {
 			}, 500, function () {
 				sectionIsMoving = false;
 			})
-		}
-
+		} 
+		
 	}
 
 
@@ -111,8 +115,8 @@ $(function () {
 			sectionInActive(0)
 			$('.profile').addClass('active')
 		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
-			sectionInActive(1)
 			navToggle.addClass('active')
+			sectionInActive(1)
 		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
 			sectionInActive(2)
 			navToggle.addClass('active')
@@ -163,7 +167,7 @@ $(function () {
 			if (!sectionIsMoving) {
 				sectionIsMoving = true;
 				moveStartRender()
-			}
+			} 
 		}
 
 
@@ -285,16 +289,6 @@ $(function () {
 			webLine.eq(1).removeClass('active')
 		}
 
-
-		// // 스롤이 my_project 섹션에 도착하면 타이틀 라인 애니메이션 실행 
-		// if (percent > 107) {
-		// 	webLine.eq(1).addClass('active')
-		// } else if (percent < 107 || percent > 200) {
-		// 	webLine.eq(1).removeClass('active')
-		// }
-
-
-
 		// 스크롤이 frontend project영역일때 PC, MOBILE 메인타이틀과 웹라인 영역 나타남
 		function frontendMainTitle(){
 		if(percent > 146) {
@@ -322,12 +316,13 @@ $(function () {
 			textInOut()
 		} else {}
 
-		// toyclone project 모바일버전 pc
+		// 
 		if (isMobile) {
 			contentInMobile();
 			moFrontendMainTitle();
 			moMyProjectCon();
 			moFinalNoticeFun();
+			
 		} else {
 			contentIn();
 			frontendMainTitle();
