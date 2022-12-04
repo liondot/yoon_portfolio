@@ -83,9 +83,9 @@ $(function () {
 
 	let maxNum;
 
-	// 메인섹션 스크롤 애니메이션 
+	// 메인섹션 스크롤 애니메이션 효과 	
 	function moveStartRender() {
-		if (!navToggle.hasClass('active')) {
+		if (!navToggle.hasClass('active') && $(window).width() > 900) {
 			navToggle.addClass('active')
 			$('.main_images').addClass('active')
 			$('html').stop(true).animate({
@@ -93,7 +93,10 @@ $(function () {
 			}, 1000, function () {
 				sectionIsMoving = false;
 			})
-		} else {
+		}else if(!navToggle.hasClass('active')) {
+			navToggle.addClass('active')
+			$('.main_images').addClass('active')
+		} else if(navToggle.hasClass('active')){
 			navToggle.removeClass('active')
 			$('.main_images').removeClass('active')
 
@@ -102,19 +105,24 @@ $(function () {
 			}, 500, function () {
 				sectionIsMoving = false;
 			})
-		}
+		} 
+		if($(window).width() > 900) {
+			// navToggle.addClass('active')
+			// $('.main_images').addClass('active')
+			console.log('jijiji')
+	} 
+	
 
 	}
 
 
-	// 각 섹션 영역  
 	function navInSection(){
 		if(winScrollTop >= offsetTop[0] && offsetBottom[0] + 1 > winScrollTop) {
 			sectionInActive(0)
 			$('.profile').addClass('active')
 		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
-			sectionInActive(1)
 			navToggle.addClass('active')
+			sectionInActive(1)
 		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
 			sectionInActive(2)
 			navToggle.addClass('active')
@@ -165,7 +173,7 @@ $(function () {
 			if (!sectionIsMoving) {
 				sectionIsMoving = true;
 				moveStartRender()
-			}
+			} 
 		}
 
 
@@ -173,7 +181,7 @@ $(function () {
 		contactOffsetTop = contactForm.offset().top
 		contactBottom = contactOffsetTop + contactForm.height()
 
-		//  scroll_text 위치 값   
+		// section 2 scroll_text 위치 값   
 		scrollTxtTop = scrollTxt.offset().top;
 		scrollTxtBottom = scrollTxtTop + scrollTxt.height();
 		textInOut()
@@ -204,6 +212,8 @@ $(function () {
 		frontendScrollTop = winScrollTop - frontendOffsetTop;
 		frontendPercent = frontendScrollTop / frontendRealHeight;
 		frontendPer = frontendPercent * 100;
+
+		console.log('percnet', percent)
 		
 	}
 
@@ -285,7 +295,6 @@ $(function () {
 			webLine.eq(1).removeClass('active')
 		}
 
-
 		// 스크롤이 frontend project영역일때 PC, MOBILE 메인타이틀과 웹라인 영역 나타남
 		function frontendMainTitle(){
 		if(percent > 146) {
@@ -313,18 +322,18 @@ $(function () {
 			textInOut()
 		} else {}
 
-		// 모바일 ver 활성화 
+		// toyclone project 모바일버전 pc
 		if (isMobile) {
 			contentInMobile();
 			moFrontendMainTitle();
 			moMyProjectCon();
 			moFinalNoticeFun();
+			
 		} else {
 			contentIn();
 			frontendMainTitle();
 			myProjectCon();
 			finalNoticeFun();
-			moveStartRender()
 		}
 	}
 
