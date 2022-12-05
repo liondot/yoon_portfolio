@@ -99,14 +99,23 @@ section {
         box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
     }
 
+    .git_icon i{
+        font-size: 30px;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+    }
+
     .nav_toggle {
         position: fixed;
-        right: 10px;
+        right: 15px;
         top: 3px;
         z-index: 999;
         font-size: 25px;
         cursor: pointer;
         color: #8d8d8d;
+
+        
 
         i {
             color: #000;
@@ -1066,7 +1075,7 @@ section {
                 padding-top: 300px;
                 padding-right: 30px;
                 padding-left: 50px;
-                height: 1950px;
+                height: 2150px;
 
                 p {
                     max-width: 80%;
@@ -1169,7 +1178,6 @@ section {
                                 background-color: #000;
 
                                 img {
-                                    border: 1px solid red;
                                     width: 500px;
                                 }
 
@@ -2003,7 +2011,7 @@ section {
                 .explane {
                     margin-top: 40px;
                     padding: 0 20px;
-                    font-size: 20px !important;
+                    font-size: 16px !important;
                 }
             }
 
@@ -2012,6 +2020,7 @@ section {
                 width: 100% !important;
 
                 .desktop_img {
+                    margin-top: 80px !important;
                     width: 390px !important;
                     height: auto !important;
                     padding-left: 8% !important;
@@ -2023,15 +2032,19 @@ section {
                     height: auto !important;
                     border-radius: 15px !important;
                     left: 35px !important;
+                    .figure {
+                        width: 120px;
+                        img {
+                            width: auto !important;
+                        }
+                    }
                 }
 
                 .slide {
                     width: 480px;
                 }
 
-                .figure {
-                    width: 120px;
-                }
+                
             }
         }
     }
@@ -2428,6 +2441,9 @@ section {
                         margin-bottom: 0 !important;
                     }
                 }
+                .explane {
+                    font-size: 14px !important;
+                }
             }
 
             .device_fix {
@@ -2444,17 +2460,17 @@ section {
                     top: 4px !important;
                     width: 320px !important;
                     height: 220px !important;
-
                     border-radius: 15px !important;
                     left: 35px !important;
+                    .figure {
+                        img {
+                            width: auto !important;
+                        }
+                    }
                 }
 
                 .slide {
                     width: 480px;
-                }
-
-                .figure {
-                    width: 120px;
                 }
             }
         }
@@ -2481,8 +2497,8 @@ section {
             height: 100vh;
 
             &:before {
-                width: 1500px;
-                height: 1500px;
+                width: 600px;
+                height: 600px;
                 transform: translateX(-50%);
                 left: 30%;
                 bottom: 68%;
@@ -2554,9 +2570,6 @@ section {
 
                 &.right_panel {
                     grid-row: 3 / 4;
-                    //   .image, .content {
-                    //     transform: translateY(300px);
-                    //   }
                 }
 
                 &.left_panel {

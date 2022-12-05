@@ -106,13 +106,6 @@ $(function () {
 				sectionIsMoving = false;
 			})
 		} 
-		if($(window).width() > 900) {
-			// navToggle.addClass('active')
-			// $('.main_images').addClass('active')
-			console.log('jijiji')
-	} 
-	
-
 	}
 
 
@@ -120,28 +113,48 @@ $(function () {
 		if(winScrollTop >= offsetTop[0] && offsetBottom[0] + 1 > winScrollTop) {
 			sectionInActive(0)
 			$('.profile').addClass('active')
+			$('.git_icon a').css({
+				"color":"black"
+			})
 		} else if(winScrollTop >= offsetTop[1] && offsetBottom[1] > winScrollTop) {
 			navToggle.addClass('active')
 			sectionInActive(1)
+			$('.git_icon a').css({
+				"color":"black"
+			})
 		} else if(winScrollTop >= offsetTop[2] && offsetBottom[2] > winScrollTop) {
 			sectionInActive(2)
 			navToggle.addClass('active')
+			$('.git_icon a').css({
+				"color":"black"
+			})
 		} else if(winScrollTop >= offsetTop[3] && offsetBottom[3] > winScrollTop) {
 			sectionInActive(3)
 			navToggle.addClass('active')
+			$('.git_icon a').css({
+				"color":"black"
+			})
 		} else if(winScrollTop >= offsetTop[4] && offsetBottom[4] > winScrollTop) {
 			sectionInActive(4)
 			navToggle.addClass('active')
+			$('.git_icon a').css({
+				"color":"black"
+			})
 		} else if(winScrollTop >= offsetTop[5] && offsetBottom[5] > winScrollTop) {
 			sectionInActive(5)
 			navToggle.addClass('active')
+			$('.git_icon a').css({
+				"color":"white"
+			})
 		} else if(winScrollTop >= offsetTop[6] && offsetBottom[6] > winScrollTop) {
 			sectionInActive(6)
 			navToggle.addClass('active')
+			$('.git_icon a').css({
+				"color":"black"
+			})
 		}
 
 	}
-
 
 	// 해당 섹션안에 진입할 때 menu 활성화 
 	function sectionInActive(index){
@@ -154,7 +167,7 @@ $(function () {
 		list.eq(index).addClass('active');
 	}
 
-// 애니메이션 값 셋팅
+	// 애니메이션 값 셋팅
 	function setProperty() {
 		winScrollTop = $(window).scrollTop();
 		isMobile = $(window).width() <= 900 ? true : false;
@@ -284,7 +297,6 @@ $(function () {
 		motionRender();
 		navInSection();
 
-
 		// 스크롤이 my project영역일때 메인타이틀과 웹라인 영역 나타남
 		if(percent > 107) {
 			mainTitle.eq(1).addClass('active')
@@ -322,7 +334,7 @@ $(function () {
 			textInOut()
 		} else {}
 
-		// toyclone project 모바일버전 pc
+		// 모바일, pc ver
 		if (isMobile) {
 			contentInMobile();
 			moFrontendMainTitle();
@@ -351,8 +363,6 @@ $(function () {
 		})
 	}
 
-
-
 	// my skill 좌우 사라지는 배경 위치 애니메이션 
 	function motionRender() {
 		let maskStartValue = 60;
@@ -371,7 +381,6 @@ $(function () {
 			contactContainer.removeClass('active')
 			contactMe.removeClass('active')
 			developerImg.removeClass('active')
-
 		}
 		// my skill 화면 열림 maskLeft, maskRight
 		maskLeft
@@ -402,7 +411,6 @@ $(function () {
 			skills.removeClass('active')
 		}
 
-
 		// 스롤이 my skill 섹션에 도착하면 타이틀 라인 애니메이션 실행 
 		if (percent > 11) {
 			webLine.eq(0).addClass('active')
@@ -417,22 +425,24 @@ $(function () {
 		var deviceImg = $('.device_fix .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
-		if (frontendPer >= 0 && frontendPer < 32) {
+		console.log('frontendper', frontendPer)
+
+		if (frontendPer >= 0 && frontendPer < 52) {
 			imageChange(imgWidth * 0);
 			$('#frontend_project .text_box .txt01').addClass('active');
 		}
 
-		if (frontendPer >= 32 && frontendPer < 54) {
+		if (frontendPer >= 52 && frontendPer < 85) {
 			imageChange(imgWidth * 1);
 			$('#frontend_project .text_box .txt02').addClass('active');
 		}
 
-		if (frontendPer >= 64 && frontendPer < 85) {
+		if (frontendPer >= 85 && frontendPer < 117) {
 			imageChange(imgWidth * 2);
 			$('#frontend_project .text_box .txt03').addClass('active');
 		}
 
-		if (frontendPer >= 95) {
+		if (frontendPer >= 117) {
 			imageChange(imgWidth * 3);
 			$('#frontend_project .text_box .txt04').addClass('active');
 		}
@@ -472,7 +482,6 @@ $(function () {
 			imageChange(imgWidth * 3);
 			$('#frontend_project .text_box p').removeClass('active');
 			$('#frontend_project .text_box .txt04').addClass('active');
-
 		}
 		if (frontendPer > 85) {
 			imageChange(imgWidth * 3);
@@ -492,7 +501,6 @@ $(function () {
 			transform: 'translateX(' + -moveX + 'px)'
 		})
 	}
-
 	
 		// my_project 스크롤 위치에 도착하면 컨텐츠 애니메이션 실행 pc, mobile
 		function myProjectCon(){
@@ -594,7 +602,6 @@ $(function () {
 			navCon.toggleClass('active', 200, 'easeOutSine');
 		});
 	});
-
 
 	function init() {
 		moveFunc()
