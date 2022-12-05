@@ -1153,7 +1153,7 @@ section {
                     padding-top: 5px;
                     margin: 0 auto;
                     width: 100%;
-
+                    margin-top: 30px;
                     .slide_wrap {
                         top: 7px;
                         overflow: hidden;
@@ -2487,6 +2487,9 @@ section {
 
     //  모바일 Contact_form 
     #contact_form {
+    width: 100%;
+    overflow: hidden;
+    width: 100vw;
         form {
             justify-content: unset;
             padding: 0rem 2rem;

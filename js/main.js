@@ -319,10 +319,10 @@ $(function () {
 	}
 
 	function moFrontendMainTitle(){
-		if(percent > 163) {
+		if(percent > 158) {
 			mainTitle.eq(2).addClass('active')
 			webLine.eq(2).addClass('active')
-		} else if (percent < 163 || percent > 180) {
+		} else if (percent < 158 || percent > 180) {
 			mainTitle.eq(2).removeClass('active')
 			webLine.eq(2).removeClass('active')
 		}
@@ -461,7 +461,6 @@ $(function () {
 		var deviceImg = $('#frontend_project .slide_wrap figure');
 		var imgWidth = deviceImg.width();
 
-		console.log('imgWidth', imgWidth)
 		
 		if (frontendPer >= 5 && frontendPer < 25) {
 			imageChange(imgWidth * 0);
@@ -527,22 +526,22 @@ $(function () {
 		}
 
 		function moMyProjectCon(){
-			if (percent > 112 && percent < 200) {
+			if (percent > 110 && percent < 200) {
 				projectCont.eq(0).addClass('active')
 			} else if (percent < 107 || percent > 200) {
 				projectCont.eq(0).removeClass('active')
 			}
-			if (percent >= 125 && percent < 200) {
+			if (percent >= 121 && percent < 200) {
 				projectCont.eq(1).addClass('active')
 			} else if (percent < 121 || percent > 200) {
 				projectCont.eq(1).removeClass('active')
 			}
-			if (percent >= 138 && percent < 200) {
+			if (percent >= 132 && percent < 200) {
 				projectCont.eq(2).addClass('active')
 			} else if (percent < 130 || percent > 200) {
 				projectCont.eq(2).removeClass('active')
 			}
-			if (percent >= 151 && percent < 200) {
+			if (percent >= 145 && percent < 200) {
 				projectCont.eq(3).addClass('active')
 			} else if (percent < 151 || percent > 200) {
 				projectCont.eq(3).removeClass('active')
