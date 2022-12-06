@@ -189,7 +189,6 @@ $(function () {
 			} 
 		}
 
-
 		// contactme 위치에 있을 때 애니메이션 실행 값 
 		contactOffsetTop = contactForm.offset().top
 		contactBottom = contactOffsetTop + contactForm.height()
@@ -229,8 +228,6 @@ $(function () {
 		console.log('percnet', percent)
 		
 	}
-
-
 
 // 나의 스킬 랜더UI 
 	function render(valueTextPercent, valueHeightPercent) {
@@ -327,7 +324,6 @@ $(function () {
 			webLine.eq(2).removeClass('active')
 		}
 	}
-
 	
 	//  scroll_txt영역이 윈도우창에 도착했을 때 텍스트 나타남  
 		if (winScrollTop > scrollTxtTop && winScrollTop <= scrollTxtBottom) {

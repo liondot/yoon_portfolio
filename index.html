@@ -356,7 +356,8 @@
                                     <i class="fa-solid fa-laptop"></i>
                                     <i class="fa-solid fa-mobile"></i>
                                 </p>
-                                <em> 여가생활 중고거래 플랫폼인 여가마켓에 사전예약 랜딩페이지를 모바일과 태블릿 PC에서도 볼 수 있도록 반응형웹으로 제작했습니다.라이브러리 사용으로 컨텐츠에 모션를 주어 시각적인 효과를 주었습니다.  
+                                <em> 여가생활 중고거래 플랫폼인 여가마켓에 사전예약 랜딩페이지를 모바일과 태블릿 PC에서도 볼 수 있도록 반응형웹으로 제작했습니다.라이브러리 사용으로
+                                    컨텐츠에 모션를 주어 시각적인 효과를 주었습니다.
                                 </em>
                                 <p class="project_icon">
                                     <em><img src="asset/images/web_img/laptop.gif" alt=""><span>퍼블리싱</span></em>
@@ -492,7 +493,8 @@
                         <article class="fix_wrap inner">
                             <div class="text_box">
 
-                                <a href="">
+                                <a href="https://liondot.github.io/react_pet_jjal/
+                                ">
                                     <p class="txt01">
                                         <span class="main_text">Pet Maker </span>
                                         <em class="explane">
@@ -514,7 +516,7 @@
                                         </em>
                                     </p>
                                 </a>
-                                <a href="#movie" rel="modal:open" target="_blank">
+                                <a href="https://liondot.github.io/webservice_movie/" rel="modal:open" target="_blank">
                                     <p class="txt02">
                                         <span class="main_text">무비 웹 서비스</span>
                                         <em class="explane">
@@ -533,7 +535,7 @@
                                         </em>
                                     </p>
                                 </a>
-                                <a href="#carrot" rel="modal:open" target="_blank">
+                                <a href="https://liondot.github.io/carrot_game/" rel="modal:open" target="_blank">
                                     <p class="txt03">
                                         <span class="main_text">당근 찾기</span>
 
@@ -549,7 +551,7 @@
                                         </em>
                                     </p>
                                 </a>
-                                <a href="#number" rel="modal:open" target="_blank">
+                                <a href="https://liondot.github.io/js_game_number/" rel="modal:open" target="_blank">
                                     <p class="txt04">
                                         <span class="main_text">숫자 맞추기</span>
 
@@ -650,26 +652,40 @@
             <!-- 컨텍트 폼 섹션  -->
             <section id="contact_form" class="section">
                 <div class="container">
-                    <h2 class="ir_so">contact me</h2>
+                    <h2 class="ir_so">contact</h2>
                     <div class="forms_container">
                         <div class="contact_me">
-                            <form action="#" class="contact_me_form">
-                                <h2 class="title">Contact Me</h2>
-                                <div class="input_field">
+                            <form class="gform pure-form pure-form-stacked contact_me_form" method="POST" data-email="yoon3315.5@gmail.com" action="https://script.google.com/macros/s/AKfycbypIv3vXCKGE55wPhLCIiO_TPCJUzwlPF3KY1UIErdyvE2EZi3uB1qAGM01ncrZp70t/exec">
+                                <h2 class="title">Contact</h2>
+                                <div class="input_field ">
                                     <i class="fas fa-building"></i>
-                                    <input type="text" placeholder="회사명" />
+                                    <input type="text" name="company" required="" placeholder="회사명" />
                                 </div>
-                                <div class="input_field">
+                                <div class="input_field form-elements">
                                     <i class="fas fa-user"></i>
-                                    <input type="text" placeholder="성함/ 직함" />
+                                    <input type="text" name="name" required="" placeholder="성함/ 직함" />
                                 </div>
                                 <div class="input_field">
                                     <i class="fas fa-phone"></i>
-                                    <input type="number" placeholder="연락처" />
+                                    <input type="number" name="phone" required="" placeholder="연락처" />
                                 </div>
-                                <textarea placeholder="메세지를 입력하세요" name="" id="" cols="30" rows="10"></textarea>
-                                <input type="submit" value="보내기" class="btn solid" />
+                                <textarea name="message" required="" placeholder="메세지를 입력하세요" name="" id="" cols="30" rows="10">
+                                    
+                                </textarea>
+                                <button class="btn solid">보내기</button>
+
+                                <!-- Thankyou_message --><br>
+                        <div class="thankyou_message"
+                        style="display:none;
+                        color: red; font-weight: bold;">
+                        <br><br>
+                        <h1>* Thanks for contacting!</h1>
+                        <p style="color:gray; font-weight: normal; text-align: center;">곧 연락드리겠습니다.</p>
+                        
+                    </div>
                             </form>
+
+
                             <form action="#" class="social_form">
                                 <h2 class="title">My Social</h2>
 
@@ -694,6 +710,8 @@
                             </form>
                         </div>
                     </div>
+
+                  
 
                     <div class="panels_container">
                         <div class="panel left_panel">
@@ -738,6 +756,116 @@
         <script src="js/ie-checker.js"></script>
         <script src="js/main.js"></script>
 
+        <script data-cfasync="false" type="text/javascript">
+    
+            (function() {
+           function validEmail(email) {
+             var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+             return re.test(email);
+           }
+         
+           function validateHuman(honeypot) {
+             if (honeypot) {
+               console.log("Robot Detected!");
+               return true;
+             } else {
+               console.log("Welcome Human!");
+             }
+           }
+           function getFormData(form) {
+             var elements = form.elements;
+         
+             var fields = Object.keys(elements).filter(function(k) {
+                   return (elements[k].name !== "honeypot");
+             }).map(function(k) {
+               if(elements[k].name !== undefined) {
+                 return elements[k].name;
+               }else if(elements[k].length > 0){
+                 return elements[k].item(0).name;
+               }
+             }).filter(function(item, pos, self) {
+               return self.indexOf(item) == pos && item;
+             });
+         
+             var formData = {};
+             fields.forEach(function(name){
+               var element = elements[name];
+               formData[name] = element.value;
+               if (element.length) {
+                 var data = [];
+                 for (var i = 0; i < element.length; i++) {
+                   var item = element.item(i);
+                   if (item.checked || item.selected) {
+                     data.push(item.value);
+                   }
+                 }
+                 formData[name] = data.join(', ');
+               }
+             });
+         
+             // add form-specific values into the data
+             formData.formDataNameOrder = JSON.stringify(fields);
+             formData.formGoogleSheetName = form.dataset.sheet || "sheet1"; // default sheet name
+             formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+         
+             console.log(formData);
+             return formData;
+           }
+         
+           function handleFormSubmit(event) {  
+             event.preventDefault();           
+             var form = event.target;
+             var data = getFormData(form);         
+             if( data.email && !validEmail(data.email) ) {   
+               var invalidEmail = form.querySelector(".email-invalid");
+               if (invalidEmail) {
+                 invalidEmail.style.display = "block";
+                 return false;
+               }
+             } else {
+               disableAllButtons(form);
+               var url = form.action;
+               var xhr = new XMLHttpRequest();
+               xhr.open('POST', url);
+               xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+               xhr.onreadystatechange = function() {
+                   console.log(xhr.status, xhr.statusText);
+                   console.log(xhr.responseText);
+                   var formElements = form.querySelector(".form-elements")
+                   if (formElements) {
+                     formElements.style.display = "none"; // hide form
+                   }
+                   var thankYouMessage = form.querySelector(".thankyou_message");
+                   if (thankYouMessage) {
+                     thankYouMessage.style.display = "block";
+                   }
+                   return;
+               };
+               var encoded = Object.keys(data).map(function(k) {
+                   return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+               }).join('&');
+               xhr.send(encoded);
+             }
+           }
+           
+           function loaded() {
+             console.log("Contact form submission handler loaded successfully.");
+             var forms = document.querySelectorAll("form.gform");
+             for (var i = 0; i < forms.length; i++) {
+               forms[i].addEventListener("submit", handleFormSubmit, false);
+             }
+           };
+           document.addEventListener("DOMContentLoaded", loaded, false);
+         
+           function disableAllButtons(form) {
+             var buttons = form.querySelectorAll("button");
+             for (var i = 0; i < buttons.length; i++) {
+               buttons[i].disabled = true;
+             }
+           }
+         })();
+         
+           </script>
     </body>
 
     </html>
