@@ -1,46 +1,46 @@
 'use-strict';
 
 $(function () {
-	let section = $('.section');
+	const section = $('.section');
 	let offsetTop = [];
 	let offsetBottom = [];
 
-	let navCon = $('.nav_con')
-	let navToggle = navCon.find('.nav_toggle')
-	let navList = navCon.find('.nav_list')
+	const navCon = $('.nav_con')
+	const navToggle = navCon.find('.nav_toggle')
+	const navList = navCon.find('.nav_list')
 
-	let mainTitle = $('.main_title')
+	const mainTitle = $('.main_title')
 
 	// main section 
-	let mainSection = $('#main_section')
+	const mainSection = $('#main_section')
 	let sectionMainTop;
 	let sectionMainBottom;
  
-	let scrollTxt = $('.scroll_txt');
-	let scrollBox = $('.scroll_box');
-	let allText = $('.fix_box .txt');
+	const scrollTxt = $('.scroll_txt');
+	const scrollBox = $('.scroll_box');
+	const allText = $('.fix_box .txt');
 
 	let winScrollTop;
 	let scrollTxtTop;
 	let scrollTxtBottom;
 
 	// my skill 
-	let mySkill = $('.my_skill');
-	let skills = $('.skills');
+	const mySkill = $('.my_skill');
+	const skills = $('.skills');
 
-	let titText = mySkill.find('.intro_txt');
-	let maskLeft = mySkill.find('.left_mask');
-	let maskRight = mySkill.find('.right_mask');
-	let bgImage = mySkill.find('.bg_img');
-	let endingContent = mySkill.find('.ending_txt');
+	const titText = mySkill.find('.intro_txt');
+	const maskLeft = mySkill.find('.left_mask');
+	const maskRight = mySkill.find('.right_mask');
+	const bgImage = mySkill.find('.bg_img');
+	const endingContent = mySkill.find('.ending_txt');
 
 	// MYproject 
-	let myProject = $('#my_project')
-	let webLine = $('.web_line');
-	let projectCont = myProject.find('.contents')
+	const myProject = $('#my_project')
+	const webLine = $('.web_line');
+	const projectCont = myProject.find('.contents')
 
 	// frontend project 
-	let frontendSec = $('#frontend_project');
+	const frontendSec = $('#frontend_project');
 
 	let isMobile;
 	let sectionIsMoving = false;
@@ -54,7 +54,7 @@ $(function () {
 	let frontendPer;
 
 	// final notice 
-	let finalNotice = $('#final_notice')
+	const finalNotice = $('#final_notice')
 	
 	// contact_form 
 	let contactForm = $('#contact_form');
@@ -64,15 +64,15 @@ $(function () {
 	let contactOffsetTop;
 	let contactBottom;
 
-	let skillCode = $('.skill_code');
-	let codeSkillText = skillCode.find('.skill_txt');
-	let codeSkillBar = skillCode.find('.skill_bar');
-	let skillDesign = $('.skill_design');
-	let designSkillText = skillDesign.find('.skill_txt');
-	let designSkillBar = skillDesign.find('.skill_bar');
+	const skillCode = $('.skill_code');
+	const codeSkillText = skillCode.find('.skill_txt');
+	const codeSkillBar = skillCode.find('.skill_bar');
+	const skillDesign = $('.skill_design');
+	const designSkillText = skillDesign.find('.skill_txt');
+	const designSkillBar = skillDesign.find('.skill_bar');
 
 	// final_notice 
-	let motionArea = $('.motion_area')
+	const motionArea = $('.motion_area')
 
 	let mySkillHeight;
 	let mySkillRealHeight;
