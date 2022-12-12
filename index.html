@@ -3,14 +3,17 @@
 
     <head>
         <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-250981161-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-250981161-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-  gtag('config', 'UA-250981161-1');
-</script>
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
+
+            gtag('config', 'UA-250981161-1');
+        </script>
 
 
         <!-- End Google Tag Manager -->
@@ -194,10 +197,11 @@
                                 기술들을 공부하여 자기계발에 힘쓰는 개발자입니다.
                             </p>
                             <div class="button_contact">
-                                <a href="#contact_form"><button>Contact me</button></a>
+                                <button><a href="#contact_form">Contact me</a></button>
                             </div>
                         </div>
                     </div>
+                </div>
             </section>
             <!-- 스크롤 텍스트 섹션 -->
             <section id="scroll_txt" class="section scroll_txt">
@@ -216,13 +220,9 @@
             </section>
             <!-- 나의 스킬 섹션  -->
             <section id="my_skill" class="section my_skill">
+                <h2 class="ir_so">text mask</h2>
                 <article class="sticky_cont">
                     <div class="cont_box ">
-                        <!-- <div class="intro_txt">
-                            <h2>
-                                my skills
-                            </h2>
-                        </div> -->
                         <div class="left_mask mask1"></div>
                         <div class="left_mask mask2"></div>
                         <div class="left_mask mask3"></div>
@@ -274,7 +274,7 @@
                                     </p>
                                     <div class="skill_icon">
                                         <i class="fa-brands fa-figma"></i>
-                                        </i>
+
                                         <em>Figma</em>
                                     </div>
                                 </div>
@@ -334,6 +334,7 @@
                                 </div>
                             </div>
                         </div>
+                    </div>
                 </article>
             </section>
             <!-- 프로젝트 섹션  -->
@@ -402,10 +403,9 @@
                                 </a>
                                 <div class="web_btn">
                                     <a class="web_btn_link" href="https://www.yoogane.co.kr/intro/main/main.html"
-                                        target="_blank><i
-                                            class=" fa-solid fa-desktop"></i><span>Live Server</span></a>
-                                    <a class="web_btn_link" href="https://github.com/liondot/yoogane" target="_blank><i
-                                            class=" fa-brands fa-github-square"></i><span>github</span></a>
+                                        target="_blank"><i class="fa-solid fa-desktop"></i>
+                                        <span>Live Server</span></a>
+                                    <a class="web_btn_link" href="https://github.com/liondot/yoogane" target="_blank"><i class="fa-brands fa-github-square"></i><span>github</span></a>
                                 </div>
                             </div>
                         </div>
@@ -489,6 +489,7 @@
                     </div>
                     <div class="contents">
                         <article class="fix_wrap inner">
+                            <h2 class="ir_so">토이프로젝트</h2>
                             <div class="text_box">
 
                                 <a href="https://liondot.github.io/react_pet_jjal/
@@ -522,12 +523,12 @@
                                             제공해주는 서비스를 리액트로 제작하였습니다.
                                             router-dom기능을 사용하여 컨텐츠의 타이틀을 누르면
                                             상세페이지로 넘어가는 링크 기능을 활용하였습니다.
-                                            <br />
-                                            <br />
+                                            <br/>
+                                            <br/>
 
-                                            - Hooks(useState, useEffect) <br />
-                                            - router-dom 기능 활용 <br />
-                                            - api 활용 <br />
+                                            - Hooks(useState, useEffect) <br/>
+                                            - router-dom 기능 활용 <br/>
+                                            - api 활용 <br/>
                                             - styled-component 활용
 
                                         </em>
@@ -543,8 +544,8 @@
                                             게임에서 실패하게 되면 스코어가 1씩 감소하고 성공할 경우
                                             "you win"이라는 메세지를 팝업으로 띄어줍니다.
 
-                                            <br />
-                                            <br />
+                                            <br/>
+                                            <br/>
                                             - 함수, 조건문, 매개변수, 반복문, style 제어
                                         </em>
                                     </p>
@@ -559,8 +560,8 @@
                                             down과 연관있는 gif파일의 짤방을 힌트로 받게 됩니다.
                                             총 5번의 기회가 있으며 입력한 값이 중복인 경우, 혹은 1~100사이가 아닌 숫자일
                                             경우 노티스를 받게 됩니다.
-                                            <br>
-                                            <br>
+                                            <br/>
+                                            <br/>
                                             -event, 함수, 조건문, 배열 사용
                                         </em>
                                     </p>
@@ -575,16 +576,16 @@
                                     <div class="slide_wrap">
                                         <div class="slide">
                                             <figure>
-                                                <img src="asset/images/my_pet.png">
+                                                <img src="asset/images/my_pet.png" alt="펫가라사대">
                                             </figure>
                                             <figure>
-                                                <img src="asset/images/movie_service.png">
+                                                <img src="asset/images/movie_service.png" alt="영화정보서비스">
                                             </figure>
                                             <figure>
-                                                <img src="asset/images/game1.png">
+                                                <img src="asset/images/game1.png" alt="당근찾기게임">
                                             </figure>
                                             <figure>
-                                                <img src="asset/images/game2.png">
+                                                <img src="asset/images/game2.png" alt="숫자게임">
                                             </figure>
                                         </div>
                                     </div>
@@ -596,6 +597,7 @@
             </section>
             <!-- 파이널 노티스 섹션  -->
             <section id="final_notice" class="section final_notice">
+                <h2 class="ir_so">감사 메세지</h2>
                 <article class="txt_area">
                     <div class="motion_area">
                         <a href="#main_section" class="tit_wrap">
@@ -653,7 +655,9 @@
                     <h2 class="ir_so">contact</h2>
                     <div class="forms_container">
                         <div class="contact_me">
-                            <form class="gform pure-form pure-form-stacked contact_me_form" method="POST" data-email="yoon3315.5@gmail.com" action="https://script.google.com/macros/s/AKfycbypIv3vXCKGE55wPhLCIiO_TPCJUzwlPF3KY1UIErdyvE2EZi3uB1qAGM01ncrZp70t/exec">
+                            <form class="gform pure-form pure-form-stacked contact_me_form" method="POST"
+                                data-email="yoon3315.5@gmail.com"
+                                action="https://script.google.com/macros/s/AKfycbypIv3vXCKGE55wPhLCIiO_TPCJUzwlPF3KY1UIErdyvE2EZi3uB1qAGM01ncrZp70t/exec">
                                 <h2 class="title">Contact</h2>
                                 <div class="input_field ">
                                     <i class="fas fa-building"></i>
@@ -667,20 +671,20 @@
                                     <i class="fas fa-phone"></i>
                                     <input type="number" name="phone" required="" placeholder="연락처" />
                                 </div>
-                                <textarea name="message" required="" placeholder="메세지를 입력하세요" name="" id="" cols="30" rows="10">
-                                    
+                                <textarea name="message" required="" placeholder="메세지를 입력하세요" id="message" cols="30"
+                                    rows="10">
+
                                 </textarea>
                                 <button class="btn solid">보내기</button>
 
                                 <!-- Thankyou_message --><br>
-                        <div class="thankyou_message"
-                        style="display:none;
+                                <div class="thankyou_message" style="display:none;
                         color: red; font-weight: bold;">
-                        <br><br>
-                        <h1>* Thanks for contacting!</h1>
-                        <p style="color:gray; font-weight: normal; text-align: center;">곧 연락드리겠습니다.</p>
-                        
-                    </div>
+                                    <br><br>
+                                    <h1>* Thanks for contacting!</h1>
+                                    <p style="color:gray; font-weight: normal; text-align: center;">곧 연락드리겠습니다.</p>
+
+                                </div>
                             </form>
 
 
@@ -709,7 +713,7 @@
                         </div>
                     </div>
 
-                  
+
 
                     <div class="panels_container">
                         <div class="panel left_panel">
@@ -722,7 +726,7 @@
                                     <i class="fas fa-angle-left"> </i> My Social
                                 </button>
                             </div>
-                            <img src="asset/images/developer.svg" class="image developer_img" alt="" />
+                            <img src="asset/images/developer.svg" class="image developer_img" alt="개발자"/>
                         </div>
                         <div class="panel right_panel">
                             <div class="content">
@@ -735,7 +739,7 @@
                                     Contact Me <i class="fas fa-angle-right"> </i>
                                 </button>
                             </div>
-                            <img src="asset/images/social.svg" class="image" alt="" />
+                            <img src="asset/images/social.svg" class="image" alt="소셜"/>
                         </div>
                     </div>
                 </div>
@@ -755,115 +759,114 @@
         <script src="js/main.js"></script>
 
         <script data-cfasync="false" type="text/javascript">
-    
-            (function() {
-           function validEmail(email) {
-             var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
-             return re.test(email);
-           }
-         
-           function validateHuman(honeypot) {
-             if (honeypot) {
-               console.log("Robot Detected!");
-               return true;
-             } else {
-               console.log("Welcome Human!");
-             }
-           }
-           function getFormData(form) {
-             var elements = form.elements;
-         
-             var fields = Object.keys(elements).filter(function(k) {
-                   return (elements[k].name !== "honeypot");
-             }).map(function(k) {
-               if(elements[k].name !== undefined) {
-                 return elements[k].name;
-               }else if(elements[k].length > 0){
-                 return elements[k].item(0).name;
-               }
-             }).filter(function(item, pos, self) {
-               return self.indexOf(item) == pos && item;
-             });
-         
-             var formData = {};
-             fields.forEach(function(name){
-               var element = elements[name];
-               formData[name] = element.value;
-               if (element.length) {
-                 var data = [];
-                 for (var i = 0; i < element.length; i++) {
-                   var item = element.item(i);
-                   if (item.checked || item.selected) {
-                     data.push(item.value);
-                   }
-                 }
-                 formData[name] = data.join(', ');
-               }
-             });
-         
-             // add form-specific values into the data
-             formData.formDataNameOrder = JSON.stringify(fields);
-             formData.formGoogleSheetName = form.dataset.sheet || "sheet1"; // default sheet name
-             formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
-         
-             console.log(formData);
-             return formData;
-           }
-         
-           function handleFormSubmit(event) {  
-             event.preventDefault();           
-             var form = event.target;
-             var data = getFormData(form);         
-             if( data.email && !validEmail(data.email) ) {   
-               var invalidEmail = form.querySelector(".email-invalid");
-               if (invalidEmail) {
-                 invalidEmail.style.display = "block";
-                 return false;
-               }
-             } else {
-               disableAllButtons(form);
-               var url = form.action;
-               var xhr = new XMLHttpRequest();
-               xhr.open('POST', url);
-               xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
-               xhr.onreadystatechange = function() {
-                   console.log(xhr.status, xhr.statusText);
-                   console.log(xhr.responseText);
-                   var formElements = form.querySelector(".form-elements")
-                   if (formElements) {
-                     formElements.style.display = "none"; // hide form
-                   }
-                   var thankYouMessage = form.querySelector(".thankyou_message");
-                   if (thankYouMessage) {
-                     thankYouMessage.style.display = "block";
-                   }
-                   return;
-               };
-               var encoded = Object.keys(data).map(function(k) {
-                   return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
-               }).join('&');
-               xhr.send(encoded);
-             }
-           }
-           
-           function loaded() {
-             console.log("Contact form submission handler loaded successfully.");
-             var forms = document.querySelectorAll("form.gform");
-             for (var i = 0; i < forms.length; i++) {
-               forms[i].addEventListener("submit", handleFormSubmit, false);
-             }
-           };
-           document.addEventListener("DOMContentLoaded", loaded, false);
-         
-           function disableAllButtons(form) {
-             var buttons = form.querySelectorAll("button");
-             for (var i = 0; i < buttons.length; i++) {
-               buttons[i].disabled = true;
-             }
-           }
-         })();
-         
-           </script>
+            (function () {
+                function validEmail(email) {
+                    var re = /^([\w-]+(?:\.[\w-]+)*)@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$/i;
+                    return re.test(email);
+                }
+
+                function validateHuman(honeypot) {
+                    if (honeypot) {
+                        console.log("Robot Detected!");
+                        return true;
+                    } else {
+                        console.log("Welcome Human!");
+                    }
+                }
+
+                function getFormData(form) {
+                    var elements = form.elements;
+
+                    var fields = Object.keys(elements).filter(function (k) {
+                        return (elements[k].name !== "honeypot");
+                    }).map(function (k) {
+                        if (elements[k].name !== undefined) {
+                            return elements[k].name;
+                        } else if (elements[k].length > 0) {
+                            return elements[k].item(0).name;
+                        }
+                    }).filter(function (item, pos, self) {
+                        return self.indexOf(item) == pos && item;
+                    });
+
+                    var formData = {};
+                    fields.forEach(function (name) {
+                        var element = elements[name];
+                        formData[name] = element.value;
+                        if (element.length) {
+                            var data = [];
+                            for (var i = 0; i < element.length; i++) {
+                                var item = element.item(i);
+                                if (item.checked || item.selected) {
+                                    data.push(item.value);
+                                }
+                            }
+                            formData[name] = data.join(', ');
+                        }
+                    });
+
+                    // add form-specific values into the data
+                    formData.formDataNameOrder = JSON.stringify(fields);
+                    formData.formGoogleSheetName = form.dataset.sheet || "sheet1"; // default sheet name
+                    formData.formGoogleSendEmail = form.dataset.email || ""; // no email by default
+
+                    console.log(formData);
+                    return formData;
+                }
+
+                function handleFormSubmit(event) {
+                    event.preventDefault();
+                    var form = event.target;
+                    var data = getFormData(form);
+                    if (data.email && !validEmail(data.email)) {
+                        var invalidEmail = form.querySelector(".email-invalid");
+                        if (invalidEmail) {
+                            invalidEmail.style.display = "block";
+                            return false;
+                        }
+                    } else {
+                        disableAllButtons(form);
+                        var url = form.action;
+                        var xhr = new XMLHttpRequest();
+                        xhr.open('POST', url);
+                        xhr.setRequestHeader("Content-Type", "application/x-www-form-urlencoded");
+                        xhr.onreadystatechange = function () {
+                            console.log(xhr.status, xhr.statusText);
+                            console.log(xhr.responseText);
+                            var formElements = form.querySelector(".form-elements")
+                            if (formElements) {
+                                formElements.style.display = "none"; // hide form
+                            }
+                            var thankYouMessage = form.querySelector(".thankyou_message");
+                            if (thankYouMessage) {
+                                thankYouMessage.style.display = "block";
+                            }
+                            return;
+                        };
+                        var encoded = Object.keys(data).map(function (k) {
+                            return encodeURIComponent(k) + "=" + encodeURIComponent(data[k]);
+                        }).join('&');
+                        xhr.send(encoded);
+                    }
+                }
+
+                function loaded() {
+                    console.log("Contact form submission handler loaded successfully.");
+                    var forms = document.querySelectorAll("form.gform");
+                    for (var i = 0; i < forms.length; i++) {
+                        forms[i].addEventListener("submit", handleFormSubmit, false);
+                    }
+                };
+                document.addEventListener("DOMContentLoaded", loaded, false);
+
+                function disableAllButtons(form) {
+                    var buttons = form.querySelectorAll("button");
+                    for (var i = 0; i < buttons.length; i++) {
+                        buttons[i].disabled = true;
+                    }
+                }
+            })();
+        </script>
     </body>
 
     </html>
